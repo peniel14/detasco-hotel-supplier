@@ -114,10 +114,12 @@
 
     /* Active Nav Item - Kolom bercahaya hanya saat tombol dipilih */
     .nav-item {
-      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: background-color 0.25s, color 0.25s, box-shadow 0.25s;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
     .nav-item.active {
       background-color: #E5B13A !important;
@@ -154,7 +156,33 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
+
+    .lang-toggle-group {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      overflow: hidden;
+    }
+    .lang-toggle-group button {
+      padding: 4px 9px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #9CA3AF;
+      transition: all 0.2s;
+    }
+    .lang-toggle-group button.lang-btn-active {
+      background: #E5B13A;
+      color: #000;
+    }
+    .theme-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
   </style>
+  <link rel="stylesheet" href="theme.css">
 </head>
 <body class="antialiased selection:bg-detasco-gold selection:text-black">
 
@@ -165,18 +193,18 @@
     <div id="mainNavContainer" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
       <!-- BRAND LOGO: [DES] DETASCO (Sesuai File Asli) -->
-      <a href="#" class="flex items-center gap-3 group">
-        <img src="logo.png" alt="DES DETASCO Logo" class="h-11 w-auto object-contain drop-shadow-[0_0_12px_rgba(229,177,58,0.35)] transition duration-300 group-hover:scale-105">
-        <div>
-          <span class="font-cinzel text-xl font-bold tracking-[0.2em] text-white flex items-center gap-2">
+      <a href="#" class="flex items-center gap-3 group shrink-0">
+        <img src="logo.png" alt="DES DETASCO Logo" class="h-11 w-auto object-contain drop-shadow-[0_0_12px_rgba(229,177,58,0.35)] transition duration-300 group-hover:scale-105 shrink-0">
+        <div class="shrink-0">
+          <span class="font-cinzel text-xl font-bold tracking-[0.2em] text-white flex items-center gap-2 whitespace-nowrap">
             DETASCO
           </span>
-          <p class="text-[9px] tracking-[0.28em] text-detasco-gold uppercase font-semibold">Hospitality Supplier</p>
+          <p class="text-[9px] tracking-[0.28em] text-detasco-gold uppercase font-semibold whitespace-nowrap">Hospitality Supplier</p>
         </div>
       </a>
 
       <!-- DESKTOP NAVIGATION MENU (Kolom bercahaya hanya saat tombol dipilih) -->
-      <nav id="desktopNav" class="hidden lg:flex items-center gap-3 xl:gap-4 text-xs font-semibold tracking-wider uppercase">
+      <nav id="desktopNav" class="hidden xl:flex items-center gap-3 xl:gap-4 text-xs font-semibold tracking-wider uppercase shrink-0">
         <a href="#beranda" class="nav-item px-3.5 py-1.5 rounded-full text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition-all duration-300">Beranda</a>
 
         <!-- KATALOG DROPDOWN MENU -->
@@ -291,8 +319,16 @@
         <a href="#lokasi" class="nav-item px-3.5 py-1.5 rounded-full text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition-all duration-300">Lokasi</a>
       </nav>
 
-      <!-- RIGHT ACTIONS: KONSULTASI (E-Katalog removed per user request) -->
-      <div class="hidden sm:flex items-center gap-3">
+      <!-- RIGHT ACTIONS: THEME + LANGUAGE (xl+ only, also in mobile drawer) + KONSULTASI -->
+      <div class="hidden sm:flex items-center gap-2.5 shrink-0">
+        <div class="hidden xl:inline-flex lang-toggle-group">
+          <button type="button" data-lang-set="id">ID</button>
+          <button type="button" data-lang-set="en">EN</button>
+        </div>
+        <button type="button" data-theme-toggle aria-label="Ganti Mode Terang/Gelap" class="hidden xl:inline-flex theme-toggle-btn text-gray-300 hover:text-detasco-gold p-2 rounded-full border border-white/10 bg-white/5 transition">
+          <i data-lucide="sun" class="theme-icon-sun w-4 h-4"></i>
+          <i data-lucide="moon" class="theme-icon-moon w-4 h-4"></i>
+        </button>
         <a href="#kontak" class="px-5 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-detasco-gold text-black hover:bg-detasco-goldHover transition shadow-[0_0_20px_rgba(229,177,58,0.35)] flex items-center gap-1.5">
           <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
           Konsultasi
@@ -300,13 +336,23 @@
       </div>
 
       <!-- MOBILE MENU TOGGLE -->
-      <button id="mobileMenuBtn" aria-label="Menu Navigasi" class="lg:hidden text-gray-300 hover:text-detasco-gold p-2.5 rounded-xl border border-white/10 bg-white/5 active:bg-white/10 transition flex items-center justify-center">
+      <button id="mobileMenuBtn" aria-label="Menu Navigasi" class="xl:hidden text-gray-300 hover:text-detasco-gold p-2.5 rounded-xl border border-white/10 bg-white/5 active:bg-white/10 transition flex items-center justify-center">
         <i data-lucide="menu" class="w-5 h-5"></i>
       </button>
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-[#0D1017]/98 border-b border-detasco-borderGold px-5 py-4 space-y-1.5 text-xs font-semibold uppercase tracking-wider max-h-[82vh] overflow-y-auto shadow-2xl backdrop-blur-xl">
+    <div id="mobileMenu" class="hidden xl:hidden bg-[#0D1017]/98 border-b border-detasco-borderGold px-5 py-4 space-y-1.5 text-xs font-semibold uppercase tracking-wider max-h-[82vh] overflow-y-auto shadow-2xl backdrop-blur-xl">
+      <div class="flex items-center justify-between gap-3 pb-3 mb-1.5 border-b border-white/10">
+        <div class="lang-toggle-group">
+          <button type="button" data-lang-set="id">ID</button>
+          <button type="button" data-lang-set="en">EN</button>
+        </div>
+        <button type="button" data-theme-toggle aria-label="Ganti Mode Terang/Gelap" class="theme-toggle-btn text-gray-300 hover:text-detasco-gold p-2 rounded-full border border-white/10 bg-white/5 transition">
+          <i data-lucide="sun" class="theme-icon-sun w-4 h-4"></i>
+          <i data-lucide="moon" class="theme-icon-moon w-4 h-4"></i>
+        </button>
+      </div>
       <a href="#beranda" class="mobile-nav-item block px-3.5 py-2.5 rounded-xl text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition">Beranda</a>
       
       <!-- Mobile Katalog Accordion -->
@@ -740,6 +786,7 @@
         <p class="stat-number font-cinzel text-2xl sm:text-4xl lg:text-5xl font-bold text-detasco-gold group-hover:text-detasco-goldHover transition duration-300 tracking-tight whitespace-nowrap"
            data-target="15"
            data-suffix="+ TH"
+           data-suffix-en="+ Yrs"
            data-duration="1800">
           0+ TH
         </p>
@@ -1426,6 +1473,12 @@
   </a>
 
   <!-- ========================================================================= -->
+  <!-- THEME (LIGHT/DARK) & LANGUAGE (ID/EN) SWITCHERS                           -->
+  <!-- ========================================================================= -->
+  <script src="theme.js"></script>
+  <script src="i18n.js"></script>
+
+  <!-- ========================================================================= -->
   <!-- JAVASCRIPT: DATA & INTERACTIVE LOGIC                                      -->
   <!-- ========================================================================= -->
   <script>
@@ -1488,19 +1541,19 @@
 
               <!-- Short Description -->
               <p class="text-xs text-[#525966] line-clamp-2 leading-relaxed mb-4">
-                ${p.shortDesc}
+                ${DetascoI18n.pick(p, 'shortDesc')}
               </p>
             </div>
 
             <!-- Inset Box (Exact 2-Column Status & MOQ Box from Image) -->
             <div class="bg-[#F4EFE6] border border-[#DDD5C5] rounded-lg p-2.5 mb-4 grid grid-cols-2 gap-2 text-[11px]">
               <div>
-                <span class="block text-[9px] uppercase font-bold tracking-wider text-[#7A8190]">${p.highlightLabel}</span>
-                <span class="text-[#1A1E29] font-semibold truncate block">${p.highlightVal}</span>
+                <span class="block text-[9px] uppercase font-bold tracking-wider text-[#7A8190]">${DetascoI18n.pick(p, 'highlightLabel')}</span>
+                <span class="text-[#1A1E29] font-semibold truncate block">${DetascoI18n.pick(p, 'highlightVal')}</span>
               </div>
               <div class="text-right">
                 <span class="block text-[9px] uppercase font-bold tracking-wider text-[#7A8190]">MOQ</span>
-                <span class="text-[#8C6618] font-bold block">${p.moq}</span>
+                <span class="text-[#8C6618] font-bold block">${DetascoI18n.pick(p, 'moq')}</span>
               </div>
             </div>
 
@@ -1515,6 +1568,7 @@
       });
 
       lucide.createIcons();
+      if (window.DetascoI18n) DetascoI18n.refreshScope(grid);
     }
 
     // Modal Details Logic
@@ -1530,12 +1584,13 @@
       document.getElementById('modalCategory').innerText = p.categoryName;
       document.getElementById('modalSKU').innerText = p.sku;
       document.getElementById('modalTitle').innerText = p.title;
-      document.getElementById('modalDesc').innerText = p.fullDesc;
+      document.getElementById('modalDesc').innerText = DetascoI18n.pick(p, 'fullDesc');
 
       // Table specs rows
       const tbody = document.getElementById('modalSpecsTable');
       tbody.innerHTML = '';
-      for (const [key, value] of Object.entries(p.specs)) {
+      const specsSource = DetascoI18n.pick(p, 'specs') || p.specs;
+      for (const [key, value] of Object.entries(specsSource)) {
         const tr = document.createElement('tr');
         tr.innerHTML = `
           <td class="py-1.5 sm:py-2 px-2.5 sm:px-3 text-gray-400 font-medium w-1/3 bg-white/[0.02] text-[11px] sm:text-xs">${key}</td>
@@ -1567,7 +1622,9 @@
     }
 
     // Tab Filtering
+    let activeTabCategory = 'all';
     function filterByTab(category, btnElement) {
+      activeTabCategory = category;
       if (!btnElement) {
         document.querySelectorAll('.tab-pill').forEach(btn => {
           const onclickAttr = btn.getAttribute('onclick') || '';
@@ -1597,22 +1654,23 @@
       const seeAllBtn = document.getElementById('seeAllBtn');
       const seeAllText = document.getElementById('seeAllText');
       if (seeAllBtn && seeAllText) {
-        if (category === 'all') {
-          seeAllBtn.href = 'katalog.html';
-          seeAllText.innerText = 'See All Products (Lihat Seluruh Koleksi)';
-        } else if (category === 'linen') {
-          seeAllBtn.href = 'katalog.html?category=linen';
-          seeAllText.innerText = 'See All Linen & Bedding (Katalog Lengkap)';
-        } else if (category === 'amenities') {
-          seeAllBtn.href = 'katalog.html?category=amenities';
-          seeAllText.innerText = 'See All Guest Amenities (Katalog Lengkap)';
-        } else if (category === 'equipment') {
-          seeAllBtn.href = 'katalog.html?category=equipment';
-          seeAllText.innerText = 'See All In-Room & Housekeeping (Katalog Lengkap)';
-        } else if (category === 'banquet') {
-          seeAllBtn.href = 'katalog.html?category=banquet';
-          seeAllText.innerText = 'See All F&B & Banquet Supplies (Katalog Lengkap)';
-        }
+        const lang = window.DetascoI18n ? DetascoI18n.getLang() : 'id';
+        const labels = {
+          all: { id: 'See All Products (Lihat Seluruh Koleksi)', en: 'See All Products (View Full Collection)' },
+          linen: { id: 'See All Linen & Bedding (Katalog Lengkap)', en: 'See All Linen & Bedding (Full Catalog)' },
+          amenities: { id: 'See All Guest Amenities (Katalog Lengkap)', en: 'See All Guest Amenities (Full Catalog)' },
+          equipment: { id: 'See All In-Room & Housekeeping (Katalog Lengkap)', en: 'See All In-Room & Housekeeping (Full Catalog)' },
+          banquet: { id: 'See All F&B & Banquet Supplies (Katalog Lengkap)', en: 'See All F&B & Banquet Supplies (Full Catalog)' }
+        };
+        const hrefs = {
+          all: 'katalog.html',
+          linen: 'katalog.html?category=linen',
+          amenities: 'katalog.html?category=amenities',
+          equipment: 'katalog.html?category=equipment',
+          banquet: 'katalog.html?category=banquet'
+        };
+        seeAllBtn.href = hrefs[category] || 'katalog.html';
+        seeAllText.innerText = (labels[category] || labels.all)[lang];
       }
     }
 
@@ -1667,7 +1725,8 @@
         const span = btnElement ? btnElement.querySelector('span') : null;
         if (span) {
           const original = span.innerText;
-          span.innerText = "Tersalin! ✓";
+          const lang = window.DetascoI18n ? DetascoI18n.getLang() : 'id';
+          span.innerText = lang === 'en' ? 'Copied! ✓' : 'Tersalin! ✓';
           setTimeout(() => { span.innerText = original; }, 2000);
         }
       }).catch(() => {
@@ -1820,7 +1879,8 @@
         // Reset numbers to 0 with suffix
         numbers.forEach((el) => {
           const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
-          const suffix = el.getAttribute('data-suffix') || '';
+          const lang = window.DetascoI18n ? DetascoI18n.getLang() : 'id';
+          const suffix = (lang === 'en' && el.getAttribute('data-suffix-en')) ? el.getAttribute('data-suffix-en') : (el.getAttribute('data-suffix') || '');
           const initialVal = decimals > 0 ? (0).toFixed(decimals) : '0';
           el.textContent = initialVal + suffix;
         });
@@ -1843,7 +1903,8 @@
           const target = parseFloat(el.getAttribute('data-target') || '0');
           const duration = parseInt(el.getAttribute('data-duration') || '1800', 10);
           const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
-          const suffix = el.getAttribute('data-suffix') || '';
+          const lang = window.DetascoI18n ? DetascoI18n.getLang() : 'id';
+          const suffix = (lang === 'en' && el.getAttribute('data-suffix-en')) ? el.getAttribute('data-suffix-en') : (el.getAttribute('data-suffix') || '');
           const isLocale = el.getAttribute('data-format') === 'id';
 
           let startTime = null;
@@ -1923,6 +1984,22 @@
         setTimeout(() => {
           smoothScrollTo(window.location.hash);
         }, 150);
+      }
+
+      if (window.DetascoI18n) {
+        DetascoI18n.onLangChange((lang) => {
+          filterByTab(activeTabCategory, null);
+          lucide.createIcons();
+          document.querySelectorAll('.stat-number[data-suffix-en]').forEach((el) => {
+            const suffixId = el.getAttribute('data-suffix');
+            const suffixEn = el.getAttribute('data-suffix-en');
+            if (el.textContent.endsWith(suffixId)) {
+              el.textContent = el.textContent.slice(0, -suffixId.length) + (lang === 'en' ? suffixEn : suffixId);
+            } else if (el.textContent.endsWith(suffixEn)) {
+              el.textContent = el.textContent.slice(0, -suffixEn.length) + (lang === 'en' ? suffixEn : suffixId);
+            }
+          });
+        });
       }
     });
   </script>

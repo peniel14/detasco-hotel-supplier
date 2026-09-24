@@ -14,10 +14,15 @@
         sku: "DTS-LIN-RD500",
         image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=600&q=80",
         shortDesc: "100% Egyptian combed cotton sateen stripe 3cm. Lembut, sejuk, dan tahan cuci industri...",
+        shortDesc_en: "100% Egyptian combed cotton sateen stripe 3cm. Soft, cool, and built to withstand industrial laundering...",
         fullDesc: "Duvet cover dan bedding set mewah berbahan 100% Egyptian combed cotton 500 Thread Count dengan motif satin stripe 3cm elegan. Diformulasikan khusus untuk laundry industri hotel bintang 5 dengan ketahanan serat tinggi terhadap klorin dan suhu sterilisasi hingga 85°C.",
+        fullDesc_en: "A luxurious duvet cover and bedding set made from 100% Egyptian combed cotton, 500 Thread Count, with an elegant 3cm satin stripe pattern. Specially formulated for 5-star hotel industrial laundry, with high fiber resistance to chlorine and sterilization temperatures up to 85°C.",
         highlightLabel: "STATUS PASOKAN",
+        highlightLabel_en: "SUPPLY STATUS",
         highlightVal: "Ready Stock & PO",
+        highlightVal_en: "Ready Stock & PO",
         moq: "20 Set",
+        moq_en: "20 Sets",
         specs: {
           "Bahan Baku": "100% Long-Staple Egyptian Combed Cotton",
           "Kerapatan Benang": "500 Thread Count (TC) Sateen Stripe 3cm",
@@ -26,6 +31,15 @@
           "Ukuran Standar": "Single (120x200), Queen (160x200), King (180x200), Super King (200x200)",
           "Bordir Logo": "Bisa Bordir Logo Hotel di Sudut Kanan Bawah",
           "Minimum Order (MOQ)": "20 Set (Ready Stock) / Custom: 50 Set"
+        },
+        specs_en: {
+          "Raw Material": "100% Long-Staple Egyptian Combed Cotton",
+          "Thread Density": "500 Thread Count (TC) Sateen Stripe 3cm",
+          "Laundry Standard": "Chlorine-Resistant & Commercial Tunnel Washer Safe",
+          "Shrinkage Rate": "< 1.5% Pre-Shrunk Finishing",
+          "Standard Sizes": "Single (120x200), Queen (160x200), King (180x200), Super King (200x200)",
+          "Logo Embroidery": "Hotel Logo Embroidery Available on Bottom Right Corner",
+          "Minimum Order (MOQ)": "20 Sets (Ready Stock) / Custom: 50 Sets"
         }
       },
       {
@@ -41,10 +55,15 @@
         sku: "DTS-LIN-TW650",
         image: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=600&q=80",
         shortDesc: "Handuk mandi katun combed 650 GSM dengan penyerapan instan dan jilidan tepi ganda anti-runtas...",
+        shortDesc_en: "650 GSM combed cotton bath towel with instant absorption and double-stitched anti-fray hems...",
         fullDesc: "Set handuk hotel bintang 5 terbuat dari 100% combed cotton twist rendah dengan gramasi ekstra 650 GSM. Daya serap air tinggi dalam hitungan detik, sangat lembut di kulit, dan dirancang dengan jahitan tepi dobel (double-stitched hem) yang teruji tahan hingga 200+ siklus pencucian industri.",
+        fullDesc_en: "A 5-star hotel towel set made from 100% low-twist combed cotton with an extra-thick 650 GSM weight. High water absorption within seconds, extremely soft on skin, and designed with double-stitched hems tested to withstand 200+ industrial wash cycles.",
         highlightLabel: "VARIAN LENGKAP",
+        highlightLabel_en: "FULL VARIANT RANGE",
         highlightVal: "Bath, Hand, Face, Mat",
+        highlightVal_en: "Bath, Hand, Face, Mat",
         moq: "50 Lusin",
+        moq_en: "50 Dozen",
         specs: {
           "Gramasi Kain": "650 GSM (Bath Towel) & 1000 GSM (Bath Mat)",
           "Dimensi Bath Towel": "70 x 140 cm / 80 x 160 cm",
@@ -53,6 +72,15 @@
           "Konstruksi Benang": "100% Ring Spun Combed Cotton 20/2",
           "Kustomisasi": "Emboss Jacquard Border atau Bordir Logo",
           "Minimum Order (MOQ)": "50 Lusin"
+        },
+        specs_en: {
+          "Fabric Weight": "650 GSM (Bath Towel) & 1000 GSM (Bath Mat)",
+          "Bath Towel Dimensions": "70 x 140 cm / 80 x 160 cm",
+          "Hand Towel Dimensions": "35 x 75 cm",
+          "Face Towel Dimensions": "30 x 30 cm",
+          "Yarn Construction": "100% Ring Spun Combed Cotton 20/2",
+          "Customization": "Embossed Jacquard Border or Logo Embroidery",
+          "Minimum Order (MOQ)": "50 Dozen"
         }
       },
       {
@@ -68,16 +96,29 @@
         sku: "DTS-LIN-PL1200",
         image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=600&q=80",
         shortDesc: "Sensasi bulu angsa alami dengan serat mikro-gel silikon anti-alergi dan anti-kempes...",
+        shortDesc_en: "A natural down-like feel with hypoallergenic, anti-flattening silicone microgel fiber fill...",
         fullDesc: "Bantal tidur komersial premium dengan isian 100% Microgel Fiber ultra-halus (0.7 denier) yang memberikan sensasi kelembutan setara goose down murni tanpa memicu alergi. Menggunakan kain pelindung 100% cotton down-proof 300TC dengan gusset samping 5cm untuk penopang leher ergonomis.",
+        fullDesc_en: "A premium commercial sleep pillow filled with 100% ultra-fine Microgel Fiber (0.7 denier) that delivers a softness equal to pure goose down without triggering allergies. Uses a 100% cotton down-proof 300TC shell with a 5cm side gusset for ergonomic neck support.",
         highlightLabel: "BERAT ISIAN",
+        highlightLabel_en: "FILL WEIGHT",
         highlightVal: "1.200 Gram (Firm/Soft)",
+        highlightVal_en: "1,200 Grams (Firm/Soft)",
         moq: "30 Pcs",
+        moq_en: "30 Pcs",
         specs: {
           "Isian Dalam": "100% Microgel Fiber Silikon 0.7D Super Soft",
           "Kain Pembungkus": "100% Cotton Down-Proof 300TC Piping Gold",
           "Dimensi": "King Size 50 x 90 cm & Standard 50 x 70 cm",
           "Karakteristik": "Breathable, Anti-Tungau, Anti-Bakteri, Tidak Bau",
           "Standar Mutu": "OEKO-TEX Standard 100 Anti-Allergen",
+          "Minimum Order (MOQ)": "30 Pcs"
+        },
+        specs_en: {
+          "Fill Material": "100% Silicone Microgel Fiber 0.7D Super Soft",
+          "Shell Fabric": "100% Cotton Down-Proof 300TC Gold Piping",
+          "Dimensions": "King Size 50 x 90 cm & Standard 50 x 70 cm",
+          "Characteristics": "Breathable, Anti-Mite, Anti-Bacterial, Odorless",
+          "Quality Standard": "OEKO-TEX Standard 100 Anti-Allergen",
           "Minimum Order (MOQ)": "30 Pcs"
         }
       },
@@ -94,16 +135,29 @@
         sku: "DTS-LIN-ROBE",
         image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80",
         shortDesc: "Jubah mandi tamu pola waffle katun breathable dengan kerah kimono dan tali pinggang...",
+        shortDesc_en: "A breathable cotton waffle-weave guest bathrobe with a kimono collar and a tie belt...",
         fullDesc: "Jubah mandi (bathrobe) tamu hotel dan fasilitas spa bintang 5. Memiliki tenunan pola waffle sarang lebah yang ringan, sejuk, dan cepat kering setelah dicuci. Dilengkapi dua saku depan besar, kerah kimono elegan, dan tali pinggang dobel pengait.",
+        fullDesc_en: "A guest bathrobe for 5-star hotel rooms and spa facilities. Features a lightweight honeycomb waffle weave that is cool and quick-drying after washing. Includes two large front pockets, an elegant kimono collar, and a double-loop tie belt.",
         highlightLabel: "MATERIAL",
+        highlightLabel_en: "MATERIAL",
         highlightVal: "100% Cotton Waffle",
+        highlightVal_en: "100% Cotton Waffle",
         moq: "25 Pcs",
+        moq_en: "25 Pcs",
         specs: {
           "Material": "100% Natural Cotton Honeycomb Waffle Weave",
           "Gramasi Kain": "320 GSM (Lightweight & Quick Dry)",
           "Desain": "Kimono Collar with 2 Patch Pockets & Double Belt Loops",
           "Pilihan Warna": "Pure White, Slate Grey, Warm Sand",
           "Bordir Logo": "Custom Logo Bordir Dada Kiri (Timbul/Benang Emas)",
+          "Minimum Order (MOQ)": "25 Pcs"
+        },
+        specs_en: {
+          "Material": "100% Natural Cotton Honeycomb Waffle Weave",
+          "Fabric Weight": "320 GSM (Lightweight & Quick Dry)",
+          "Design": "Kimono Collar with 2 Patch Pockets & Double Belt Loops",
+          "Color Options": "Pure White, Slate Grey, Warm Sand",
+          "Logo Embroidery": "Custom Left-Chest Logo Embroidery (Raised/Gold Thread)",
           "Minimum Order (MOQ)": "25 Pcs"
         }
       },
@@ -120,16 +174,29 @@
         sku: "DTS-LIN-PROT",
         image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=600&q=80",
         shortDesc: "Pelindung kasur dengan membran TPU tahan air tanpa suara gemerisik, fitted skirt 40cm...",
+        shortDesc_en: "A mattress protector with a waterproof, noiseless TPU membrane and a 40cm fitted skirt...",
         fullDesc: "Pelindung kasur standar perhotelan dengan lapisan atas katun terry lembut dan membran TPU waterproof bagian bawah yang melindungi kasur dari tumpahan cairan atau noda darah tanpa menimbulkan bunyi plastik saat tamu bergerak.",
+        fullDesc_en: "A hospitality-grade mattress protector with a soft cotton terry top layer and a waterproof TPU membrane underside that shields the mattress from spills or blood stains without any plastic rustling noise when guests move.",
         highlightLabel: "FIT TINGGI",
+        highlightLabel_en: "MATTRESS FIT HEIGHT",
         highlightVal: "Matras s/d 40 cm",
+        highlightVal_en: "Mattress up to 40 cm",
         moq: "20 Pcs",
+        moq_en: "20 Pcs",
         specs: {
           "Lapisan Atas": "80% Cotton Terry + 20% Polyester Absorbent",
           "Membran Bawah": "100% Breathable TPU Waterproof Silent Film",
           "Samping": "All-Round Elastic Fitted Skirt (Tinggi 40cm)",
           "Perawatan": "Mesin cuci industri tahan panas hingga 60°C",
           "Ukuran Standar": "Single (120x200), Queen (160x200), King (180x200), Super King (200x200)",
+          "Minimum Order (MOQ)": "20 Pcs"
+        },
+        specs_en: {
+          "Top Layer": "80% Cotton Terry + 20% Polyester Absorbent",
+          "Bottom Membrane": "100% Breathable TPU Waterproof Silent Film",
+          "Sides": "All-Round Elastic Fitted Skirt (Up to 40cm Height)",
+          "Care Instructions": "Industrial washing machine, heat-resistant up to 60°C",
+          "Standard Sizes": "Single (120x200), Queen (160x200), King (180x200), Super King (200x200)",
           "Minimum Order (MOQ)": "20 Pcs"
         }
       },
@@ -148,10 +215,15 @@
         sku: "DTS-AMN-ECOLUX",
         image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
         shortDesc: "Kemasan biodegradable berbahan jerami gandum & kraft paper water-resistant. Custom logo hotel...",
+        shortDesc_en: "Biodegradable packaging made from wheat straw & water-resistant kraft paper. Custom hotel logo...",
         fullDesc: "Koleksi amenities ramah lingkungan berkonsep Zero Single-Use Plastic. Gagang sikat gigi terbuat dari serat jerami gandum (wheat straw) dapat terurai alami. Sabun dan sampo beraroma botanical spa formulasi aman kulit, telah terdaftar resmi di BPOM dan bersertifikat Halal.",
+        fullDesc_en: "An eco-friendly amenities collection built on a Zero Single-Use Plastic concept. Toothbrush handles are made from naturally biodegradable wheat straw fiber. Soaps and shampoos use botanical spa fragrances that are skin-safe, officially BPOM-registered, and Halal-certified.",
         highlightLabel: "ESTIMASI HARGA",
+        highlightLabel_en: "PRICE ESTIMATE",
         highlightVal: "Rp 12.500 - 35.000",
+        highlightVal_en: "Rp 12,500 - 35,000",
         moq: "500 Pcs",
+        moq_en: "500 Pcs",
         specs: {
           "Material Gagang": "Wheat Straw Bio-Composite & Birchwood",
           "Kemasan Kotak": "FSC Certified Recycled Kraft / Stone Paper Water-Resistant",
@@ -160,6 +232,15 @@
           "Kustomisasi": "Free Hot Foil Stamp Logo Hotel warna Emas/Hitam",
           "Kemasan Master": "500 Set per kardus tersegel",
           "Minimum Order (MOQ)": "500 Set (Polos) / 1.000 Set (Custom Logo)"
+        },
+        specs_en: {
+          "Handle Material": "Wheat Straw Bio-Composite & Birchwood",
+          "Box Packaging": "FSC Certified Recycled Kraft / Water-Resistant Stone Paper",
+          "Package Contents": "Toothbrush + 6g Paste, Wooden Comb, PLA Shower Cap, Sanitary Bag, Vanity Kit",
+          "Legal Compliance": "BPOM-Registered Toothpaste NA18221400231 & Halal MUI",
+          "Customization": "Free Gold/Black Hot Foil Stamp Hotel Logo",
+          "Master Packaging": "500 Sets per sealed carton",
+          "Minimum Order (MOQ)": "500 Sets (Plain) / 1,000 Sets (Custom Logo)"
         }
       },
       {
@@ -175,10 +256,15 @@
         sku: "DTS-AMN-DISP",
         image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80",
         shortDesc: "Botol amber kaca/PET tebal dengan wall-bracket stainless steel kunci pengaman anti-buka...",
+        shortDesc_en: "Thick amber glass/PET bottle with a stainless steel wall bracket and a tamper-proof security lock...",
         fullDesc: "Sistem dispenser amenities ramah lingkungan (Zero Single-Use Plastic) untuk kamar mandi hotel. Botol amber elegan tahan benturan dipadukan dengan dudukan dinding SUS304 anti-karat dengan kunci khusus anti-pencurian (tamper-proof locking key).",
+        fullDesc_en: "An eco-friendly amenity dispenser system (Zero Single-Use Plastic) for hotel bathrooms. An elegant impact-resistant amber bottle paired with a rust-proof SUS304 wall bracket featuring a dedicated tamper-proof locking key.",
         highlightLabel: "KAPASITAS",
+        highlightLabel_en: "CAPACITY",
         highlightVal: "300ml / 500ml",
+        highlightVal_en: "300ml / 500ml",
         moq: "20 Set",
+        moq_en: "20 Sets",
         specs: {
           "Material Botol": "Heavy-Duty Amber Glass atau Shatter-Proof PET",
           "Material Bracket": "Stainless Steel SUS304 Matte Black / Brushed Gold",
@@ -186,6 +272,14 @@
           "Labeling": "Sablon Permanen: Body Wash, Shampoo, Conditioner, Hand Wash",
           "Garansi Bracket": "5 Tahun Anti Karat",
           "Minimum Order (MOQ)": "20 Set (Single / Double / Triple Bracket)"
+        },
+        specs_en: {
+          "Bottle Material": "Heavy-Duty Amber Glass or Shatter-Proof PET",
+          "Bracket Material": "Stainless Steel SUS304 Matte Black / Brushed Gold",
+          "Lock System": "Magnetic Anti-Theft Lock Key for Housekeeping Only",
+          "Labeling": "Permanent Print: Body Wash, Shampoo, Conditioner, Hand Wash",
+          "Bracket Warranty": "5-Year Rust-Proof Warranty",
+          "Minimum Order (MOQ)": "20 Sets (Single / Double / Triple Bracket)"
         }
       },
       {
@@ -201,10 +295,15 @@
         sku: "DTS-AMN-SLIP",
         image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80",
         shortDesc: "Sandal hotel bahan waffle tebal dengan sol EVA 8mm anti-slip berpola diamond grip...",
+        shortDesc_en: "Thick waffle hotel slippers with an 8mm anti-slip EVA sole in a diamond grip pattern...",
         fullDesc: "Sandal kamar hotel bintang 4 & 5 dengan sol EVA tebal 8mm berpola anti-slip yang aman di lantai marmer basah. Bagian atas (upper) dilapisi busa spon tebal 5mm dan kain waffle katun lembut. Pilihan open toe atau closed toe dengan sablon/bordir logo hotel.",
+        fullDesc_en: "4 & 5-star hotel room slippers with a thick 8mm anti-slip EVA sole pattern, safe on wet marble floors. The upper is lined with 5mm thick foam sponge and soft cotton waffle fabric. Available in open-toe or closed-toe with hotel logo printing/embroidery.",
         highlightLabel: "KETEBALAN SOL",
+        highlightLabel_en: "SOLE THICKNESS",
         highlightVal: "8 mm High Density EVA",
+        highlightVal_en: "8mm High Density EVA",
         moq: "1.000 Pasang",
+        moq_en: "1,000 Pairs",
         specs: {
           "Material Upper": "100% Waffle Cotton dilapisi Busa Spon 5mm",
           "Material Sol": "EVA 8mm Anti-Slip Diamond Texture Grip",
@@ -212,6 +311,14 @@
           "Kemasan Satuan": "Biodegradable Polybag atau Pita Kertas Kraft Ramah Lingkungan",
           "Kustomisasi": "Cetak / Bordir Logo Hotel 1-4 Warna",
           "Minimum Order (MOQ)": "1.000 Pasang"
+        },
+        specs_en: {
+          "Upper Material": "100% Waffle Cotton lined with 5mm Foam Sponge",
+          "Sole Material": "8mm EVA Anti-Slip Diamond Texture Grip",
+          "Toe Type": "Closed Toe / Open Toe",
+          "Unit Packaging": "Biodegradable Polybag or Eco-Friendly Kraft Paper Band",
+          "Customization": "1-4 Color Hotel Logo Print / Embroidery",
+          "Minimum Order (MOQ)": "1,000 Pairs"
         }
       },
       {
@@ -227,10 +334,15 @@
         sku: "DTS-AMN-SOAP",
         image: "https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?auto=format&fit=crop&w=600&q=80",
         shortDesc: "Sabun batang alami ekstrak minyak zaitun & serai, kemasan kertas plisse wrap logo timbul...",
+        shortDesc_en: "A natural bar soap with olive oil & lemongrass extract, packed in an embossed pleated paper wrap...",
         fullDesc: "Sabun batang tamu formula nabati murni (vegetable base) yang lembut di kulit sensitif. Diperkaya minyak esensial serai Bali (lemongrass) dan minyak zaitun murni. Dikemas higienis dengan plisse wrap lipat dan stiker logo berstempel emas foil.",
+        fullDesc_en: "A pure vegetable-base guest bar soap that is gentle on sensitive skin. Enriched with Balinese lemongrass essential oil and pure olive oil. Hygienically packed in a folded pleated wrap with a gold foil-stamped logo sticker.",
         highlightLabel: "LEGALITAS",
+        highlightLabel_en: "LEGAL COMPLIANCE",
         highlightVal: "Resmi BPOM & Halal",
+        highlightVal_en: "Officially BPOM & Halal",
         moq: "1.000 Pcs",
+        moq_en: "1,000 Pcs",
         specs: {
           "Basis Formula": "100% Vegetable Palm & Olive Oil Base (Tanpa Lemak Hewani)",
           "Berat Bersih": "30 Gram (Tersedia varian 20g, 40g, 50g)",
@@ -238,6 +350,14 @@
           "Kemasan": "Pleated Paper Wrap dengan Embossed Foil Seal",
           "Legalitas Resmi": "BPOM NA Registered & Sertifikasi Halal MUI",
           "Minimum Order (MOQ)": "1.000 Pcs"
+        },
+        specs_en: {
+          "Formula Base": "100% Vegetable Palm & Olive Oil Base (No Animal Fat)",
+          "Net Weight": "30 Grams (20g, 40g, 50g variants available)",
+          "Signature Scent": "Lemongrass Spa / Green Tea Jasmine / Sweet Amber",
+          "Packaging": "Pleated Paper Wrap with Embossed Foil Seal",
+          "Legal Compliance": "BPOM NA Registered & Halal MUI Certified",
+          "Minimum Order (MOQ)": "1,000 Pcs"
         }
       },
       {
@@ -253,10 +373,15 @@
         sku: "DTS-AMN-COMP",
         image: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80",
         shortDesc: "Set aksesoris meja kamar berbahan kulit sintetis PU premium tahan air dengan emboss logo...",
+        shortDesc_en: "A room desk accessory set in premium waterproof PU leatherette with an embossed logo...",
         fullDesc: "Koleksi aksesoris meja kamar hotel luxury yang mencakup: folder direktori (compendium), kotak tisu kotak/persegi, baki remote control, alas memo (notepad holder), dan tempat pulpen. Dibuat dari kulit sintetis PU tebal dengan jahitan tepi presisi dan lapisan tahan air.",
+        fullDesc_en: "A luxury hotel room desk accessory collection including a directory compendium folder, a square tissue box, a remote control tray, a notepad holder, and a pen cup. Made from thick PU leatherette with precision-stitched edges and a waterproof coating.",
         highlightLabel: "ISI PAKET",
+        highlightLabel_en: "PACKAGE CONTENTS",
         highlightVal: "5 Item Aksesoris Meja",
+        highlightVal_en: "5 Desk Accessory Items",
         moq: "20 Set",
+        moq_en: "20 Sets",
         specs: {
           "Material Bodi": "Premium PU Leather dengan Inti Kayu MDF Kokoh",
           "Finishing Jahitan": "Jahitan Nilon Tepi Rapi & Lapisan Anti-Noda Air",
@@ -264,6 +389,14 @@
           "Pilihan Warna": "Obsidian Black, Cognac Brown, Cream Ivory",
           "Logo Brand": "Deboss Timbul atau Gold Hot Stamping Logo Hotel",
           "Minimum Order (MOQ)": "20 Set"
+        },
+        specs_en: {
+          "Body Material": "Premium PU Leather with a Sturdy MDF Wood Core",
+          "Stitching Finish": "Neat Edge Nylon Stitching & Water-Stain Resistant Coating",
+          "Items in Set": "A4 Compendium Folder, Tissue Box, Remote Tray, Notepad Holder, Pen Cup",
+          "Color Options": "Obsidian Black, Cognac Brown, Cream Ivory",
+          "Brand Logo": "Raised Debossing or Gold Hot-Stamped Hotel Logo",
+          "Minimum Order (MOQ)": "20 Sets"
         }
       },
 
@@ -281,10 +414,15 @@
         sku: "DTS-EQP-MB40L",
         image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80",
         shortDesc: "Teknologi absorpsi tanpa kompresor. Nol getaran, kaca ganda tempered, interior LED...",
+        shortDesc_en: "Compressor-free absorption technology. Zero vibration, dual tempered glass, LED interior...",
         fullDesc: "Kulkas minibar khusus kamar hotel dengan sistem pendingin absorpsi termoelektrik tanpa kompresor mekanis, menghasilkan tingkat kebisingan 0 dB yang menjaga kualitas tidur tamu. Pintu kaca ganda tempered low-E anti-embun dengan kunci pengaman dan lampu LED otomatis.",
+        fullDesc_en: "A hotel room minibar fridge with a thermoelectric absorption cooling system and no mechanical compressor, producing a 0 dB noise level that protects guests' sleep quality. Anti-fog low-E dual tempered glass door with a security lock and automatic LED lighting.",
         highlightLabel: "GARANSI RESMI",
+        highlightLabel_en: "OFFICIAL WARRANTY",
         highlightVal: "3 Tahun Komersial",
+        highlightVal_en: "3-Year Commercial Warranty",
         moq: "10 Unit",
+        moq_en: "10 Units",
         specs: {
           "Kapasitas Volume": "40 Liter (Muat botol wine & kaleng minuman)",
           "Tingkat Kebisingan": "0 dB (Nol Getaran, Absorption System)",
@@ -293,6 +431,15 @@
           "Fitur Tambahan": "Soft Warm Interior LED, Kunci Pengaman Master Key",
           "Garansi Komersial": "3 Tahun Garansi Suku Cadang & Servis",
           "Minimum Order (MOQ)": "10 Unit"
+        },
+        specs_en: {
+          "Volume Capacity": "40 Liters (Fits wine bottles & beverage cans)",
+          "Noise Level": "0 dB (Zero Vibration, Absorption System)",
+          "Power Consumption": "65 Watts (Eco-Logic Energy Saving)",
+          "Door Material": "Double Layer Tempered Glass with Reversible Hinge",
+          "Additional Features": "Soft Warm Interior LED, Master Key Security Lock",
+          "Commercial Warranty": "3-Year Parts & Service Warranty",
+          "Minimum Order (MOQ)": "10 Units"
         }
       },
       {
@@ -308,10 +455,15 @@
         sku: "DTS-EQP-SAFE",
         image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80",
         shortDesc: "Brankas kamar motorik dengan kunci digital LED, muat laptop 15.6 inch, dan master audit...",
+        shortDesc_en: "A motorized room safe with a digital LED keypad, fits a 15.6-inch laptop, with master audit trail...",
         fullDesc: "Brankas keamanan kamar hotel berbahan pelat baja cold-rolled tebal 2mm/5mm dengan sistem penguncian motorik ganda otomatis. Layar LED terang memudahkan tamu menginput PIN 4-6 digit. Dilengkapi fitur audit trail 100 log pembukaan terakhir via unit CEU dan kunci manual darurat.",
+        fullDesc_en: "A hotel room security safe made from thick cold-rolled steel plate (2mm/5mm) with an automatic dual motorized locking system. A bright LED display makes it easy for guests to enter a 4-6 digit PIN. Includes an audit trail of the last 100 openings via a CEU unit and an emergency manual key.",
         highlightLabel: "KAPASITAS",
+        highlightLabel_en: "CAPACITY",
         highlightVal: "Laptop 15.6 Inch",
+        highlightVal_en: "15.6-Inch Laptop",
         moq: "10 Unit",
+        moq_en: "10 Units",
         specs: {
           "Material Bodi": "Cold-Rolled Steel (Pintu 5mm, Bodi 2mm)",
           "Sistem Kunci": "Dual Motorized Solid Steel Deadbolts (dia. 20mm)",
@@ -320,6 +472,15 @@
           "Finishing": "Powder Coating Anti-Gores Tahan Korosi",
           "Garansi Komersial": "2 Tahun Garansi Resmi",
           "Minimum Order (MOQ)": "10 Unit"
+        },
+        specs_en: {
+          "Body Material": "Cold-Rolled Steel (5mm Door, 2mm Body)",
+          "Lock System": "Dual Motorized Solid Steel Deadbolts (dia. 20mm)",
+          "Security Features": "100-Opening Audit Trail, Master Code & Master Key",
+          "Unit Dimensions": "200(H) x 430(W) x 370(D) mm (Fits 15.6\" Laptop)",
+          "Finishing": "Scratch-Resistant Corrosion-Proof Powder Coating",
+          "Commercial Warranty": "2-Year Official Warranty",
+          "Minimum Order (MOQ)": "10 Units"
         }
       },
       {
@@ -335,10 +496,15 @@
         sku: "DTS-EQP-KET1L",
         image: "https://images.unsplash.com/photo-1594213114663-d94db9b17125?auto=format&fit=crop&w=600&q=80",
         shortDesc: "Teko listrik dinding ganda stainless steel 304 food-grade dengan sensor otomatis Strix UK...",
+        shortDesc_en: "A double-wall food-grade 304 stainless steel electric kettle with an automatic UK Strix sensor...",
         fullDesc: "Teko pemanas air khusus kamar hotel dengan konstruksi double-wall cool-touch (bagian luar tidak panas saat disentuh untuk keselamatan tamu). Interior tanpa sambungan dari stainless steel SUS304 food-grade, dilengkapi kontroler Strix buatan Inggris dengan auto shut-off dan boil-dry protection.",
+        fullDesc_en: "A water-heating kettle for hotel rooms with a cool-touch double-wall construction (the exterior stays cool to the touch for guest safety). A seamless food-grade SUS304 stainless steel interior, fitted with a British-made Strix controller with auto shut-off and boil-dry protection.",
         highlightLabel: "KONSUMSI DAYA",
+        highlightLabel_en: "POWER CONSUMPTION",
         highlightVal: "800 - 1000 Watt",
+        highlightVal_en: "800 - 1000 Watts",
         moq: "20 Unit",
+        moq_en: "20 Units",
         specs: {
           "Kapasitas": "1.0 Liter (Porsi ideal 4 cangkir)",
           "Material Bodi": "Double-Wall SUS304 Seamless Interior + Cool-Touch Exterior",
@@ -346,6 +512,14 @@
           "Dasar Putar": "360° Cordless Base dengan Penggulung Kabel Tersembunyi",
           "Fitur Keamanan": "Steam Sensor & Boil-Dry Protection Otomatis",
           "Minimum Order (MOQ)": "20 Unit"
+        },
+        specs_en: {
+          "Capacity": "1.0 Liter (Ideal for 4 cups)",
+          "Body Material": "Double-Wall SUS304 Seamless Interior + Cool-Touch Exterior",
+          "Temperature Controller": "British Strix Controller with Auto Shut-Off",
+          "Swivel Base": "360° Cordless Base with Hidden Cord Storage",
+          "Safety Features": "Automatic Steam Sensor & Boil-Dry Protection",
+          "Minimum Order (MOQ)": "20 Units"
         }
       },
       {
@@ -361,10 +535,15 @@
         sku: "DTS-EQP-HD1800",
         image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80",
         shortDesc: "Pengering rambut dinding dengan saklar mikro pengaman otomatis dan teknologi ion negatif...",
+        shortDesc_en: "A wall-mounted hair dryer with an automatic safety microswitch and negative ion technology...",
         fullDesc: "Pengering rambut komersial dengan braket dudukan dinding kokoh. Dilengkapi sensor mikro switch yang otomatis mematikan mesin saat gagang ditaruh kembali ke dudukan, mencegah risiko kebakaran akibat lupa mematikan saklar. Aliran udara ionik berkekuatan 1800W mengeringkan rambut tanpa membuatnya kering rusak.",
+        fullDesc_en: "A commercial hair dryer with a sturdy wall-mount bracket. Fitted with a micro switch sensor that automatically shuts off the unit when the handle is returned to its holster, preventing fire risk from a forgotten power switch. A 1800W ionic airflow dries hair without damaging it.",
         highlightLabel: "DAYA & SENSOR",
+        highlightLabel_en: "POWER & SENSOR",
         highlightVal: "1800W Microswitch",
+        highlightVal_en: "1800W Microswitch",
         moq: "15 Unit",
+        moq_en: "15 Units",
         specs: {
           "Daya Listrik": "1800 Watt (220-240V / 50Hz)",
           "Pengaturan Angin": "2 Kecepatan Udara + 3 Level Panas + Cool Shot",
@@ -372,6 +551,14 @@
           "Panjang Kabel": "Kabel Spiral Elastis 2.0 Meter Heavy-Duty",
           "Material Dudukan": "ABS Polikarbonat Tahan Api (Flame Retardant)",
           "Minimum Order (MOQ)": "15 Unit"
+        },
+        specs_en: {
+          "Power Rating": "1800 Watts (220-240V / 50Hz)",
+          "Airflow Settings": "2 Speed Levels + 3 Heat Levels + Cool Shot",
+          "Safety System": "Overheat Protection & Wall-Mount Holster Microswitch",
+          "Cord Length": "2.0-Meter Heavy-Duty Elastic Spiral Cord",
+          "Holster Material": "Flame-Retardant ABS Polycarbonate",
+          "Minimum Order (MOQ)": "15 Units"
         }
       },
       {
@@ -387,10 +574,15 @@
         sku: "DTS-EQP-TRL01",
         image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80",
         shortDesc: "Troli housekeeping aluminium anti-karat dengan kantong linen ganda & roda senyap 8 inch...",
+        shortDesc_en: "A rust-proof aluminum housekeeping trolley with double linen bags & 8-inch silent wheels...",
         fullDesc: "Troli operasional room attendant / housekeeping hotel dengan rangka paduan aluminium kokoh dan bodi baja tebal berpelindung bumper karet di keempat sudut. Dilengkapi 2 kantong kain tahan air tebal untuk sprei kotor/sampah, 3 rak linen luas, dan kompartemen atas bersekat untuk amenities.",
+        fullDesc_en: "A room attendant / housekeeping operational trolley with a sturdy aluminum alloy frame and a thick steel body protected by rubber corner bumpers on all four corners. Fitted with 2 thick waterproof fabric bags for soiled linen/trash, 3 spacious linen shelves, and a partitioned top compartment for amenities.",
         highlightLabel: "KAPASITAS",
+        highlightLabel_en: "CAPACITY",
         highlightVal: "Beban 150 kg (16 Kamar)",
+        highlightVal_en: "150 kg Load (16 Rooms)",
         moq: "2 Unit",
+        moq_en: "2 Units",
         specs: {
           "Material Rangka": "Anodized Aluminium & Heavy-Duty Steel Panel",
           "Bumper": "Full-Wrap Corner Rubber Bumper Pelindung Dinding Hotel",
@@ -398,6 +590,14 @@
           "Kantong Linen": "2 Kantong Kain Oxford 600D Waterproof (Kapasitas 80L per kantong)",
           "Dimensi Unit": "1420(P) x 500(L) x 1180(T) mm",
           "Minimum Order (MOQ)": "2 Unit"
+        },
+        specs_en: {
+          "Frame Material": "Anodized Aluminium & Heavy-Duty Steel Panel",
+          "Bumper": "Full-Wrap Corner Rubber Bumper to Protect Hotel Walls",
+          "Wheels": "4 Swivel 8-Inch TPR Silent Wheels (2 with Brake Lock)",
+          "Linen Bags": "2 Oxford 600D Waterproof Fabric Bags (80L Capacity Each)",
+          "Unit Dimensions": "1420(L) x 500(W) x 1180(H) mm",
+          "Minimum Order (MOQ)": "2 Units"
         }
       },
 
@@ -415,10 +615,15 @@
         sku: "DTS-FB-OPUL",
         image: "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?auto=format&fit=crop&w=600&q=80",
         shortDesc: "Porselen bone china dengan lapisan glaze anti-gores dan aksen lis emas murni 24k...",
+        shortDesc_en: "Bone china porcelain with a scratch-resistant glaze coating and pure 24k gold rim accents...",
         fullDesc: "Perlengkapan jamuan makan fine dining dan banquet hotel. Terbuat dari porselen bermutu tinggi dengan formula reinforced alumina chip-resistant yang tahan benturan meja saji. Glasur bening anti-gores pisau dan aman dicuci pada mesin komersial suhu 90°C.",
+        fullDesc_en: "Fine dining and hotel banquet tableware. Made from high-quality porcelain with a reinforced alumina chip-resistant formula that withstands serving-table impacts. A clear, knife-scratch-resistant glaze that is safe in commercial dishwashers at 90°C.",
         highlightLabel: "VARIAN KOLEKSI",
+        highlightLabel_en: "COLLECTION VARIANTS",
         highlightVal: "32 Model Plate & Cup",
+        highlightVal_en: "32 Plate & Cup Models",
         moq: "100 Pcs",
+        moq_en: "100 Pcs",
         specs: {
           "Material Porselen": "Reinforced High-Alumina Bone China",
           "Ketahanan": "Chip-Resistant Rim & Scratch-Proof Glaze",
@@ -426,6 +631,15 @@
           "Suhu Oven / Micr.": "Tahan panas oven hingga 250°C",
           "Pilihan Varian": "Show Plate 31cm, Dinner Plate 27cm, Soup Bowl, Tea Cup Set",
           "Logo Restoran": "Bisa cetak logo hotel underglaze permanen",
+          "Minimum Order (MOQ)": "100 Pcs per model"
+        },
+        specs_en: {
+          "Porcelain Material": "Reinforced High-Alumina Bone China",
+          "Durability": "Chip-Resistant Rim & Scratch-Proof Glaze",
+          "Accent": "24K Real Gold Lining (Dishwasher Safe)",
+          "Oven / Microwave Temp.": "Oven-safe up to 250°C",
+          "Available Variants": "31cm Show Plate, 27cm Dinner Plate, Soup Bowl, Tea Cup Set",
+          "Restaurant Logo": "Permanent Underglaze Hotel Logo Printing Available",
           "Minimum Order (MOQ)": "100 Pcs per model"
         }
       },
@@ -442,10 +656,15 @@
         sku: "DTS-FB-CHF9L",
         image: "https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=600&q=80",
         shortDesc: "Pemanas makanan buffet dengan tutup roll-top hidrolik 90°/180° kaca transparan dan bodi mirror polish...",
+        shortDesc_en: "A buffet food warmer with a 90°/180° hydraulic roll-top lid, clear glass window, and mirror-polished body...",
         fullDesc: "Wadah pemanas makanan prasmanan buffet bintang 5 berbahan stainless steel food grade SUS304 tebal dengan pemolesan cermin (mirror finish). Tutup sistem roll-top dengan peredam hidrolik soft-close dapat berhenti stabil di sudut 90° atau dibuka penuh 180°. Dilengkapi jendela kaca tempered tahan panas.",
+        fullDesc_en: "A 5-star buffet food warmer made from thick food-grade SUS304 stainless steel with a mirror finish. The roll-top lid system with a soft-close hydraulic damper can hold steady at 90° or open fully to 180°. Fitted with a heat-resistant tempered glass viewing window.",
         highlightLabel: "KAPASITAS",
+        highlightLabel_en: "CAPACITY",
         highlightVal: "9 Liter (Food Pan 1/1)",
+        highlightVal_en: "9 Liters (Food Pan 1/1)",
         moq: "4 Unit",
+        moq_en: "4 Units",
         specs: {
           "Material Bodi": "Stainless Steel SUS304 Food Grade (Tebal 1.2 mm)",
           "Mekanisme Tutup": "Hydraulic Soft-Close Roll-Top (Berhenti di 90° & 180°)",
@@ -453,6 +672,14 @@
           "Kompatibilitas Pan": "GN 1/1 Pan (Kedalaman 65mm), GN 1/2, GN 1/3",
           "Sumber Pemanas": "Sterno Fuel Canister Holder atau Induksi Elektrik",
           "Minimum Order (MOQ)": "4 Unit"
+        },
+        specs_en: {
+          "Body Material": "Stainless Steel SUS304 Food Grade (1.2 mm Thick)",
+          "Lid Mechanism": "Hydraulic Soft-Close Roll-Top (Stops at 90° & 180°)",
+          "Lid Window": "Clear Shatter-Proof Tempered Glass",
+          "Pan Compatibility": "GN 1/1 Pan (65mm Depth), GN 1/2, GN 1/3",
+          "Heat Source": "Sterno Fuel Canister Holder or Electric Induction",
+          "Minimum Order (MOQ)": "4 Units"
         }
       },
       {
@@ -468,10 +695,15 @@
         sku: "DTS-FB-GLS24",
         image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80",
         shortDesc: "Gelas kristal bebas timbal dengan kejernihan optik tinggi dan bibir potong laser halus...",
+        shortDesc_en: "Lead-free crystal glassware with high optical clarity and a fine laser-cut rim...",
         fullDesc: "Koleksi gelas minum mewah untuk restoran fine dining dan lounge bar hotel. Dibuat dari formula kristal barium/titanium bebas timbal (lead-free crystal) yang memiliki dentingan suara jernih, transmisi kilau cahaya maksimal, dan bibir gelas (laser-cut rim) ultra-tipis yang memperkaya cita rasa minuman.",
+        fullDesc_en: "A luxury drinkware collection for fine dining restaurants and hotel lounge bars. Made from a lead-free barium/titanium crystal formula with a clear ring tone, maximum light refraction, and an ultra-thin laser-cut rim that enhances every sip.",
         highlightLabel: "VARIAN GELAS",
+        highlightLabel_en: "GLASS VARIANTS",
         highlightVal: "Bordeaux, Flute, Rocks",
+        highlightVal_en: "Bordeaux, Flute, Rocks",
         moq: "24 Lusin",
+        moq_en: "24 Dozen",
         specs: {
           "Material": "Lead-Free Titanium Crystalline Glass",
           "Teknologi Rim": "Cold Laser-Cut Rim (Ketebalan < 0.9 mm)",
@@ -479,6 +711,14 @@
           "Model Tersedia": "Red Wine (550ml), White Wine (420ml), Champagne Flute (220ml), Rocks (350ml)",
           "Custom Grafir": "Laser Etching Logo Halus di Dasar Kaki Gelas",
           "Minimum Order (MOQ)": "24 Lusin per model"
+        },
+        specs_en: {
+          "Material": "Lead-Free Titanium Crystalline Glass",
+          "Rim Technology": "Cold Laser-Cut Rim (Thickness < 0.9 mm)",
+          "Wash Durability": "Commercial Dishwasher Safe for 2,000 Wash Cycles",
+          "Available Models": "Red Wine (550ml), White Wine (420ml), Champagne Flute (220ml), Rocks (350ml)",
+          "Custom Engraving": "Fine Laser-Etched Logo on the Glass Foot",
+          "Minimum Order (MOQ)": "24 Dozen per model"
         }
       },
       {
@@ -494,10 +734,15 @@
         sku: "DTS-FB-CTL18",
         image: "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=600&q=80",
         shortDesc: "Sendok, garpu, dan pisau tempaan stainless steel 18/10 berbobot seimbang dan tahan asam...",
+        shortDesc_en: "18/10 stainless steel forged spoons, forks, and knives with a balanced weight and acid resistance...",
         fullDesc: "Perangkat makan (cutlery) standar jamuan kenegaraan dan hotel luxury. Ditempa dari baja tahan karat kelas tertinggi 18/10 (18% Chrome, 10% Nickel) yang memberikan perlindungan maksimal terhadap karat, asam makanan, dan goresan mesin cuci komersial. Memiliki bobot mantap dan keseimbangan sempurna di genggaman.",
+        fullDesc_en: "State-banquet and luxury hotel dining cutlery. Forged from the highest-grade 18/10 stainless steel (18% Chrome, 10% Nickel), offering maximum protection against rust, food acids, and commercial dishwasher scratching. A solid weight with perfect balance in hand.",
         highlightLabel: "KETEBALAN BAJA",
+        highlightLabel_en: "STEEL THICKNESS",
         highlightVal: "4.0 mm Heavy Forged",
+        highlightVal_en: "4.0mm Heavy Forged",
         moq: "50 Set",
+        moq_en: "50 Sets",
         specs: {
           "Komposisi": "18/10 High-Grade Stainless Steel (SUS304)",
           "Ketebalan Gagang": "4.0 mm Solid Forged Handle",
@@ -505,6 +750,14 @@
           "Kelengkapan Seri": "Dinner Fork, Dinner Knife, Dinner Spoon, Soup Spoon, Dessert Fork, Teaspoon",
           "Tahan Pencucian": "100% Dishwasher Safe Komersial Suhu Tinggi",
           "Minimum Order (MOQ)": "50 Set (Per 6 Pcs)"
+        },
+        specs_en: {
+          "Composition": "18/10 High-Grade Stainless Steel (SUS304)",
+          "Handle Thickness": "4.0mm Solid Forged Handle",
+          "Finishing": "High-Mirror Hand Polish & PVD Titanium Coating (Silver / Gold / Black)",
+          "Set Contents": "Dinner Fork, Dinner Knife, Dinner Spoon, Soup Spoon, Dessert Fork, Teaspoon",
+          "Wash Durability": "100% Commercial High-Temperature Dishwasher Safe",
+          "Minimum Order (MOQ)": "50 Sets (Per 6 Pcs)"
         }
       },
       {
@@ -520,10 +773,15 @@
         sku: "DTS-FB-BEV8L",
         image: "https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=600&q=80",
         shortDesc: "Dispenser jus & susu buffet dengan tabung es tengah pendingin tanpa mencairkan rasa minuman...",
+        shortDesc_en: "A juice & milk buffet dispenser with a central ice core tube that cools without diluting flavor...",
         fullDesc: "Dispenser minuman dingin kapasitas 8 liter untuk meja sarapan buffet hotel. Menggunakan silinder polikarbonat bening tebal anti-pecah dan bodi dasar stainless steel SUS304 dengan drip tray magnetik. Tabung inti stainless steel di bagian tengah dapat diisi es batu untuk menjaga minuman tetap dingin selama 6+ jam tanpa mencairkan konsentrasi rasa.",
+        fullDesc_en: "An 8-liter cold beverage dispenser for hotel breakfast buffet tables. Uses a thick, shatter-proof clear polycarbonate cylinder and a SUS304 stainless steel base with a magnetic drip tray. The central stainless steel ice core tube keeps drinks cold for 6+ hours without diluting the flavor.",
         highlightLabel: "PENDINGINAN",
+        highlightLabel_en: "COOLING SYSTEM",
         highlightVal: "Ice Core Tube (6+ Jam)",
+        highlightVal_en: "Ice Core Tube (6+ Hours)",
         moq: "2 Unit",
+        moq_en: "2 Units",
         specs: {
           "Kapasitas Tabung": "8.0 Liter (Opsi Single, Double, Triple Base)",
           "Material Tabung": "Food-Grade Unbreakable Polycarbonate Crystalline",
@@ -531,6 +789,14 @@
           "Sistem Pendingin": "Central Hollow Ice Core (Tanpa Mencairkan Minuman)",
           "Keran Minuman": "Solid Brass Chrome Anti-Drip Spigot Awet",
           "Minimum Order (MOQ)": "2 Unit"
+        },
+        specs_en: {
+          "Cylinder Capacity": "8.0 Liters (Single, Double, Triple Base Options)",
+          "Cylinder Material": "Food-Grade Unbreakable Polycarbonate Crystalline",
+          "Base & Lid": "SUS304 Stainless Steel Mirror Polish / Gold Accent",
+          "Cooling System": "Central Hollow Ice Core (No Drink Dilution)",
+          "Beverage Tap": "Solid Brass Chrome Anti-Drip Durable Spigot",
+          "Minimum Order (MOQ)": "2 Units"
         }
       }
     ];

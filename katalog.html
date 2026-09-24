@@ -114,7 +114,33 @@
       border: 1px solid rgba(229, 177, 58, 0.4);
       box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.9);
     }
+
+    .lang-toggle-group {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      overflow: hidden;
+    }
+    .lang-toggle-group button {
+      padding: 4px 9px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #9CA3AF;
+      transition: all 0.2s;
+    }
+    .lang-toggle-group button.lang-btn-active {
+      background: #E5B13A;
+      color: #000;
+    }
+    .theme-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
   </style>
+  <link rel="stylesheet" href="theme.css">
 </head>
 <body class="min-h-screen flex flex-col selection:bg-detasco-gold selection:text-black">
 
@@ -150,24 +176,24 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
       <!-- LOGO -->
-      <a href="index.html#beranda" class="flex items-center gap-3.5 group">
-        <div class="relative">
+      <a href="index.html#beranda" class="flex items-center gap-3.5 group shrink-0">
+        <div class="relative shrink-0">
           <div class="w-11 h-11 rounded-full bg-gradient-to-br from-[#1C2331] to-[#0A0D13] border border-detasco-gold flex items-center justify-center p-1.5 shadow-lg group-hover:scale-105 transition-transform duration-300">
             <img src="logo.png" alt="DETASCO Logo" class="w-full h-full object-contain filter brightness-110 drop-shadow-[0_0_8px_rgba(229,177,58,0.5)]">
           </div>
         </div>
-        <div class="flex flex-col">
-          <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-[0.2em] text-white group-hover:text-detasco-gold transition duration-300">
+        <div class="flex flex-col shrink-0">
+          <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-[0.2em] text-white group-hover:text-detasco-gold transition duration-300 whitespace-nowrap">
             DETASCO
           </span>
-          <span class="text-[9px] uppercase font-bold tracking-[0.3em] text-detasco-gold">
+          <span class="text-[9px] uppercase font-bold tracking-[0.3em] text-detasco-gold whitespace-nowrap">
             HOSPITALITY SUPPLIER
           </span>
         </div>
       </a>
 
       <!-- DESKTOP NAVIGATION -->
-      <nav class="hidden lg:flex items-center gap-3 xl:gap-4 text-xs font-semibold tracking-wider uppercase text-gray-300">
+      <nav class="hidden xl:flex items-center gap-3 xl:gap-4 text-xs font-semibold tracking-wider uppercase text-gray-300 shrink-0">
         <a href="index.html#beranda" class="px-3 py-1.5 rounded-full hover:text-detasco-gold hover:bg-white/5 transition-all duration-300">
           Beranda
         </a>
@@ -200,14 +226,22 @@
       </nav>
 
       <!-- CTA BUTTON & MOBILE TOGGLE -->
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2.5 shrink-0">
+        <div class="hidden xl:inline-flex lang-toggle-group">
+          <button type="button" data-lang-set="id">ID</button>
+          <button type="button" data-lang-set="en">EN</button>
+        </div>
+        <button type="button" data-theme-toggle aria-label="Ganti Mode Terang/Gelap" class="hidden xl:inline-flex theme-toggle-btn text-gray-300 hover:text-detasco-gold p-2 rounded-full border border-white/10 bg-white/5 transition">
+          <i data-lucide="sun" class="theme-icon-sun w-4 h-4"></i>
+          <i data-lucide="moon" class="theme-icon-moon w-4 h-4"></i>
+        </button>
         <a href="https://wa.me/6281234567890?text=Halo%20Detasco,%20saya%20ingin%20berkonsultasi%20mengenai%20katalog%20produk" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-detasco-gold to-detasco-goldHover text-black font-bold text-xs uppercase tracking-wider hover:shadow-[0_0_20px_rgba(229,177,58,0.4)] transition-all duration-300">
           <i data-lucide="message-circle" class="w-4 h-4"></i>
           <span>Konsultasi</span>
         </a>
 
         <!-- Mobile Menu Toggle Button -->
-        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Menu Navigasi" class="lg:hidden text-gray-300 hover:text-detasco-gold p-2 rounded-lg hover:bg-white/5 transition">
+        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Menu Navigasi" class="xl:hidden text-gray-300 hover:text-detasco-gold p-2 rounded-lg hover:bg-white/5 transition">
           <i data-lucide="menu" id="menuIcon" class="w-6 h-6"></i>
         </button>
       </div>
@@ -215,7 +249,17 @@
     </div>
 
     <!-- MOBILE MENU DRAWER -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-[#0D1017] border-b border-detasco-gold/30 px-5 py-4 space-y-2 text-sm font-semibold tracking-wider uppercase">
+    <div id="mobileMenu" class="hidden xl:hidden bg-[#0D1017] border-b border-detasco-gold/30 px-5 py-4 space-y-2 text-sm font-semibold tracking-wider uppercase">
+      <div class="flex items-center justify-between gap-3 pb-3 mb-1">
+        <div class="lang-toggle-group">
+          <button type="button" data-lang-set="id">ID</button>
+          <button type="button" data-lang-set="en">EN</button>
+        </div>
+        <button type="button" data-theme-toggle aria-label="Ganti Mode Terang/Gelap" class="theme-toggle-btn text-gray-300 hover:text-detasco-gold p-2 rounded-full border border-white/10 bg-white/5 transition">
+          <i data-lucide="sun" class="theme-icon-sun w-4 h-4"></i>
+          <i data-lucide="moon" class="theme-icon-moon w-4 h-4"></i>
+        </button>
+      </div>
       <a href="index.html#beranda" class="block py-2.5 text-gray-300 hover:text-detasco-gold border-b border-white/5">Beranda</a>
       <a href="katalog.html" class="block py-2.5 text-detasco-gold font-bold border-b border-white/5 flex items-center justify-between">
         <span>Katalog Lengkap</span>
@@ -565,6 +609,12 @@
   </a>
 
   <!-- ========================================================================= -->
+  <!-- THEME (LIGHT/DARK) & LANGUAGE (ID/EN) SWITCHERS                           -->
+  <!-- ========================================================================= -->
+  <script src="theme.js"></script>
+  <script src="i18n.js"></script>
+
+  <!-- ========================================================================= -->
   <!-- JAVASCRIPT: CATALOG SEARCH, FILTER, SORT & MODAL LOGIC                   -->
   <!-- ========================================================================= -->
   <script>
@@ -730,19 +780,19 @@
 
               <!-- Short Description -->
               <p class="text-xs text-[#525966] line-clamp-2 leading-relaxed mb-4">
-                ${p.shortDesc}
+                ${DetascoI18n.pick(p, 'shortDesc')}
               </p>
             </div>
 
             <!-- Inset Box (Status & MOQ) -->
             <div class="bg-[#F4EFE6] border border-[#DDD5C5] rounded-lg p-2.5 mb-4 grid grid-cols-2 gap-2 text-[11px]">
               <div>
-                <span class="block text-[9px] uppercase font-bold tracking-wider text-[#7A8190]">${p.highlightLabel}</span>
-                <span class="text-[#1A1E29] font-semibold truncate block">${p.highlightVal}</span>
+                <span class="block text-[9px] uppercase font-bold tracking-wider text-[#7A8190]">${DetascoI18n.pick(p, 'highlightLabel')}</span>
+                <span class="text-[#1A1E29] font-semibold truncate block">${DetascoI18n.pick(p, 'highlightVal')}</span>
               </div>
               <div class="text-right">
                 <span class="block text-[9px] uppercase font-bold tracking-wider text-[#7A8190]">MOQ</span>
-                <span class="text-[#8C6618] font-bold block">${p.moq}</span>
+                <span class="text-[#8C6618] font-bold block">${DetascoI18n.pick(p, 'moq')}</span>
               </div>
             </div>
 
@@ -757,6 +807,7 @@
       });
 
       lucide.createIcons();
+      if (window.DetascoI18n) DetascoI18n.refreshScope(grid);
     }
 
     // Modal Handling
@@ -772,12 +823,13 @@
       document.getElementById('modalCategory').innerText = p.categoryName;
       document.getElementById('modalSKU').innerText = p.sku;
       document.getElementById('modalTitle').innerText = p.title;
-      document.getElementById('modalDesc').innerText = p.fullDesc;
+      document.getElementById('modalDesc').innerText = DetascoI18n.pick(p, 'fullDesc');
 
       const specsTable = document.getElementById('modalSpecsTable');
       specsTable.innerHTML = '';
-      if (p.specs) {
-        for (const [key, value] of Object.entries(p.specs)) {
+      const specsSource = DetascoI18n.pick(p, 'specs') || p.specs;
+      if (specsSource) {
+        for (const [key, value] of Object.entries(specsSource)) {
           const row = document.createElement('tr');
           row.className = "hover:bg-white/[0.04]";
           row.innerHTML = `
@@ -819,6 +871,13 @@
         renderCatalog();
       }
       lucide.createIcons();
+
+      if (window.DetascoI18n) {
+        DetascoI18n.onLangChange(() => {
+          renderCatalog();
+          lucide.createIcons();
+        });
+      }
     });
   </script>
 </body>

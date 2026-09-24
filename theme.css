@@ -1,0 +1,67 @@
+/* =========================================================================
+   DETASCO — LIGHT MODE OVERRIDES
+   Default site design is the dark-luxury theme (unchanged).
+   Adding class="light-mode" on <html> flips the dark-chrome sections
+   (nav, hero, footer, modal, cards) to a light cream theme that matches
+   the already-light sections (Katalog, Inspirasi, Lokasi).
+   Uses [class*="..."] substring selectors instead of hand-escaped
+   Tailwind selectors so it stays correct regardless of opacity/variant
+   suffixes (e.g. bg-[#0D1017]/98, bg-white/[0.02]).
+   ========================================================================= */
+
+html.light-mode body {
+  background-color: #FFFFFF !important;
+  color: #1A1E29 !important;
+}
+
+/* Dark section backgrounds -> light equivalents */
+html.light-mode [class*="bg-[#0D1017]"] { background-color: #FFFFFF !important; }
+html.light-mode [class*="bg-[#0A0D13]"] { background-color: #F8F5EE !important; }
+html.light-mode [class*="bg-[#090C12]"] { background-color: #F3EDE0 !important; }
+html.light-mode [class*="bg-[#06080D]"] { background-color: #F3EDE0 !important; }
+
+/* Dark gradient banners (e.g. "Jadwalkan Kunjungan" cards) -> flat light card */
+html.light-mode [class*="from-[#1A1E29]"] { background: #F4EFE6 !important; }
+
+/* Dark card surfaces -> white cards */
+html.light-mode .bg-detasco-cardBg,
+html.light-mode .bg-detasco-cardHover,
+html.light-mode .bg-detasco-cardInset,
+html.light-mode [class*="bg-[#131822]"],
+html.light-mode [class*="bg-[#181E2B]"],
+html.light-mode [class*="bg-[#0B0E14]"] {
+  background-color: #FFFFFF !important;
+}
+
+/* Text colors */
+html.light-mode [class*="text-white"] { color: #1A1E29 !important; }
+html.light-mode [class*="text-gray-200"],
+html.light-mode [class*="text-gray-300"] { color: #525966 !important; }
+html.light-mode [class*="text-gray-400"] { color: #7A8190 !important; }
+html.light-mode [class*="text-gray-500"] { color: #8A93A6 !important; }
+
+/* Translucent white borders/backgrounds (only meaningful on dark bg) */
+html.light-mode [class*="border-white/"] { border-color: rgba(26, 30, 41, 0.14) !important; }
+html.light-mode [class*="bg-white/"] { background-color: rgba(26, 30, 41, 0.045) !important; }
+
+/* Nav glass + dropdown */
+html.light-mode .glass-nav {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-bottom: 1px solid rgba(26, 30, 41, 0.08) !important;
+}
+html.light-mode .solid-dropdown {
+  background-color: #FFFFFF !important;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(229, 177, 58, 0.5) !important;
+  box-shadow: 0 16px 40px -8px rgba(26, 30, 41, 0.18) !important;
+}
+
+/* Scrollbar */
+html.light-mode ::-webkit-scrollbar-track { background: #ECE5D8 !important; }
+html.light-mode ::-webkit-scrollbar-thumb { background: #C4B59D !important; }
+html.light-mode ::-webkit-scrollbar-thumb:hover { background: #B88B2A !important; }
+
+/* Theme toggle button icon swap */
+html.light-mode .theme-icon-sun { display: none !important; }
+html.light-mode .theme-icon-moon { display: inline-flex !important; }
+.theme-icon-moon { display: none !important; }
