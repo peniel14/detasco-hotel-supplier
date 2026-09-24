@@ -5,9 +5,11 @@ Portal Pengadaan Perlengkapan Komersial Hotel & Resor Bintang 4 & 5 di Indonesia
 ## 📁 Struktur File
 - `index.html`: Laman Beranda (Hero, Katalog 1 Baris Pilihan, Kategori, Inspirasi, Standar SLA, Cara Pemesanan 4 Langkah, Formulir Penawaran, Lokasi Showroom & Google Maps).
 - `katalog.html`: Laman Lengkap Katalog 20 Produk (Pencarian real-time, filter kategori, sorting, modal detail spesifikasi komersial, tombol WhatsApp terintegrasi).
-- `products-data.js`: Database master terpusat untuk 20 item produk hotel.
+- `products-data.js`: Database master terpusat untuk 20 item produk hotel (Single Source of Truth).
 - `server.js`: Web server lokal menggunakan Node.js (Port 3000 & 3001).
 - `logo.png`: Aset logo resmi Detasco.
+- `CLAUDE.md`: Konfigurasi & instruksi otomatis khusus untuk rekan tim pengguna Anthropic Claude.
+- `AI_GUIDELINES.md`: Panduan lengkap sinkronisasi kerja tim multi-AI (Antigravity + Claude).
 
 ## 🚀 Cara Menjalankan di Laptop
 
