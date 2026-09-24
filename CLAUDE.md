@@ -11,7 +11,7 @@ Please strictly adhere to the project conventions, architecture, and design syst
 - **Stack**: Pure HTML5, Tailwind CSS (via CDN), Vanilla JavaScript, Font Awesome 6, Google Fonts (`Cinzel`, `Playfair Display`, `Plus Jakarta Sans`).
 - **Server**: Zero-dependency Node.js HTTP server (`server.js`) serving static files on port 3000 (and fallback 3001).
 - **Core Files**:
-  - `index.html`: Landing page (Hero, 1-row Featured Catalog, Categories, Inspiration, SLA Standards, 4-Step Order Guide, RFQ Form, Showroom Location & Maps).
+  - `index.html`: Landing page (Hero, 1-row Featured Catalog, Categories, Inspiration, SLA Standards, 4-Step Order Guide, RFQ Form, Showroom Location & Facilities).
   - `katalog.html`: Dedicated complete catalog page (Search, Category filters, Sorting, Commercial spec modal, dynamic WhatsApp quote button).
   - `products-data.js`: **Single Source of Truth** for all 20+ hotel products. Exposes `window.products`.
   - `server.js`: Development server (`node server.js`).

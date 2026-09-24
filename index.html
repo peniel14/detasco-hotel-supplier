@@ -1071,13 +1071,13 @@
   </section>
 
   <!-- ========================================================================= -->
-  <!-- LOKASI & GOOGLE MAPS INTERAKTIF (Showroom & Fasilitas Logistik Terpadu)   -->
+  <!-- LOKASI PERUSAHAAN & SHOWROOM RESMI                                       -->
   <!-- ========================================================================= -->
-  <section id="lokasi" class="bg-[#F8F5EE] border-t border-b border-[#E2D8C7] pt-5 pb-16 sm:py-16">
+  <section id="lokasi" class="bg-[#F8F5EE] border-t border-b border-[#E2D8C7] pt-5 pb-16 sm:py-16 scroll-mt-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
-      <div class="text-center mb-10">
+      <div class="text-center mb-12">
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#DEC89A] bg-[#EFE9DC] mb-3">
           <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#8C6618]"></i>
           <span class="text-[10px] uppercase tracking-[0.2em] text-[#8C6618] font-semibold">
@@ -1091,108 +1091,47 @@
         <p class="text-[#525966] text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
           Kunjungi fasilitas sentral pergudangan dan showroom kami untuk meninjau langsung tekstur linen, ketahanan amenities, serta simulasi mock-up tata ruang kamar hotel bersama spesialis teknis kami.
         </p>
-
-        <!-- Location Selector Tabs (Jakarta HQ vs Bali Regional Hub - Stack on mobile, inline on desktop) -->
-        <div class="flex flex-col sm:flex-row justify-center items-center gap-2.5 sm:gap-3 mt-6">
-          <button onclick="switchMapLocation('jakarta', this)" id="locBtnJakarta" class="loc-tab active w-full sm:w-auto px-5 py-2.5 rounded-full text-xs font-bold tracking-wider border border-[#1A1E29] bg-[#1A1E29] text-[#E5B13A] transition-all duration-300 shadow-md flex items-center justify-center gap-2">
-            <i data-lucide="building-2" class="w-4 h-4"></i>
-            <span>Kantor Pusat & Showroom Utama (Jakarta)</span>
-          </button>
-          <button onclick="switchMapLocation('bali', this)" id="locBtnBali" class="loc-tab w-full sm:w-auto px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider border border-[#DDD5C5] bg-white text-[#525966] hover:border-[#8C6618] hover:text-[#1A1E29] transition-all duration-300 flex items-center justify-center gap-2">
-            <i data-lucide="palmtree" class="w-4 h-4"></i>
-            <span>Hub Distribusi & Showroom (Bali)</span>
-          </button>
-        </div>
       </div>
 
-      <!-- Main Map & Location Details (2 Columns) -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+      <!-- 2 Showroom Locations Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
         
-        <!-- Left: Interactive Google Maps Frame (7 Cols) -->
-        <div class="lg:col-span-7 rounded-2xl overflow-hidden border border-[#DDD5C5] bg-white shadow-xl relative flex flex-col min-h-[380px] sm:min-h-[440px] group">
-          
-          <!-- Status Bar overlay (Clean & Responsive) -->
-          <div class="p-3 sm:absolute sm:top-3 sm:left-3 sm:right-3 z-10 flex items-center justify-between gap-2 bg-[#F8F5EE] sm:bg-white/95 sm:backdrop-blur-md border-b sm:border border-[#DDD5C5] sm:rounded-xl shadow-md">
-            <div class="flex items-center gap-2 min-w-0">
-              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
-              <span id="mapBadgeText" class="text-[11px] sm:text-xs font-semibold text-[#1A1E29] truncate">Headquarters & Central Warehouse - PIK, Jakarta</span>
+        <!-- Card 1: Jakarta HQ & Showroom -->
+        <div class="rounded-2xl bg-white border border-[#DDD5C5] p-6 sm:p-8 shadow-xl hover:border-[#8C6618]/50 transition-all duration-300 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C6618]">KANTOR PUSAT & PERGUDANGAN SENTRAL</span>
+              <span class="text-[10px] px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-semibold flex items-center gap-1.5 shrink-0">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Showroom Buka
+              </span>
             </div>
-            <a id="btnDirections" href="https://maps.google.com/?q=Pantai+Indah+Kapuk,+Jakarta+Utara,+Indonesia" target="_blank" class="shrink-0 px-3 py-1.5 rounded-lg bg-[#1A1E29] text-[#E5B13A] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider flex items-center gap-1.5 hover:bg-[#B88B2A] hover:text-black transition shadow-sm">
-              <i data-lucide="navigation" class="w-3.5 h-3.5"></i>
-              <span>Buka Rute</span>
-            </a>
-          </div>
-
-          <!-- Google Maps Iframe -->
-          <div class="relative w-full flex-1 min-h-[300px] sm:min-h-[380px] bg-gray-100">
-            <iframe 
-              id="gmapFrame"
-              class="w-full h-full border-0 min-h-[300px] sm:min-h-[380px]"
-              src="https://maps.google.com/maps?q=Pantai%20Indah%20Kapuk%2C%20Jakarta%20Utara%2C%20Indonesia&t=&z=14&ie=UTF8&iwloc=&output=embed" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Google Maps Lokasi Perusahaan DETASCO">
-            </iframe>
-          </div>
-
-          <!-- Bottom Helper Bar -->
-          <div class="p-3 sm:p-3.5 bg-white border-t border-[#DDD5C5] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-[11px] text-[#525966]">
-            <span class="flex items-center gap-1.5 text-[#525966]">
-              <i data-lucide="compass" class="w-4 h-4 text-[#8C6618] shrink-0"></i>
-              Peta interaktif: Navigasi geser, zoom in/out, dan periksa rute.
-            </span>
-            <a id="btnOpenMaps" href="https://maps.google.com/?q=Pantai+Indah+Kapuk,+Jakarta+Utara,+Indonesia" target="_blank" class="text-[#8C6618] hover:underline font-semibold flex items-center gap-1 shrink-0 self-end sm:self-auto">
-              Perbesar di Google Maps <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-            </a>
-          </div>
-
-        </div>
-
-        <!-- Right: Detailed Address & Showroom Info (5 Cols) -->
-        <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
-          
-          <!-- Info Card -->
-          <div class="rounded-2xl bg-white border border-[#DDD5C5] p-5 sm:p-7 shadow-xl space-y-4 sm:space-y-5">
             
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <span id="locTag" class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C6618]">KANTOR PUSAT & PERGUDANGAN SENTRAL</span>
-                <span class="text-[10px] px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-semibold flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Showroom Buka
-                </span>
-              </div>
-              <h3 id="locName" class="font-cinzel text-xl sm:text-2xl font-bold text-[#1A1E29] leading-snug">
-                DETASCO Hospitality HQ & Showroom
-              </h3>
-              <p id="locDesc" class="text-xs text-[#525966] mt-1.5 leading-relaxed">
-                Pusat inventori nasional, display room perlengkapan kamar hotel bintang 5, serta laboratorium pengujian benang linen & formula aroma amenities.
-              </p>
-            </div>
+            <h3 class="font-cinzel text-xl sm:text-2xl font-bold text-[#1A1E29] leading-snug">
+              DETASCO Hospitality HQ & Showroom (Jakarta)
+            </h3>
+            
+            <p class="text-xs text-[#525966] leading-relaxed">
+              Pusat inventori nasional, display room perlengkapan kamar hotel bintang 5, serta laboratorium pengujian benang linen & formula aroma amenities.
+            </p>
 
             <!-- Address Box -->
-            <div class="p-3.5 sm:p-4 rounded-xl bg-[#F4EFE6] border border-[#DDD5C5] space-y-3">
+            <div class="p-4 rounded-xl bg-[#F4EFE6] border border-[#DDD5C5] space-y-3">
               <div class="flex items-start gap-3">
-                <div class="p-1.5 rounded-lg bg-[#EFE9DC] text-[#8C6618] shrink-0 mt-0.5">
-                  <i data-lucide="map-pin" class="w-4 h-4"></i>
+                <div class="p-2 rounded-lg bg-[#EFE9DC] text-[#8C6618] shrink-0 mt-0.5">
+                  <i data-lucide="building-2" class="w-4 h-4"></i>
                 </div>
                 <div class="text-xs">
                   <p class="text-[#7A8190] text-[10px] uppercase font-bold tracking-wider">Alamat Fisik:</p>
-                  <p id="locAddress" class="text-[#1A1E29] font-medium leading-relaxed mt-0.5">
+                  <p class="text-[#1A1E29] font-medium leading-relaxed mt-0.5">
                     Kawasan Niaga & Pergudangan Terpadu Pantai Indah Kapuk (PIK), Blok D No. 88, Jakarta Utara, DKI Jakarta 14470, Indonesia
                   </p>
                 </div>
               </div>
-              
               <div class="pt-1 flex flex-wrap gap-2">
-                <button onclick="copyAddressToClipboard()" class="px-3.5 py-1.5 rounded-lg bg-white hover:bg-gray-50 border border-[#DDD5C5] text-[#1A1E29] text-xs font-medium flex items-center gap-1.5 transition shadow-sm">
+                <button onclick="copyAddress('Kawasan Niaga & Pergudangan Terpadu Pantai Indah Kapuk (PIK), Blok D No. 88, Jakarta Utara, DKI Jakarta 14470, Indonesia', this)" class="px-3.5 py-1.5 rounded-lg bg-white hover:bg-gray-50 border border-[#DDD5C5] text-[#1A1E29] text-xs font-medium flex items-center gap-1.5 transition shadow-sm">
                   <i data-lucide="copy" class="w-3.5 h-3.5 text-[#8C6618]"></i>
-                  <span id="copyBtnText">Salin Alamat</span>
+                  <span>Salin Alamat</span>
                 </button>
-                <a id="locMapLink" href="https://maps.google.com/?q=Pantai+Indah+Kapuk,+Jakarta+Utara,+Indonesia" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-white hover:bg-gray-50 border border-[#DDD5C5] text-[#1A1E29] text-xs font-medium flex items-center gap-1.5 transition shadow-sm">
-                  <i data-lucide="map" class="w-3.5 h-3.5 text-[#8C6618]"></i>
-                  Buka Google Maps
-                </a>
               </div>
             </div>
 
@@ -1202,46 +1141,126 @@
                 <i data-lucide="clock" class="w-4 h-4 text-[#8C6618] shrink-0 mt-0.5"></i>
                 <div>
                   <span class="text-[#1A1E29] font-semibold">Jam Operasional Showroom:</span>
-                  <p class="text-[#525966] text-[11px] mt-0.5" id="locHours">Senin – Jumat: 08:30 – 17:30 WIB | Sabtu: 08:30 – 14:00 WIB (Minggu/Hari Libur Tutup)</p>
+                  <p class="text-[#525966] text-[11px] mt-0.5">Senin – Jumat: 08:30 – 17:30 WIB | Sabtu: 08:30 – 14:00 WIB (Minggu/Hari Libur Tutup)</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
                 <i data-lucide="phone" class="w-4 h-4 text-[#8C6618] shrink-0 mt-0.5"></i>
                 <div>
-                  <span class="text-[#1A1E29] font-semibold">Telepon Kantor & Saluran Khusus:</span>
-                  <p class="text-[#525966] text-[11px] mt-0.5" id="locPhone">(021) 5890-7788 / WhatsApp: +62 812-3456-7890</p>
+                  <span class="text-[#1A1E29] font-semibold">Telepon & WhatsApp:</span>
+                  <p class="text-[#525966] text-[11px] mt-0.5">(021) 5890-7788 / WhatsApp: +62 812-3456-7890</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
                 <i data-lucide="check-check" class="w-4 h-4 text-[#8C6618] shrink-0 mt-0.5"></i>
                 <div>
-                  <span class="text-[#1A1E29] font-semibold">Fasilitas Kunjungan Rekanan:</span>
-                  <p class="text-[#525966] text-[11px] mt-0.5" id="locFacilities">Ruang Mock-Up Kamar Hotel, Bedding Texture Gallery, Meja Uji Amenities, Area Parkir Truk & Kontainer</p>
+                  <span class="text-[#1A1E29] font-semibold">Fasilitas Kunjungan:</span>
+                  <p class="text-[#525966] text-[11px] mt-0.5">Ruang Mock-Up Kamar Hotel, Bedding Texture Gallery, Meja Uji Amenities, Area Parkir Truk & Kontainer</p>
                 </div>
               </div>
             </div>
-
           </div>
 
-          <!-- Appointment Card -->
-          <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#1A1E29] via-[#242A38] to-[#1F2430] border border-[#3A4252] shadow-lg flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4 text-white">
-            <div>
-              <p class="text-xs font-bold text-white uppercase tracking-wider flex items-center gap-2">
-                <i data-lucide="calendar" class="w-4 h-4 text-detasco-gold"></i>
-                Jadwalkan Kunjungan Tim Proyek
-              </p>
-              <p class="text-[11px] text-gray-300 mt-1">
-                Dapatkan pendampingan langsung dari konsultan teknis dan sampel gratis untuk diuji di properti Anda.
-              </p>
-            </div>
-            <a id="btnShowroomWA" href="https://wa.me/6281234567890?text=Halo%20Detasco,%20saya%20ingin%20menjadwalkan%20kunjungan%20ke%20showroom%20Jakarta%20untuk%20melihat%20sampel%20produk%20hotel" target="_blank" class="w-full sm:w-auto text-center justify-center shrink-0 px-4 py-2.5 rounded-xl bg-detasco-gold text-black text-xs font-bold uppercase tracking-wider hover:bg-detasco-goldHover transition shadow-[0_0_15px_rgba(229,177,58,0.3)] flex items-center gap-1.5">
+          <!-- Action Button -->
+          <div class="pt-3 border-t border-[#DDD5C5]">
+            <a href="https://wa.me/6281234567890?text=Halo%20Detasco,%20saya%20ingin%20menjadwalkan%20kunjungan%20ke%20showroom%20Jakarta%20untuk%20melihat%20sampel%20produk%20hotel" target="_blank" class="w-full py-2.5 px-4 rounded-xl bg-[#1A1E29] text-[#E5B13A] text-xs font-bold uppercase tracking-wider hover:bg-[#B88B2A] hover:text-black transition shadow-md flex items-center justify-center gap-2">
               <i data-lucide="message-circle" class="w-4 h-4"></i>
-              Jadwalkan Kunjungan
+              <span>Jadwalkan Kunjungan (Jakarta)</span>
             </a>
           </div>
-
         </div>
 
+        <!-- Card 2: Bali Regional Hub & Showroom -->
+        <div class="rounded-2xl bg-white border border-[#DDD5C5] p-6 sm:p-8 shadow-xl hover:border-[#8C6618]/50 transition-all duration-300 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C6618]">HUB DISTRIBUSI & SHOWROOM REGIONAL</span>
+              <span class="text-[10px] px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-semibold flex items-center gap-1.5 shrink-0">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Showroom Buka
+              </span>
+            </div>
+            
+            <h3 class="font-cinzel text-xl sm:text-2xl font-bold text-[#1A1E29] leading-snug">
+              DETASCO Regional Hub & Showroom (Bali)
+            </h3>
+            
+            <p class="text-xs text-[#525966] leading-relaxed">
+              Pusat pasokan cepat dan showroom hotel & resort luxury untuk wilayah Bali, Lombok, dan Nusa Tenggara dengan buffer stock darurat tersedia.
+            </p>
+
+            <!-- Address Box -->
+            <div class="p-4 rounded-xl bg-[#F4EFE6] border border-[#DDD5C5] space-y-3">
+              <div class="flex items-start gap-3">
+                <div class="p-2 rounded-lg bg-[#EFE9DC] text-[#8C6618] shrink-0 mt-0.5">
+                  <i data-lucide="palmtree" class="w-4 h-4"></i>
+                </div>
+                <div class="text-xs">
+                  <p class="text-[#7A8190] text-[10px] uppercase font-bold tracking-wider">Alamat Fisik:</p>
+                  <p class="text-[#1A1E29] font-medium leading-relaxed mt-0.5">
+                    Jl. Sunset Road No. 108, Seminyak - Kuta, Kabupaten Badung, Bali 80361, Indonesia
+                  </p>
+                </div>
+              </div>
+              <div class="pt-1 flex flex-wrap gap-2">
+                <button onclick="copyAddress('Jl. Sunset Road No. 108, Seminyak - Kuta, Kabupaten Badung, Bali 80361, Indonesia', this)" class="px-3.5 py-1.5 rounded-lg bg-white hover:bg-gray-50 border border-[#DDD5C5] text-[#1A1E29] text-xs font-medium flex items-center gap-1.5 transition shadow-sm">
+                  <i data-lucide="copy" class="w-3.5 h-3.5 text-[#8C6618]"></i>
+                  <span>Salin Alamat</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Practical Details -->
+            <div class="space-y-3 text-xs text-[#525966]">
+              <div class="flex items-start gap-3">
+                <i data-lucide="clock" class="w-4 h-4 text-[#8C6618] shrink-0 mt-0.5"></i>
+                <div>
+                  <span class="text-[#1A1E29] font-semibold">Jam Operasional Showroom:</span>
+                  <p class="text-[#525966] text-[11px] mt-0.5">Senin – Sabtu: 09:00 – 18:00 WITA (Minggu Tutup)</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i data-lucide="phone" class="w-4 h-4 text-[#8C6618] shrink-0 mt-0.5"></i>
+                <div>
+                  <span class="text-[#1A1E29] font-semibold">Telepon & WhatsApp:</span>
+                  <p class="text-[#525966] text-[11px] mt-0.5">(0361) 894-2200 / WhatsApp: +62 812-3456-7890</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i data-lucide="check-check" class="w-4 h-4 text-[#8C6618] shrink-0 mt-0.5"></i>
+                <div>
+                  <span class="text-[#1A1E29] font-semibold">Fasilitas Kunjungan:</span>
+                  <p class="text-[#525966] text-[11px] mt-0.5">Resort & Villa Linen Showcase, Scented Amenities Testing Bar, Buffer Stock Room, Area Parkir Tamu</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Button -->
+          <div class="pt-3 border-t border-[#DDD5C5]">
+            <a href="https://wa.me/6281234567890?text=Halo%20Detasco,%20saya%20ingin%20menjadwalkan%20kunjungan%20ke%20showroom%20Bali%20untuk%20melihat%20sampel%20produk%20hotel" target="_blank" class="w-full py-2.5 px-4 rounded-xl bg-[#1A1E29] text-[#E5B13A] text-xs font-bold uppercase tracking-wider hover:bg-[#B88B2A] hover:text-black transition shadow-md flex items-center justify-center gap-2">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Jadwalkan Kunjungan (Bali)</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Appointment Card Banner -->
+      <div class="mt-8 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-[#1A1E29] via-[#242A38] to-[#1F2430] border border-[#3A4252] shadow-xl flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 text-white">
+        <div>
+          <p class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="calendar" class="w-4 h-4 text-detasco-gold"></i>
+            Jadwalkan Kunjungan & Mock-Up Sampel Bersama Tim Proyek
+          </p>
+          <p class="text-xs text-gray-300 mt-1 max-w-2xl leading-relaxed">
+            Dapatkan pendampingan langsung dari konsultan teknis hospitality DETASCO serta sampel gratis untuk diuji ketahanan dan kenyamanannya di properti hotel Anda.
+          </p>
+        </div>
+        <a href="https://wa.me/6281234567890?text=Halo%20Detasco,%20saya%20ingin%20berkonsultasi%20dan%20menjadwalkan%20kunjungan%20spesifikasi%20produk%20hotel" target="_blank" class="shrink-0 px-5 py-3 rounded-xl bg-detasco-gold text-black text-xs font-bold uppercase tracking-wider hover:bg-detasco-goldHover transition shadow-[0_0_15px_rgba(229,177,58,0.3)] flex items-center justify-center gap-2">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Konsultasi Kunjungan Showroom</span>
+        </a>
       </div>
 
     </div>
@@ -1641,93 +1660,18 @@
     }
 
     // ============================================================
-    // GOOGLE MAPS & LOCATION SWITCHER LOGIC
+    // SALIN ALAMAT SHOWROOM
     // ============================================================
-    const companyLocations = {
-      jakarta: {
-        tag: "KANTOR PUSAT & PERGUDANGAN SENTRAL",
-        badge: "Headquarters & Central Warehouse - Pantai Indah Kapuk, Jakarta",
-        name: "DETASCO Hospitality HQ & Showroom",
-        desc: "Pusat inventori nasional, display room perlengkapan kamar hotel bintang 5, serta laboratorium pengujian benang linen & formula aroma amenities.",
-        address: "Kawasan Niaga & Pergudangan Terpadu Pantai Indah Kapuk (PIK), Blok D No. 88, Jakarta Utara, DKI Jakarta 14470, Indonesia",
-        hours: "Senin – Jumat: 08:30 – 17:30 WIB | Sabtu: 08:30 – 14:00 WIB (Minggu/Hari Libur Tutup)",
-        phone: "(021) 5890-7788 / WhatsApp: +62 812-3456-7890",
-        facilities: "Ruang Mock-Up Kamar Hotel, Bedding Texture Gallery, Meja Uji Amenities, Area Parkir Truk & Kontainer",
-        mapSrc: "https://maps.google.com/maps?q=Pantai%20Indah%20Kapuk%2C%20Jakarta%20Utara%2C%20Indonesia&t=&z=14&ie=UTF8&iwloc=&output=embed",
-        directionsUrl: "https://maps.google.com/?q=Pantai+Indah+Kapuk,+Jakarta+Utara,+Indonesia",
-        waMessage: "Halo Detasco, saya ingin menjadwalkan kunjungan ke showroom Jakarta untuk melihat sampel produk hotel"
-      },
-      bali: {
-        tag: "HUB DISTRIBUSI & SHOWROOM REGIONAL",
-        badge: "Regional Hub & Showroom - Kuta, Badung, Bali",
-        name: "DETASCO Regional Hub & Showroom Bali",
-        desc: "Pusat pasokan cepat dan showroom hotel & villa luxury untuk wilayah Bali, Lombok, dan Nusa Tenggara dengan stok darurat tersedia.",
-        address: "Jl. Sunset Road No. 108, Seminyak - Kuta, Kabupaten Badung, Bali 80361, Indonesia",
-        hours: "Senin – Sabtu: 09:00 – 18:00 WITA (Minggu Tutup)",
-        phone: "(0361) 894-2200 / WhatsApp: +62 812-3456-7890",
-        facilities: "Resort & Villa Linen Showcase, Scented Amenities Testing Bar, Buffer Stock Room, Area Parkir Tamu",
-        mapSrc: "https://maps.google.com/maps?q=Sunset%20Road%20Kuta%2C%20Badung%2C%20Bali%2C%20Indonesia&t=&z=14&ie=UTF8&iwloc=&output=embed",
-        directionsUrl: "https://maps.google.com/?q=Sunset+Road+Kuta,+Badung,+Bali,+Indonesia",
-        waMessage: "Halo Detasco, saya ingin menjadwalkan kunjungan ke showroom Bali untuk melihat sampel produk hotel"
-      }
-    };
-
-    let currentLocationKey = 'jakarta';
-
-    function switchMapLocation(key, btnElement) {
-      const loc = companyLocations[key];
-      if (!loc) return;
-      currentLocationKey = key;
-
-      // Update Map iframe
-      const gmap = document.getElementById('gmapFrame');
-      if (gmap) gmap.src = loc.mapSrc;
-
-      // Update Text Fields
-      document.getElementById('mapBadgeText').innerText = loc.badge;
-      document.getElementById('locTag').innerText = loc.tag;
-      document.getElementById('locName').innerText = loc.name;
-      document.getElementById('locDesc').innerText = loc.desc;
-      document.getElementById('locAddress').innerText = loc.address;
-      document.getElementById('locHours').innerText = loc.hours;
-      document.getElementById('locPhone').innerText = loc.phone;
-      document.getElementById('locFacilities').innerText = loc.facilities;
-
-      // Update Links
-      document.getElementById('btnDirections').href = loc.directionsUrl;
-      document.getElementById('btnOpenMaps').href = loc.directionsUrl;
-      document.getElementById('locMapLink').href = loc.directionsUrl;
-      document.getElementById('btnShowroomWA').href = `https://wa.me/6281234567890?text=${encodeURIComponent(loc.waMessage)}`;
-
-      // Update Tabs styling
-      document.querySelectorAll('.loc-tab').forEach(b => {
-        b.classList.remove('active', 'border-[#1A1E29]', 'bg-[#1A1E29]', 'text-[#E5B13A]', 'shadow-md', 'font-bold', 'border-detasco-gold', 'bg-detasco-gold', 'text-black', 'shadow-[0_0_20px_rgba(229,177,58,0.35)]');
-        b.classList.add('border-[#DDD5C5]', 'bg-white', 'text-[#525966]', 'font-semibold');
-      });
-
-      if (btnElement) {
-        btnElement.classList.add('active', 'border-[#1A1E29]', 'bg-[#1A1E29]', 'text-[#E5B13A]', 'shadow-md', 'font-bold');
-        btnElement.classList.remove('border-[#DDD5C5]', 'bg-white', 'text-[#525966]', 'font-semibold');
-      }
-
-      lucide.createIcons();
-    }
-
-    function copyAddressToClipboard() {
-      const loc = companyLocations[currentLocationKey];
-      if (!loc) return;
-
-      navigator.clipboard.writeText(loc.address).then(() => {
-        const copyBtn = document.getElementById('copyBtnText');
-        if (copyBtn) {
-          const original = copyBtn.innerText;
-          copyBtn.innerText = "Tersalin! ✓";
-          setTimeout(() => {
-            copyBtn.innerText = original;
-          }, 2000);
+    function copyAddress(addressText, btnElement) {
+      navigator.clipboard.writeText(addressText).then(() => {
+        const span = btnElement ? btnElement.querySelector('span') : null;
+        if (span) {
+          const original = span.innerText;
+          span.innerText = "Tersalin! ✓";
+          setTimeout(() => { span.innerText = original; }, 2000);
         }
-      }).catch(err => {
-        alert("Alamat: " + loc.address);
+      }).catch(() => {
+        alert("Alamat: " + addressText);
       });
     }
 
