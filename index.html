@@ -1,0 +1,1987 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DETASCO | Solusi Pengadaan Hospitality Bintang 5 di Seluruh Indonesia</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans, Playfair Display (Italic Luxury) & Cinzel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Master Products Data (Single Source of Truth) -->
+  <script src="products-data.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            detasco: {
+              gold: '#E5B13A',
+              goldHover: '#F5C452',
+              goldDark: '#B88A20',
+              champagne: '#F8E8C0',
+              bronze: '#C59E47',
+              darkBg: '#0D1017',
+              darker: '#080A0F',
+              cardBg: '#131822',
+              cardHover: '#181E2B',
+              cardInset: '#0B0E14',
+              borderCard: 'rgba(255, 255, 255, 0.08)',
+              borderGold: 'rgba(229, 177, 58, 0.3)',
+              borderGoldHover: 'rgba(229, 177, 58, 0.7)',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            script: ['"Playfair Display"', 'serif'],
+            cinzel: ['"Cinzel"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0D1017;
+      color: #E2E8F0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    
+    .font-luxury-script {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0D1017;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #222938;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #E5B13A;
+    }
+
+    .gold-glow {
+      box-shadow: 0 0 35px -5px rgba(229, 177, 58, 0.25);
+    }
+    .card-hover-glow:hover {
+      box-shadow: 0 10px 30px -8px rgba(229, 177, 58, 0.25);
+      border-color: rgba(229, 177, 58, 0.55);
+    }
+
+    .glass-nav {
+      background: rgba(13, 16, 23, 0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-search-box {
+      background: rgba(19, 24, 34, 0.96);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(229, 177, 58, 0.4);
+    }
+
+    /* Range slider custom styling */
+    input[type=range] {
+      accent-color: #E5B13A;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    section[id] {
+      scroll-margin-top: 80px;
+    }
+
+    /* Active Nav Item - Kolom bercahaya hanya saat tombol dipilih */
+    .nav-item {
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-item.active {
+      background-color: #E5B13A !important;
+      color: #000000 !important;
+      font-weight: 700 !important;
+      box-shadow: 0 0 20px rgba(229, 177, 58, 0.65), 0 0 8px rgba(229, 177, 58, 0.45) !important;
+    }
+    .mobile-nav-item.active {
+      background-color: #E5B13A !important;
+      color: #000000 !important;
+      font-weight: 700 !important;
+      box-shadow: 0 0 15px rgba(229, 177, 58, 0.5) !important;
+    }
+
+    /* 100% Solid Opaque Dropdown (Tidak Transparan agar Mudah Dibaca) */
+    .solid-dropdown {
+      background-color: #0D1017 !important;
+      background: #0D1017 !important;
+      opacity: 1 !important;
+      border: 1px solid rgba(229, 177, 58, 0.45) !important;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.98), 0 0 35px rgba(0, 0, 0, 0.95) !important;
+    }
+
+    /* Mobile UX & Scrollbar Helpers */
+    html, body {
+      touch-action: manipulation;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-detasco-gold selection:text-black">
+
+  <!-- ========================================== -->
+  <!-- NAVIGATION BAR (Exact Header from Image)   -->
+  <!-- ========================================== -->
+  <header class="sticky top-0 z-40 glass-nav transition-all duration-300">
+    <div id="mainNavContainer" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- BRAND LOGO: [DES] DETASCO (Sesuai File Asli) -->
+      <a href="#" class="flex items-center gap-3 group">
+        <img src="logo.png" alt="DES DETASCO Logo" class="h-11 w-auto object-contain drop-shadow-[0_0_12px_rgba(229,177,58,0.35)] transition duration-300 group-hover:scale-105">
+        <div>
+          <span class="font-cinzel text-xl font-bold tracking-[0.2em] text-white flex items-center gap-2">
+            DETASCO
+          </span>
+          <p class="text-[9px] tracking-[0.28em] text-detasco-gold uppercase font-semibold">Hospitality Supplier</p>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAVIGATION MENU (Kolom bercahaya hanya saat tombol dipilih) -->
+      <nav id="desktopNav" class="hidden lg:flex items-center gap-3 xl:gap-4 text-xs font-semibold tracking-wider uppercase">
+        <a href="#beranda" class="nav-item px-3.5 py-1.5 rounded-full text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition-all duration-300">Beranda</a>
+
+        <!-- KATALOG DROPDOWN MENU -->
+        <div class="relative group/catalog">
+          <a href="katalog.html" class="nav-item px-3.5 py-1.5 rounded-full text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition-all duration-300 inline-flex items-center gap-1.5 cursor-pointer">
+            <span>Katalog</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-gray-400 group-hover/catalog:text-detasco-gold group-hover/catalog:rotate-180 transition-transform duration-300"></i>
+          </a>
+
+          <!-- DROPDOWN PANEL (100% Solid Opaque - Tidak Transparan) -->
+          <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2.5 w-72 invisible opacity-0 translate-y-2 group-hover/catalog:visible group-hover/catalog:opacity-100 group-hover/catalog:translate-y-0 transition-all duration-200 ease-out z-50 pointer-events-none group-hover/catalog:pointer-events-auto">
+            <div class="solid-dropdown rounded-2xl p-2.5 bg-[#0D1017]">
+              
+              <!-- Dropdown Header -->
+              <div class="px-3 py-2 bg-[#131822] rounded-xl border border-white/5 mb-1.5 flex items-center justify-between">
+                <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-detasco-gold flex items-center gap-1.5">
+                  <i data-lucide="sparkles" class="w-3 h-3 text-detasco-gold"></i>
+                  Kategori Suplai
+                </span>
+                <span class="text-[10px] text-gray-300 font-semibold">20 Produk</span>
+              </div>
+
+              <!-- Menu Items (Arahkan Langsung ke Laman Katalog) -->
+              <div class="space-y-1">
+                <!-- 1. Semua Koleksi (20) -->
+                <a href="katalog.html" class="flex items-center justify-between px-3 py-2 rounded-xl text-gray-200 hover:text-black hover:bg-detasco-gold transition-all duration-200 group/cat">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-7 h-7 rounded-lg bg-[#181E2B] border border-white/5 group-hover/cat:bg-black/15 group-hover/cat:border-transparent flex items-center justify-center text-detasco-gold group-hover/cat:text-black transition">
+                      <i data-lucide="layers" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <p class="text-xs font-bold leading-none text-white group-hover/cat:text-black">Semua Koleksi</p>
+                      <p class="text-[10px] text-gray-400 group-hover/cat:text-black/80 mt-0.5 normal-case">Katalog lengkap hotel</p>
+                    </div>
+                  </div>
+                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#181E2B] border border-detasco-gold/30 text-detasco-gold group-hover/cat:bg-black/20 group-hover/cat:text-black group-hover/cat:border-transparent transition">20</span>
+                </a>
+
+                <!-- 2. Linen & Bedding (5) -->
+                <a href="katalog.html?category=linen" class="flex items-center justify-between px-3 py-2 rounded-xl text-gray-200 hover:text-black hover:bg-detasco-gold transition-all duration-200 group/cat">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-7 h-7 rounded-lg bg-[#181E2B] border border-white/5 group-hover/cat:bg-black/15 group-hover/cat:border-transparent flex items-center justify-center text-detasco-gold group-hover/cat:text-black transition">
+                      <i data-lucide="bed-double" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <p class="text-xs font-bold leading-none text-white group-hover/cat:text-black">Linen & Bedding</p>
+                      <p class="text-[10px] text-gray-400 group-hover/cat:text-black/80 mt-0.5 normal-case">Sprei, duvet & handuk</p>
+                    </div>
+                  </div>
+                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#181E2B] border border-detasco-gold/30 text-detasco-gold group-hover/cat:bg-black/20 group-hover/cat:text-black group-hover/cat:border-transparent transition">5</span>
+                </a>
+
+                <!-- 3. Guest Amenities (5) -->
+                <a href="katalog.html?category=amenities" class="flex items-center justify-between px-3 py-2 rounded-xl text-gray-200 hover:text-black hover:bg-detasco-gold transition-all duration-200 group/cat">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-7 h-7 rounded-lg bg-[#181E2B] border border-white/5 group-hover/cat:bg-black/15 group-hover/cat:border-transparent flex items-center justify-center text-detasco-gold group-hover/cat:text-black transition">
+                      <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <p class="text-xs font-bold leading-none text-white group-hover/cat:text-black">Guest Amenities</p>
+                      <p class="text-[10px] text-gray-400 group-hover/cat:text-black/80 mt-0.5 normal-case">Dental kit & toiletries</p>
+                    </div>
+                  </div>
+                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#181E2B] border border-detasco-gold/30 text-detasco-gold group-hover/cat:bg-black/20 group-hover/cat:text-black group-hover/cat:border-transparent transition">5</span>
+                </a>
+
+                <!-- 4. In-Room & Housekeeping (5) -->
+                <a href="katalog.html?category=equipment" class="flex items-center justify-between px-3 py-2 rounded-xl text-gray-200 hover:text-black hover:bg-detasco-gold transition-all duration-200 group/cat">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-7 h-7 rounded-lg bg-[#181E2B] border border-white/5 group-hover/cat:bg-black/15 group-hover/cat:border-transparent flex items-center justify-center text-detasco-gold group-hover/cat:text-black transition">
+                      <i data-lucide="box" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <p class="text-xs font-bold leading-none text-white group-hover/cat:text-black">In-Room & Housekeeping</p>
+                      <p class="text-[10px] text-gray-400 group-hover/cat:text-black/80 mt-0.5 normal-case">Kettle, safe & trolley</p>
+                    </div>
+                  </div>
+                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#181E2B] border border-detasco-gold/30 text-detasco-gold group-hover/cat:bg-black/20 group-hover/cat:text-black group-hover/cat:border-transparent transition">5</span>
+                </a>
+
+                <!-- 5. F&B & Banquet Supplies (5) -->
+                <a href="katalog.html?category=banquet" class="flex items-center justify-between px-3 py-2 rounded-xl text-gray-200 hover:text-black hover:bg-detasco-gold transition-all duration-200 group/cat">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-7 h-7 rounded-lg bg-[#181E2B] border border-white/5 group-hover/cat:bg-black/15 group-hover/cat:border-transparent flex items-center justify-center text-detasco-gold group-hover/cat:text-black transition">
+                      <i data-lucide="utensils" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <p class="text-xs font-bold leading-none text-white group-hover/cat:text-black">F&B & Banquet Supplies</p>
+                      <p class="text-[10px] text-gray-400 group-hover/cat:text-black/80 mt-0.5 normal-case">Chafing dish & cutlery</p>
+                    </div>
+                  </div>
+                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#181E2B] border border-detasco-gold/30 text-detasco-gold group-hover/cat:bg-black/20 group-hover/cat:text-black group-hover/cat:border-transparent transition">5</span>
+                </a>
+              </div>
+
+              <!-- Quick CTA in Dropdown -->
+              <div class="mt-2 pt-2 border-t border-white/5 px-1">
+                <a href="katalog.html" class="flex items-center justify-center gap-1.5 py-1.5 rounded-lg bg-[#181E2B] text-[11px] font-bold text-detasco-gold hover:bg-detasco-gold hover:text-black transition duration-200">
+                  <span>Buka Seluruh Katalog (20 Koleksi)</span>
+                  <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <a href="#kategori" class="nav-item px-3.5 py-1.5 rounded-full text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition-all duration-300">Kategori</a>
+        <a href="#inspirasi" class="nav-item px-3.5 py-1.5 rounded-full text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition-all duration-300">Inspirasi</a>
+        <a href="#standar" class="nav-item px-3.5 py-1.5 rounded-full text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition-all duration-300">Standar</a>
+        <a href="#kontak" class="nav-item px-3.5 py-1.5 rounded-full text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition-all duration-300">Kontak</a>
+        <a href="#lokasi" class="nav-item px-3.5 py-1.5 rounded-full text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition-all duration-300">Lokasi</a>
+      </nav>
+
+      <!-- RIGHT ACTIONS: KONSULTASI (E-Katalog removed per user request) -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="#kontak" class="px-5 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-detasco-gold text-black hover:bg-detasco-goldHover transition shadow-[0_0_20px_rgba(229,177,58,0.35)] flex items-center gap-1.5">
+          <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+          Konsultasi
+        </a>
+      </div>
+
+      <!-- MOBILE MENU TOGGLE -->
+      <button id="mobileMenuBtn" aria-label="Menu Navigasi" class="lg:hidden text-gray-300 hover:text-detasco-gold p-2.5 rounded-xl border border-white/10 bg-white/5 active:bg-white/10 transition flex items-center justify-center">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-[#0D1017]/98 border-b border-detasco-borderGold px-5 py-4 space-y-1.5 text-xs font-semibold uppercase tracking-wider max-h-[82vh] overflow-y-auto shadow-2xl backdrop-blur-xl">
+      <a href="#beranda" class="mobile-nav-item block px-3.5 py-2.5 rounded-xl text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition">Beranda</a>
+      
+      <!-- Mobile Katalog Accordion -->
+      <div class="space-y-1">
+        <div class="flex items-center justify-between">
+          <a href="katalog.html" class="mobile-nav-item flex-1 block px-3.5 py-2.5 rounded-xl text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition">Katalog</a>
+          <button type="button" onclick="toggleMobileCatalog(event)" class="px-3.5 py-2.5 text-gray-400 hover:text-detasco-gold transition" aria-label="Toggle Katalog Submenu">
+            <i data-lucide="chevron-down" id="mobileCatChevron" class="w-4 h-4 transition-transform duration-200"></i>
+          </button>
+        </div>
+        <div id="mobileCatalogDropdown" class="hidden pl-3 pr-2 py-2 space-y-1 solid-dropdown rounded-xl bg-[#0D1017] my-1">
+          <a href="katalog.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-gray-200 hover:text-black hover:bg-detasco-gold text-xs transition">
+            <span class="flex items-center gap-2 font-medium"><i data-lucide="layers" class="w-3.5 h-3.5 text-detasco-gold"></i> Semua Koleksi</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-full bg-[#181E2B] border border-detasco-gold/30 text-detasco-gold font-bold">20</span>
+          </a>
+          <a href="katalog.html?category=linen" class="flex items-center justify-between px-3 py-2 rounded-lg text-gray-200 hover:text-black hover:bg-detasco-gold text-xs transition">
+            <span class="flex items-center gap-2 font-medium"><i data-lucide="bed-double" class="w-3.5 h-3.5 text-detasco-gold"></i> Linen & Bedding</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-full bg-[#181E2B] border border-detasco-gold/30 text-detasco-gold font-bold">5</span>
+          </a>
+          <a href="katalog.html?category=amenities" class="flex items-center justify-between px-3 py-2 rounded-lg text-gray-200 hover:text-black hover:bg-detasco-gold text-xs transition">
+            <span class="flex items-center gap-2 font-medium"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-detasco-gold"></i> Guest Amenities</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-full bg-[#181E2B] border border-detasco-gold/30 text-detasco-gold font-bold">5</span>
+          </a>
+          <a href="katalog.html?category=equipment" class="flex items-center justify-between px-3 py-2 rounded-lg text-gray-200 hover:text-black hover:bg-detasco-gold text-xs transition">
+            <span class="flex items-center gap-2 font-medium"><i data-lucide="box" class="w-3.5 h-3.5 text-detasco-gold"></i> In-Room & Housekeeping</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-full bg-[#181E2B] border border-detasco-gold/30 text-detasco-gold font-bold">5</span>
+          </a>
+          <a href="katalog.html?category=banquet" class="flex items-center justify-between px-3 py-2 rounded-lg text-gray-200 hover:text-black hover:bg-detasco-gold text-xs transition">
+            <span class="flex items-center gap-2 font-medium"><i data-lucide="utensils" class="w-3.5 h-3.5 text-detasco-gold"></i> F&B & Banquet Supplies</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-full bg-[#181E2B] border border-detasco-gold/30 text-detasco-gold font-bold">5</span>
+          </a>
+          <div class="pt-1.5 border-t border-white/10 mt-1">
+            <a href="katalog.html" class="flex items-center justify-center gap-1.5 py-2 rounded-lg bg-detasco-gold text-black text-xs font-bold tracking-wider uppercase shadow-sm">
+              <span>Buka Laman Katalog Lengkap &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#kategori" class="mobile-nav-item block px-3.5 py-2.5 rounded-xl text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition">Kategori</a>
+      <a href="#inspirasi" class="mobile-nav-item block px-3.5 py-2.5 rounded-xl text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition">Inspirasi</a>
+      <a href="#standar" class="mobile-nav-item block px-3.5 py-2.5 rounded-xl text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition">Standar</a>
+      <a href="#kontak" class="mobile-nav-item block px-3.5 py-2.5 rounded-xl text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition">Kontak</a>
+      <a href="#lokasi" class="mobile-nav-item block px-3.5 py-2.5 rounded-xl text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition">Lokasi Showroom</a>
+      <div class="pt-3">
+        <a href="#kontak" class="mobile-nav-item block w-full py-3 rounded-xl bg-detasco-gold text-black text-center font-bold uppercase tracking-wider text-xs shadow-lg">Konsultasi</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- HERO SECTION: 2 COLUMNS + FLOATING FILTER (Identical to Image Layout)     -->
+  <!-- ========================================================================= -->
+  <section id="beranda" class="relative pt-5 sm:pt-6 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    
+    <!-- 2-Column Hero Content: Left Text, Right Luxury Villa Architecture -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-8 sm:mb-10">
+      
+      <!-- Left Column (Text & Badges) -->
+      <div class="lg:col-span-7 space-y-4 sm:space-y-5 text-left">
+        
+        <!-- Sub-badge -->
+        <div class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full border border-white/10 bg-black/40 backdrop-blur-md max-w-full">
+          <span class="w-2 h-2 rounded-full bg-detasco-gold animate-pulse shrink-0"></span>
+          <span class="text-[9px] sm:text-[10px] uppercase tracking-wider sm:tracking-[0.18em] text-gray-300 font-semibold leading-relaxed">
+            SOLUSI PENGADAAN HOSPITALITY BINTANG 5 DI SELURUH INDONESIA
+          </span>
+        </div>
+
+        <!-- Headline: "ELEVATE YOUR" + Script "Guest Experience" -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+          ELEVATE YOUR <br />
+          <span class="font-luxury-script font-semibold text-transparent bg-clip-text bg-gradient-to-r from-detasco-champagne via-detasco-gold to-detasco-goldHover tracking-normal capitalize text-4xl sm:text-6xl lg:text-7xl block mt-1">
+            Guest Experience
+          </span>
+        </h1>
+
+        <!-- 3 Feature Badges in Row/Wrap (from Image) -->
+        <div class="flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3 pt-2 text-xs text-gray-300 font-medium">
+          <div class="flex items-center gap-2 bg-[#131822] px-3.5 py-2 rounded-lg border border-white/10 shadow-sm">
+            <i data-lucide="check-circle" class="w-4 h-4 text-detasco-gold shrink-0"></i>
+            <span>Custom Logo & Hot Stamping</span>
+          </div>
+          <div class="flex items-center gap-2 bg-[#131822] px-3.5 py-2 rounded-lg border border-white/10 shadow-sm">
+            <i data-lucide="shield-check" class="w-4 h-4 text-detasco-gold shrink-0"></i>
+            <span>Sertifikasi Standar Industri Hotel</span>
+          </div>
+          <div class="flex items-center gap-2 bg-[#131822] px-3.5 py-2 rounded-lg border border-white/10 shadow-sm">
+            <i data-lucide="truck" class="w-4 h-4 text-detasco-gold shrink-0"></i>
+            <span>Distribusi Cepat Seluruh Nusantara</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Sharp Luxury Architecture Image (Exact from Image) -->
+      <div class="lg:col-span-5 relative">
+        <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl h-60 sm:h-80 lg:h-96 relative group">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" 
+               alt="Luxury Villa Hotel Architecture at Dusk" 
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- KATALOG PRODUK UNGGULAN (Exact 4 Cards from Image)          -->
+  <!-- ============================================================ -->
+  <section id="katalog" class="bg-[#F8F5EE] border-t border-b border-[#E2D8C7] pt-5 pb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title & Subtitle (Light Luxury Theme) -->
+      <div class="text-center mb-10">
+        <h2 class="font-cinzel text-2xl sm:text-3xl font-bold tracking-[0.15em] text-[#1A1E29] uppercase">
+          KATALOG PRODUK UNGGULAN
+        </h2>
+        <div class="w-16 h-0.5 bg-[#B88B2A] mx-auto my-3"></div>
+        <p class="text-[#525966] text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
+          Koleksi esensial perhotelan dengan spesifikasi komersial teruji, didesain untuk durabilitas tinggi dan kemewahan sentuhan tamu.
+        </p>
+
+        <!-- Category Filter Tabs (Pill Tabs with Item Counts - Smooth Horizontal Swipe on Mobile) -->
+        <div class="flex overflow-x-auto no-scrollbar sm:flex-wrap sm:justify-center gap-2 mt-6 sm:mt-8 pb-2 sm:pb-0 px-1 -mx-4 sm:mx-0 px-4 sm:px-0">
+          <button onclick="filterByTab('all', this)" class="tab-pill active shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-semibold tracking-wide border border-[#1A1E29] bg-[#1A1E29] text-[#E5B13A] transition shadow-md">
+            Semua Koleksi (20)
+          </button>
+          <button onclick="filterByTab('linen', this)" class="tab-pill shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-semibold tracking-wide border border-[#DDD5C5] bg-white text-[#525966] hover:border-[#B88B2A] hover:text-[#1A1E29] transition">
+            Linen & Bedding (5)
+          </button>
+          <button onclick="filterByTab('amenities', this)" class="tab-pill shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-semibold tracking-wide border border-[#DDD5C5] bg-white text-[#525966] hover:border-[#B88B2A] hover:text-[#1A1E29] transition">
+            Guest Amenities (5)
+          </button>
+          <button onclick="filterByTab('equipment', this)" class="tab-pill shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-semibold tracking-wide border border-[#DDD5C5] bg-white text-[#525966] hover:border-[#B88B2A] hover:text-[#1A1E29] transition">
+            In-Room & Housekeeping (5)
+          </button>
+          <button onclick="filterByTab('banquet', this)" class="tab-pill shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-semibold tracking-wide border border-[#DDD5C5] bg-white text-[#525966] hover:border-[#B88B2A] hover:text-[#1A1E29] transition">
+            F&B & Banquet Supplies (5)
+          </button>
+        </div>
+      </div>
+
+      <!-- PRODUCT CARDS GRID (Tampil Hanya 1 Baris - 4 Produk Pilihan) -->
+      <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <!-- Injected by renderCards() - Dibatasi 1 baris (4 kartu) -->
+      </div>
+
+      <!-- TOMBOL "SEE ALL" / LIHAT SELURUH KATALOG DI LAMAN LAIN -->
+      <div class="mt-10 flex flex-col items-center justify-center text-center">
+        <a id="seeAllBtn" href="katalog.html" class="group relative inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-full bg-[#1A1E29] text-[#E5B13A] border-2 border-[#1A1E29] hover:bg-[#B88B2A] hover:border-[#B88B2A] hover:text-black font-bold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5">
+          <i data-lucide="layout-grid" class="w-4 h-4 text-[#E5B13A] group-hover:text-black transition"></i>
+          <span id="seeAllText">See All Products (Lihat Seluruh Koleksi)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 text-[#E5B13A] group-hover:text-black group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <p class="text-[11px] sm:text-xs text-[#525966] mt-3 flex items-center justify-center gap-1.5 font-medium">
+          <span class="inline-block w-2 h-2 rounded-full bg-[#B88B2A]"></span>
+          <span>Tersedia 20+ koleksi lengkap dengan filter spesifikasi komersial di laman katalog</span>
+        </p>
+      </div>
+
+      <!-- Bottom Note -->
+      <div class="mt-12 text-center">
+        <p class="text-xs text-[#525966]">
+          *Memerlukan penyesuaian dimensi matras, bordir lambang khusus, atau formulasi aroma (*signature scent*) hotel Anda?
+        </p>
+        <a href="https://wa.me/6281234567890?text=Halo%20Detasco,%20saya%20ingin%20berkonsultasi%20mengenai%20custom%20order%20perlengkapan%20hotel" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#8C6618] hover:text-[#6D4F11] transition border-b border-[#8C6618] pb-0.5 mt-2">
+          Hubungi Tim Spesifikasi Teknis B2B <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- KATEGORI PASOKAN UTAMA (4 Scope Cards from Image)            -->
+  <!-- ============================================================ -->
+  <section id="kategori" class="pt-5 pb-20 bg-[#0A0D13] border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header (Exact from Image) -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-detasco-gold">RUANG LINGKUP PENGADAAN KOMPREHENSIF</span>
+          <h2 class="font-cinzel text-2xl sm:text-3xl font-bold tracking-wider text-white mt-1 uppercase">
+            KATEGORI PASOKAN UTAMA
+          </h2>
+        </div>
+        <p class="text-xs sm:text-sm text-gray-400 max-w-md leading-relaxed">
+          Mendukung seluruh tahapan operasional properti: mulai dari proyek pembukaan awal (<em>pre-opening</em>) hingga pengadaan terjadwal bulanan.
+        </p>
+      </div>
+
+      <!-- 4 Category Cards with Top Floating Icon Badges (Exact from Image) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1: Room Linen & Bedding -->
+        <div class="rounded-xl bg-detasco-cardBg border border-white/10 overflow-hidden hover:border-detasco-gold transition duration-300 flex flex-col group shadow-xl">
+          <div class="h-44 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="Room Linen" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-detasco-cardBg via-transparent to-transparent"></div>
+            <!-- Floating Icon Box from Image -->
+            <div class="absolute top-3 left-3 w-8 h-8 rounded-lg bg-black/80 border border-detasco-gold/60 flex items-center justify-center text-detasco-gold shadow-md">
+              <i data-lucide="bed-double" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-cinzel font-bold text-sm text-white mb-2 uppercase tracking-wide group-hover:text-detasco-gold transition">
+                Room Linen & Bedding
+              </h3>
+              <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                Sprei, duvet cover, bantal microfibre bulu angsa, matras topper, dan handuk tebal 650 GSM dengan penyerapan prima.
+              </p>
+            </div>
+            <div class="space-y-1.5 pt-3 border-t border-white/5 text-[11px] text-gray-300">
+              <p class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-detasco-gold"></i> Thread Count 300 - 600 TC</p>
+              <p class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-detasco-gold"></i> Waffle & Velour Bathrobes</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Guest Amenities & Care -->
+        <div class="rounded-xl bg-detasco-cardBg border border-white/10 overflow-hidden hover:border-detasco-gold transition duration-300 flex flex-col group shadow-xl">
+          <div class="h-44 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80" alt="Guest Amenities" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-detasco-cardBg via-transparent to-transparent"></div>
+            <!-- Floating Icon Box from Image -->
+            <div class="absolute top-3 left-3 w-8 h-8 rounded-lg bg-black/80 border border-detasco-gold/60 flex items-center justify-center text-detasco-gold shadow-md">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-cinzel font-bold text-sm text-white mb-2 uppercase tracking-wide group-hover:text-detasco-gold transition">
+                Guest Amenities & Care
+              </h3>
+              <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                Dental kit ramah lingkungan, sabun alami esensial, sampo herbal, serta sandal hotel tebal dengan sol anti-slip.
+              </p>
+            </div>
+            <div class="space-y-1.5 pt-3 border-t border-white/5 text-[11px] text-gray-300">
+              <p class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-detasco-gold"></i> Custom Embossed Packaging</p>
+              <p class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-detasco-gold"></i> Formulasi Tersertifikasi BPOM</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: F&B & Banquet Supplies -->
+        <div class="rounded-xl bg-detasco-cardBg border border-white/10 overflow-hidden hover:border-detasco-gold transition duration-300 flex flex-col group shadow-xl">
+          <div class="h-44 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?auto=format&fit=crop&w=600&q=80" alt="F&B Banquet" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-detasco-cardBg via-transparent to-transparent"></div>
+            <!-- Floating Icon Box from Image -->
+            <div class="absolute top-3 left-3 w-8 h-8 rounded-lg bg-black/80 border border-detasco-gold/60 flex items-center justify-center text-detasco-gold shadow-md">
+              <i data-lucide="utensils" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-cinzel font-bold text-sm text-white mb-2 uppercase tracking-wide group-hover:text-detasco-gold transition">
+                F&B & Banquet Supplies
+              </h3>
+              <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                Peralatan prasmanan chafing dish roll-top, cutlery stainless steel 18/10, kristal glassware, dan trolley room service.
+              </p>
+            </div>
+            <div class="space-y-1.5 pt-3 border-t border-white/5 text-[11px] text-gray-300">
+              <p class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-detasco-gold"></i> Hidrolik Soft-Close Roll-top</p>
+              <p class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-detasco-gold"></i> Porselen Anti-Gores Restoran</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: In-Room & Housekeeping -->
+        <div class="rounded-xl bg-detasco-cardBg border border-white/10 overflow-hidden hover:border-detasco-gold transition duration-300 flex flex-col group shadow-xl">
+          <div class="h-44 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="In-Room Housekeeping" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-detasco-cardBg via-transparent to-transparent"></div>
+            <!-- Floating Icon Box from Image -->
+            <div class="absolute top-3 left-3 w-8 h-8 rounded-lg bg-black/80 border border-detasco-gold/60 flex items-center justify-center text-detasco-gold shadow-md">
+              <i data-lucide="box" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-cinzel font-bold text-sm text-white mb-2 uppercase tracking-wide group-hover:text-detasco-gold transition">
+                In-Room & Housekeeping
+              </h3>
+              <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                Deposit box digital dengan audit trail, kettle elektrik 304 food-grade, gantungan kayu solid, dan trolley housekeeping.
+              </p>
+            </div>
+            <div class="space-y-1.5 pt-3 border-t border-white/5 text-[11px] text-gray-300">
+              <p class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-detasco-gold"></i> Brankas Kamar Digital Audit</p>
+              <p class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-detasco-gold"></i> Trolley Housekeeping Heavy Duty</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- INSPIRASI KEMEWAHAN RUANG HOTEL (Portofolio Suasana Properti)-->
+  <!-- ============================================================ -->
+  <section id="inspirasi" class="bg-[#F8F5EE] border-t border-b border-[#E2D8C7] pt-5 pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title (Light Luxury Theme) -->
+      <div class="text-center mb-12">
+        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C6618]">PORTOFOLIO SUASANA PROPERTI</span>
+        <h2 class="font-cinzel text-2xl sm:text-3xl font-bold tracking-wider text-[#1A1E29] mt-1 uppercase">
+          INSPIRASI KEMEWAHAN RUANG HOTEL
+        </h2>
+        <div class="w-14 h-0.5 bg-[#B88B2A] mx-auto my-3"></div>
+        <p class="text-xs sm:text-sm text-[#525966] max-w-2xl mx-auto leading-relaxed">
+          Bagaimana produk-produk DETASCO berpadu sempurna menghadirkan kenyamanan kelas dunia di berbagai sudut hotel dan resor rekanan kami.
+        </p>
+      </div>
+
+      <!-- 3 Ambience Gallery Cards (Exact from Image) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Gallery Card 1 -->
+        <div class="relative h-80 rounded-2xl overflow-hidden border border-[#DDD5C5] group cursor-pointer shadow-lg hover:shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="Executive Suite Setup" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <span class="text-[10px] uppercase font-bold tracking-widest text-detasco-gold">EXECUTIVE SUITE SETUP</span>
+            <h3 class="font-cinzel text-base font-bold text-white mt-0.5">Bed Linen & Master Suite Comfort</h3>
+          </div>
+        </div>
+
+        <!-- Gallery Card 2 -->
+        <div class="relative h-80 rounded-2xl overflow-hidden border border-[#DDD5C5] group cursor-pointer shadow-lg hover:shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=800&q=80" alt="Villa & Spa Bathroom" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <span class="text-[10px] uppercase font-bold tracking-widest text-detasco-gold">VILLA & SPA BATHROOM</span>
+            <h3 class="font-cinzel text-base font-bold text-white mt-0.5">Organic Amenities & Plush Towels</h3>
+          </div>
+        </div>
+
+        <!-- Gallery Card 3 -->
+        <div class="relative h-80 rounded-2xl overflow-hidden border border-[#DDD5C5] group cursor-pointer shadow-lg hover:shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Fine Dining & Ballroom" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <span class="text-[10px] uppercase font-bold tracking-widest text-detasco-gold">FINE DINING & BALLROOM</span>
+            <h3 class="font-cinzel text-base font-bold text-white mt-0.5">Opulence Tableware & Cutlery</h3>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- KEY STATISTICS BAR (Exact 4 Metrics from Image)              -->
+  <!-- ============================================================ -->
+  <!-- ============================================================ -->
+  <!-- KEY STATISTICS BAR (Exact 4 Metrics with Counter Animation)   -->
+  <!-- ============================================================ -->
+  <section id="stats-section" class="border-y border-white/10 bg-[#0A0D13] py-8 sm:py-12 px-3 sm:px-4 relative overflow-hidden">
+    <!-- Subtle luxury background gold shimmer -->
+    <div class="absolute inset-0 bg-gradient-to-r from-detasco-gold/5 via-transparent to-detasco-gold/5 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-6 md:gap-8 text-center relative z-10">
+      
+      <!-- Stat 1: 250+ -->
+      <div class="stat-card group border-r border-b md:border-b-0 border-white/5 p-2.5 sm:p-4 rounded-xl sm:rounded-2xl transition-all duration-700 opacity-0 translate-y-6 hover:bg-white/[0.02] hover:shadow-[0_0_25px_rgba(229,177,58,0.12)]">
+        <div class="inline-flex items-center justify-center mb-1.5 sm:mb-2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-detasco-gold/10 text-detasco-gold group-hover:scale-110 group-hover:bg-detasco-gold/20 transition-all duration-300">
+          <i data-lucide="hotel" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+        </div>
+        <p class="stat-number font-cinzel text-2xl sm:text-4xl lg:text-5xl font-bold text-detasco-gold group-hover:text-detasco-goldHover transition duration-300 tracking-tight whitespace-nowrap"
+           data-target="250"
+           data-suffix="+"
+           data-duration="2000">
+          0+
+        </p>
+        <p class="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-[0.18em] text-gray-300 font-semibold mt-1 sm:mt-2 group-hover:text-white transition">
+          Hotel & Resor Rekanan
+        </p>
+      </div>
+
+      <!-- Stat 2: 120.000+ -->
+      <div class="stat-card group border-b md:border-b-0 md:border-r border-white/5 p-2.5 sm:p-4 rounded-xl sm:rounded-2xl transition-all duration-700 opacity-0 translate-y-6 hover:bg-white/[0.02] hover:shadow-[0_0_25px_rgba(229,177,58,0.12)]">
+        <div class="inline-flex items-center justify-center mb-1.5 sm:mb-2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-detasco-gold/10 text-detasco-gold group-hover:scale-110 group-hover:bg-detasco-gold/20 transition-all duration-300">
+          <i data-lucide="door-closed" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+        </div>
+        <p class="stat-number font-cinzel text-2xl sm:text-4xl lg:text-5xl font-bold text-detasco-gold group-hover:text-detasco-goldHover transition duration-300 tracking-tight whitespace-nowrap"
+           data-target="120000"
+           data-format="id"
+           data-suffix="+"
+           data-duration="2200">
+          0+
+        </p>
+        <p class="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-[0.18em] text-gray-300 font-semibold mt-1 sm:mt-2 group-hover:text-white transition">
+          Kamar Dilayani di Seluruh RI
+        </p>
+      </div>
+
+      <!-- Stat 3: 99.6% -->
+      <div class="stat-card group border-r border-white/5 p-2.5 sm:p-4 rounded-xl sm:rounded-2xl transition-all duration-700 opacity-0 translate-y-6 hover:bg-white/[0.02] hover:shadow-[0_0_25px_rgba(229,177,58,0.12)]">
+        <div class="inline-flex items-center justify-center mb-1.5 sm:mb-2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-detasco-gold/10 text-detasco-gold group-hover:scale-110 group-hover:bg-detasco-gold/20 transition-all duration-300">
+          <i data-lucide="badge-check" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+        </div>
+        <p class="stat-number font-cinzel text-2xl sm:text-4xl lg:text-5xl font-bold text-detasco-gold group-hover:text-detasco-goldHover transition duration-300 tracking-tight whitespace-nowrap"
+           data-target="99.6"
+           data-decimals="1"
+           data-suffix="%"
+           data-duration="2000">
+          0.0%
+        </p>
+        <p class="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-[0.18em] text-gray-300 font-semibold mt-1 sm:mt-2 group-hover:text-white transition">
+          Tingkat Ketepatan Pengiriman (SLA)
+        </p>
+      </div>
+
+      <!-- Stat 4: 15+ Th -->
+      <div class="stat-card group p-2.5 sm:p-4 rounded-xl sm:rounded-2xl transition-all duration-700 opacity-0 translate-y-6 hover:bg-white/[0.02] hover:shadow-[0_0_25px_rgba(229,177,58,0.12)]">
+        <div class="inline-flex items-center justify-center mb-1.5 sm:mb-2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-detasco-gold/10 text-detasco-gold group-hover:scale-110 group-hover:bg-detasco-gold/20 transition-all duration-300">
+          <i data-lucide="award" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+        </div>
+        <p class="stat-number font-cinzel text-2xl sm:text-4xl lg:text-5xl font-bold text-detasco-gold group-hover:text-detasco-goldHover transition duration-300 tracking-tight whitespace-nowrap"
+           data-target="15"
+           data-suffix="+ TH"
+           data-duration="1800">
+          0+ TH
+        </p>
+        <p class="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-[0.18em] text-gray-300 font-semibold mt-1 sm:mt-2 group-hover:text-white transition">
+          Pengalaman Industri Supplier
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- MENGAPA MEMILIH DETASCO (Exact 4 Pillars from Image)         -->
+  <!-- ============================================================ -->
+  <section id="standar" class="pt-5 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    
+    <!-- Section Header (Exact from Image) -->
+    <div class="text-center mb-14">
+      <h2 class="font-cinzel text-2xl sm:text-3xl font-bold tracking-[0.15em] text-white uppercase">
+        MENGAPA MEMILIH DETASCO
+      </h2>
+      <div class="w-14 h-0.5 bg-detasco-gold mx-auto my-3"></div>
+      <p class="text-xs sm:text-sm text-gray-400 max-w-xl mx-auto">
+        Kemitraan pengadaan jangka panjang dengan kepastian kualitas konsisten, transparansi harga pabrik, dan dedikasi layanan purna jual.
+      </p>
+    </div>
+
+    <!-- 4 Pillars Grid (Exact from Image) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Pillar 1 -->
+      <div class="p-6 rounded-2xl bg-detasco-cardBg border border-white/10 hover:border-detasco-gold transition duration-300 flex flex-col items-center text-center group card-hover-glow shadow-xl">
+        <div class="w-14 h-14 rounded-xl border border-detasco-gold/40 flex items-center justify-center text-detasco-gold mb-5 bg-[#0B0E14] group-hover:scale-110 group-hover:border-detasco-gold transition duration-300">
+          <i data-lucide="medal" class="w-7 h-7 stroke-[1.4]"></i>
+        </div>
+        <h3 class="font-cinzel font-bold text-sm tracking-wider text-white uppercase mb-2 group-hover:text-detasco-gold transition">
+          STANDAR BINTANG 5
+        </h3>
+        <p class="text-xs text-gray-400 leading-relaxed">
+          Diproduksi dengan bahan baku pilihan yang lolos uji ketahanan cuci intensif dan regulasi hospitality internasional.
+        </p>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div class="p-6 rounded-2xl bg-detasco-cardBg border border-white/10 hover:border-detasco-gold transition duration-300 flex flex-col items-center text-center group card-hover-glow shadow-xl">
+        <div class="w-14 h-14 rounded-xl border border-detasco-gold/40 flex items-center justify-center text-detasco-gold mb-5 bg-[#0B0E14] group-hover:scale-110 group-hover:border-detasco-gold transition duration-300">
+          <i data-lucide="sparkles" class="w-7 h-7 stroke-[1.4]"></i>
+        </div>
+        <h3 class="font-cinzel font-bold text-sm tracking-wider text-white uppercase mb-2 group-hover:text-detasco-gold transition">
+          CUSTOM LOGO & BRANDING
+        </h3>
+        <p class="text-xs text-gray-400 leading-relaxed">
+          Kustomisasi logo hotel pada linen (bordir benang emas), kemasan kemewahan amenities, serta leatherette desk organizer.
+        </p>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div class="p-6 rounded-2xl bg-detasco-cardBg border border-white/10 hover:border-detasco-gold transition duration-300 flex flex-col items-center text-center group card-hover-glow shadow-xl">
+        <div class="w-14 h-14 rounded-xl border border-detasco-gold/40 flex items-center justify-center text-detasco-gold mb-5 bg-[#0B0E14] group-hover:scale-110 group-hover:border-detasco-gold transition duration-300">
+          <i data-lucide="layers" class="w-7 h-7 stroke-[1.4]"></i>
+        </div>
+        <h3 class="font-cinzel font-bold text-sm tracking-wider text-white uppercase mb-2 group-hover:text-detasco-gold transition">
+          KAPASITAS VOLUME BESAR
+        </h3>
+        <p class="text-xs text-gray-400 leading-relaxed">
+          Didukung jaringan rantai pasok terintegrasi dan kapasitas gudang besar yang sanggup menyuplai ratusan kamar secara simultan.
+        </p>
+      </div>
+
+      <!-- Pillar 4 -->
+      <div class="p-6 rounded-2xl bg-detasco-cardBg border border-white/10 hover:border-detasco-gold transition duration-300 flex flex-col items-center text-center group card-hover-glow shadow-xl">
+        <div class="w-14 h-14 rounded-xl border border-detasco-gold/40 flex items-center justify-center text-detasco-gold mb-5 bg-[#0B0E14] group-hover:scale-110 group-hover:border-detasco-gold transition duration-300">
+          <i data-lucide="shield-alert" class="w-7 h-7 stroke-[1.4]"></i>
+        </div>
+        <h3 class="font-cinzel font-bold text-sm tracking-wider text-white uppercase mb-2 group-hover:text-detasco-gold transition">
+          GARANSI & SLA PENGIRIMAN
+        </h3>
+        <p class="text-xs text-gray-400 leading-relaxed">
+          Jaminan penggantian unit cacat pabrik secara cepat (<em>zero-hassle replacement</em>) dan kepastian tanggal serah terima proyek.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Client Marquee Text (Exact from Image) -->
+    <div class="mt-16 pt-10 border-t border-white/5 text-center">
+      <p class="text-[10px] uppercase tracking-[0.25em] text-gray-500 font-semibold mb-6">
+        DIPERCAYA OLEH RESOR DAN JARINGAN HOTEL TERNAMA
+      </p>
+      <div class="flex flex-wrap justify-center items-center gap-y-4 gap-x-6 sm:gap-14 opacity-65">
+        <span class="font-cinzel text-sm sm:text-base font-bold tracking-[0.2em] text-gray-300 hover:text-detasco-gold transition cursor-default">THE GRAND ASTOR</span>
+        <span class="font-cinzel text-sm sm:text-base font-bold tracking-[0.2em] text-gray-300 hover:text-detasco-gold transition cursor-default">SAMUDRA RESORT</span>
+        <span class="font-cinzel text-sm sm:text-base font-bold tracking-[0.2em] text-gray-300 hover:text-detasco-gold transition cursor-default">VILLAS OF BALI</span>
+        <span class="font-cinzel text-sm sm:text-base font-bold tracking-[0.2em] text-gray-300 hover:text-detasco-gold transition cursor-default">PARAMOUNT SUITES</span>
+        <span class="font-cinzel text-sm sm:text-base font-bold tracking-[0.2em] text-gray-300 hover:text-detasco-gold transition cursor-default">NORDIC HERITAGE</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- ALUR & CARA PEMESANAN (Empat Langkah Mudah - Sesuai Gambar)  -->
+  <!-- ============================================================ -->
+  <section class="bg-[#F3EDE0] border-t border-b border-[#DEC89A]/50 py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title & Subtitle (Exact from Image) -->
+      <div class="text-center mb-14 sm:mb-16">
+        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C6618]">CARA PEMESANAN</span>
+        <h2 class="font-cinzel text-2xl sm:text-3xl font-bold tracking-wide text-[#1A1E29] mt-1">
+          Empat Langkah Mudah
+        </h2>
+        <div class="w-14 h-0.5 bg-[#B88B2A] mx-auto my-3"></div>
+        <p class="text-xs sm:text-sm text-[#525966] max-w-xl mx-auto leading-relaxed">
+          Proses pemesanan yang singkat dan transparan, dari memilih produk sampai barang tiba.
+        </p>
+      </div>
+
+      <!-- 4 Steps Timeline Container -->
+      <div class="relative">
+        
+        <!-- Desktop Connecting Line between Step Circles -->
+        <div class="hidden md:block absolute top-7 left-[12%] right-[12%] h-[1px] bg-gradient-to-r from-[#B88B2A]/20 via-[#B88B2A]/50 to-[#B88B2A]/20 z-0"></div>
+
+        <!-- Steps Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
+          
+          <!-- Step 1: Pilih Produk -->
+          <div class="flex flex-col items-center text-center group">
+            <div class="relative mb-5">
+              <div class="w-14 h-14 rounded-full bg-[#1A1E29] border-2 border-[#B88B2A] flex items-center justify-center text-[#E5B13A] shadow-md group-hover:scale-110 transition-all duration-300">
+                <i data-lucide="list-checks" class="w-6 h-6"></i>
+              </div>
+              <!-- Step Number Badge -->
+              <span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#B88B2A] text-black font-bold text-[10px] flex items-center justify-center shadow-md">
+                1
+              </span>
+            </div>
+            <h3 class="font-cinzel font-bold text-sm sm:text-base text-[#1A1E29] mb-2 group-hover:text-[#8C6618] transition">
+              Pilih Produk
+            </h3>
+            <p class="text-xs text-[#525966] leading-relaxed max-w-[240px]">
+              Telusuri katalog dan catat produk, jumlah, serta kebutuhan kustomisasi Anda.
+            </p>
+          </div>
+
+          <!-- Step 2: Minta Penawaran -->
+          <div class="flex flex-col items-center text-center group">
+            <div class="relative mb-5">
+              <div class="w-14 h-14 rounded-full bg-[#1A1E29] border-2 border-[#B88B2A] flex items-center justify-center text-[#E5B13A] shadow-md group-hover:scale-110 transition-all duration-300">
+                <i data-lucide="message-square" class="w-6 h-6"></i>
+              </div>
+              <!-- Step Number Badge -->
+              <span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#B88B2A] text-black font-bold text-[10px] flex items-center justify-center shadow-md">
+                2
+              </span>
+            </div>
+            <h3 class="font-cinzel font-bold text-sm sm:text-base text-[#1A1E29] mb-2 group-hover:text-[#8C6618] transition">
+              Minta Penawaran
+            </h3>
+            <p class="text-xs text-[#525966] leading-relaxed max-w-[240px]">
+              Kirim daftar kebutuhan lewat WhatsApp atau formulir. Kami balas dengan penawaran harga grosir.
+            </p>
+          </div>
+
+          <!-- Step 3: Konfirmasi & Persiapan -->
+          <div class="flex flex-col items-center text-center group">
+            <div class="relative mb-5">
+              <div class="w-14 h-14 rounded-full bg-[#1A1E29] border-2 border-[#B88B2A] flex items-center justify-center text-[#E5B13A] shadow-md group-hover:scale-110 transition-all duration-300">
+                <i data-lucide="clipboard-check" class="w-6 h-6"></i>
+              </div>
+              <!-- Step Number Badge -->
+              <span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#B88B2A] text-black font-bold text-[10px] flex items-center justify-center shadow-md">
+                3
+              </span>
+            </div>
+            <h3 class="font-cinzel font-bold text-sm sm:text-base text-[#1A1E29] mb-2 group-hover:text-[#8C6618] transition">
+              Konfirmasi & Persiapan
+            </h3>
+            <p class="text-xs text-[#525966] leading-relaxed max-w-[240px]">
+              Sepakati spesifikasi, desain custom (jika ada), pembayaran, dan jadwal pengerjaan.
+            </p>
+          </div>
+
+          <!-- Step 4: Pengiriman -->
+          <div class="flex flex-col items-center text-center group">
+            <div class="relative mb-5">
+              <div class="w-14 h-14 rounded-full bg-[#1A1E29] border-2 border-[#B88B2A] flex items-center justify-center text-[#E5B13A] shadow-md group-hover:scale-110 transition-all duration-300">
+                <i data-lucide="package" class="w-6 h-6"></i>
+              </div>
+              <!-- Step Number Badge -->
+              <span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#B88B2A] text-black font-bold text-[10px] flex items-center justify-center shadow-md">
+                4
+              </span>
+            </div>
+            <h3 class="font-cinzel font-bold text-sm sm:text-base text-[#1A1E29] mb-2 group-hover:text-[#8C6618] transition">
+              Pengiriman
+            </h3>
+            <p class="text-xs text-[#525966] leading-relaxed max-w-[240px]">
+              Pesanan dikemas rapi dan dikirim ke alamat properti atau institusi Anda.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- KONTAK & FORM PERMINTAAN PENAWARAN (Split Form from Image)   -->
+  <!-- ============================================================ -->
+  <section id="kontak" class="pt-5 pb-20 bg-[#090C12] border-t border-white/5 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- Left Column: Contact Information (5 Cols) -->
+      <div class="lg:col-span-5 space-y-6">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-detasco-gold">Layanan Pengadaan B2B</span>
+          <h2 class="font-cinzel text-2xl sm:text-3xl font-bold text-white mt-1 leading-snug">
+            Hubungi Tim Konsultan Pengadaan DETASCO
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-400 mt-3 leading-relaxed">
+            Kami melayani pembelian partai besar, tender pengadaan, pengiriman sampel fisik (<em>mock-up room sampling</em>), serta kontrak pasokan jangka panjang dengan termin fleksibel.
+          </p>
+        </div>
+
+        <div class="space-y-4 pt-2">
+          
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-detasco-cardBg border border-white/5">
+            <div class="p-2 rounded-lg bg-detasco-gold/10 text-detasco-gold shrink-0">
+              <i data-lucide="map-pin" class="w-5 h-5"></i>
+            </div>
+            <div class="text-xs">
+              <p class="text-white font-semibold mb-0.5">Kantor Pusat & Pergudangan Terpadu</p>
+              <p class="text-gray-400 leading-relaxed">Sentra Logistik & Pergudangan Modern, Jakarta & Kantor Perwakilan Bali</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-detasco-cardBg border border-white/5">
+            <div class="p-2 rounded-lg bg-detasco-gold/10 text-detasco-gold shrink-0">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+            </div>
+            <div class="text-xs">
+              <p class="text-white font-semibold mb-0.5">Email Resmi Procurement</p>
+              <p class="text-gray-400 font-mono">sales@detasco.co.id / inquiry@detasco.co.id</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-detasco-cardBg border border-white/5">
+            <div class="p-2 rounded-lg bg-detasco-gold/10 text-detasco-gold shrink-0">
+              <i data-lucide="phone-call" class="w-5 h-5"></i>
+            </div>
+            <div class="text-xs">
+              <p class="text-white font-semibold mb-0.5">Hotline WhatsApp Sales Proyek</p>
+              <p class="text-detasco-gold font-semibold">+62 812-3456-7890 <span class="text-gray-400 font-normal text-[11px]">(Senin - Sabtu, 08:30 - 17:30 WIB)</span></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Quotation & Mock-Up Request Form (7 Cols) -->
+      <div class="lg:col-span-7 rounded-2xl bg-detasco-cardBg border border-detasco-borderGold p-5 sm:p-8 shadow-2xl">
+        <h3 class="font-cinzel text-lg sm:text-xl font-bold text-white mb-2 flex items-center gap-2">
+          <i data-lucide="clipboard-pen" class="w-5 h-5 text-detasco-gold"></i>
+          Formulir Permintaan Penawaran & Sampel Produk
+        </h3>
+        <p class="text-xs text-gray-400 mb-6">
+          Isi detail kebutuhan properti Anda. Tim kami akan menyiapkan estimasi penawaran resmi B2B dalam waktu 1x24 jam.
+        </p>
+
+        <form id="quotationForm" onsubmit="handleFormSubmit(event)" class="space-y-4 text-xs">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-300 font-medium mb-1">Nama Lengkap PIC</label>
+              <input type="text" id="picName" required placeholder="Contoh: Bpk. Hendra Wijaya" class="w-full px-3.5 py-2.5 rounded-lg bg-[#0B0E14] border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-detasco-gold transition">
+            </div>
+            <div>
+              <label class="block text-gray-300 font-medium mb-1">Nama Properti / Hotel</label>
+              <input type="text" id="hotelName" required placeholder="Contoh: The Grand Palace Hotel" class="w-full px-3.5 py-2.5 rounded-lg bg-[#0B0E14] border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-detasco-gold transition">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-300 font-medium mb-1">Email Perusahaan</label>
+              <input type="email" id="email" inputmode="email" required placeholder="purchasing@grandpalace.com" class="w-full px-3.5 py-2.5 rounded-lg bg-[#0B0E14] border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-detasco-gold transition">
+            </div>
+            <div>
+              <label class="block text-gray-300 font-medium mb-1">Nomor WhatsApp Aktif</label>
+              <input type="tel" id="phone" inputmode="tel" required placeholder="0812-XXXX-XXXX" class="w-full px-3.5 py-2.5 rounded-lg bg-[#0B0E14] border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-detasco-gold transition">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-300 font-medium mb-1">Kategori Kebutuhan</label>
+              <select id="formCategory" class="w-full px-3.5 py-2.5 rounded-lg bg-[#0B0E14] border border-white/10 text-white focus:outline-none focus:border-detasco-gold transition cursor-pointer">
+                <option value="Linen & Bedding">Linen & Bedding (Sprei, Handuk 500TC)</option>
+                <option value="Guest Room Amenities">Guest Room Amenities & Toiletries</option>
+                <option value="F&B & Banquet Supplies">F&B & Banquet Supplies (Chinaware & Chafing)</option>
+                <option value="In-Room Equipment">In-Room Equipment (Minibar, Safe Box, Kettle)</option>
+                <option value="Full Pre-Opening Package">Paket Lengkap Hotel Pre-Opening</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-gray-300 font-medium mb-1">Jumlah Kamar / Unit</label>
+              <input type="text" id="roomCount" inputmode="numeric" placeholder="Contoh: 120 Kamar" class="w-full px-3.5 py-2.5 rounded-lg bg-[#0B0E14] border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-detasco-gold transition">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-gray-300 font-medium mb-1">Spesifikasi Tambahan & Catatan Khusus</label>
+            <textarea id="notes" rows="3" placeholder="Sebutkan detail pesanan (contoh: Katun satin 500TC, logo bordir emas di sudut sprei, butuh mock-up sampel minggu depan)..." class="w-full px-3.5 py-2.5 rounded-lg bg-[#0B0E14] border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-detasco-gold transition"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-3.5 px-6 rounded-lg bg-detasco-gold text-black font-bold text-xs uppercase tracking-wider hover:bg-detasco-goldHover transition shadow-xl flex items-center justify-center gap-2">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            KIRIM PERMINTAAN PENAWARAN RESMI
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- LOKASI & GOOGLE MAPS INTERAKTIF (Showroom & Fasilitas Logistik Terpadu)   -->
+  <!-- ========================================================================= -->
+  <section id="lokasi" class="bg-[#F8F5EE] border-t border-b border-[#E2D8C7] pt-5 pb-16 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-10">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#DEC89A] bg-[#EFE9DC] mb-3">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#8C6618]"></i>
+          <span class="text-[10px] uppercase tracking-[0.2em] text-[#8C6618] font-semibold">
+            JARINGAN LOGISTIK & SHOWROOM RESMI
+          </span>
+        </div>
+        <h2 class="font-cinzel text-2xl sm:text-3xl lg:text-4xl font-bold tracking-[0.12em] text-[#1A1E29] uppercase">
+          LOKASI PERUSAHAAN & SHOWROOM
+        </h2>
+        <div class="w-16 h-0.5 bg-[#B88B2A] mx-auto my-3"></div>
+        <p class="text-[#525966] text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
+          Kunjungi fasilitas sentral pergudangan dan showroom kami untuk meninjau langsung tekstur linen, ketahanan amenities, serta simulasi mock-up tata ruang kamar hotel bersama spesialis teknis kami.
+        </p>
+
+        <!-- Location Selector Tabs (Jakarta HQ vs Bali Regional Hub - Stack on mobile, inline on desktop) -->
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-2.5 sm:gap-3 mt-6">
+          <button onclick="switchMapLocation('jakarta', this)" id="locBtnJakarta" class="loc-tab active w-full sm:w-auto px-5 py-2.5 rounded-full text-xs font-bold tracking-wider border border-[#1A1E29] bg-[#1A1E29] text-[#E5B13A] transition-all duration-300 shadow-md flex items-center justify-center gap-2">
+            <i data-lucide="building-2" class="w-4 h-4"></i>
+            <span>Kantor Pusat & Showroom Utama (Jakarta)</span>
+          </button>
+          <button onclick="switchMapLocation('bali', this)" id="locBtnBali" class="loc-tab w-full sm:w-auto px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider border border-[#DDD5C5] bg-white text-[#525966] hover:border-[#8C6618] hover:text-[#1A1E29] transition-all duration-300 flex items-center justify-center gap-2">
+            <i data-lucide="palmtree" class="w-4 h-4"></i>
+            <span>Hub Distribusi & Showroom (Bali)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Map & Location Details (2 Columns) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Left: Interactive Google Maps Frame (7 Cols) -->
+        <div class="lg:col-span-7 rounded-2xl overflow-hidden border border-[#DDD5C5] bg-white shadow-xl relative flex flex-col min-h-[380px] sm:min-h-[440px] group">
+          
+          <!-- Status Bar overlay (Clean & Responsive) -->
+          <div class="p-3 sm:absolute sm:top-3 sm:left-3 sm:right-3 z-10 flex items-center justify-between gap-2 bg-[#F8F5EE] sm:bg-white/95 sm:backdrop-blur-md border-b sm:border border-[#DDD5C5] sm:rounded-xl shadow-md">
+            <div class="flex items-center gap-2 min-w-0">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
+              <span id="mapBadgeText" class="text-[11px] sm:text-xs font-semibold text-[#1A1E29] truncate">Headquarters & Central Warehouse - PIK, Jakarta</span>
+            </div>
+            <a id="btnDirections" href="https://maps.google.com/?q=Pantai+Indah+Kapuk,+Jakarta+Utara,+Indonesia" target="_blank" class="shrink-0 px-3 py-1.5 rounded-lg bg-[#1A1E29] text-[#E5B13A] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider flex items-center gap-1.5 hover:bg-[#B88B2A] hover:text-black transition shadow-sm">
+              <i data-lucide="navigation" class="w-3.5 h-3.5"></i>
+              <span>Buka Rute</span>
+            </a>
+          </div>
+
+          <!-- Google Maps Iframe -->
+          <div class="relative w-full flex-1 min-h-[300px] sm:min-h-[380px] bg-gray-100">
+            <iframe 
+              id="gmapFrame"
+              class="w-full h-full border-0 min-h-[300px] sm:min-h-[380px]"
+              src="https://maps.google.com/maps?q=Pantai%20Indah%20Kapuk%2C%20Jakarta%20Utara%2C%20Indonesia&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Google Maps Lokasi Perusahaan DETASCO">
+            </iframe>
+          </div>
+
+          <!-- Bottom Helper Bar -->
+          <div class="p-3 sm:p-3.5 bg-white border-t border-[#DDD5C5] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-[11px] text-[#525966]">
+            <span class="flex items-center gap-1.5 text-[#525966]">
+              <i data-lucide="compass" class="w-4 h-4 text-[#8C6618] shrink-0"></i>
+              Peta interaktif: Navigasi geser, zoom in/out, dan periksa rute.
+            </span>
+            <a id="btnOpenMaps" href="https://maps.google.com/?q=Pantai+Indah+Kapuk,+Jakarta+Utara,+Indonesia" target="_blank" class="text-[#8C6618] hover:underline font-semibold flex items-center gap-1 shrink-0 self-end sm:self-auto">
+              Perbesar di Google Maps <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right: Detailed Address & Showroom Info (5 Cols) -->
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
+          
+          <!-- Info Card -->
+          <div class="rounded-2xl bg-white border border-[#DDD5C5] p-5 sm:p-7 shadow-xl space-y-4 sm:space-y-5">
+            
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span id="locTag" class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C6618]">KANTOR PUSAT & PERGUDANGAN SENTRAL</span>
+                <span class="text-[10px] px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-semibold flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Showroom Buka
+                </span>
+              </div>
+              <h3 id="locName" class="font-cinzel text-xl sm:text-2xl font-bold text-[#1A1E29] leading-snug">
+                DETASCO Hospitality HQ & Showroom
+              </h3>
+              <p id="locDesc" class="text-xs text-[#525966] mt-1.5 leading-relaxed">
+                Pusat inventori nasional, display room perlengkapan kamar hotel bintang 5, serta laboratorium pengujian benang linen & formula aroma amenities.
+              </p>
+            </div>
+
+            <!-- Address Box -->
+            <div class="p-3.5 sm:p-4 rounded-xl bg-[#F4EFE6] border border-[#DDD5C5] space-y-3">
+              <div class="flex items-start gap-3">
+                <div class="p-1.5 rounded-lg bg-[#EFE9DC] text-[#8C6618] shrink-0 mt-0.5">
+                  <i data-lucide="map-pin" class="w-4 h-4"></i>
+                </div>
+                <div class="text-xs">
+                  <p class="text-[#7A8190] text-[10px] uppercase font-bold tracking-wider">Alamat Fisik:</p>
+                  <p id="locAddress" class="text-[#1A1E29] font-medium leading-relaxed mt-0.5">
+                    Kawasan Niaga & Pergudangan Terpadu Pantai Indah Kapuk (PIK), Blok D No. 88, Jakarta Utara, DKI Jakarta 14470, Indonesia
+                  </p>
+                </div>
+              </div>
+              
+              <div class="pt-1 flex flex-wrap gap-2">
+                <button onclick="copyAddressToClipboard()" class="px-3.5 py-1.5 rounded-lg bg-white hover:bg-gray-50 border border-[#DDD5C5] text-[#1A1E29] text-xs font-medium flex items-center gap-1.5 transition shadow-sm">
+                  <i data-lucide="copy" class="w-3.5 h-3.5 text-[#8C6618]"></i>
+                  <span id="copyBtnText">Salin Alamat</span>
+                </button>
+                <a id="locMapLink" href="https://maps.google.com/?q=Pantai+Indah+Kapuk,+Jakarta+Utara,+Indonesia" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-white hover:bg-gray-50 border border-[#DDD5C5] text-[#1A1E29] text-xs font-medium flex items-center gap-1.5 transition shadow-sm">
+                  <i data-lucide="map" class="w-3.5 h-3.5 text-[#8C6618]"></i>
+                  Buka Google Maps
+                </a>
+              </div>
+            </div>
+
+            <!-- Practical Details -->
+            <div class="space-y-3 text-xs text-[#525966]">
+              <div class="flex items-start gap-3">
+                <i data-lucide="clock" class="w-4 h-4 text-[#8C6618] shrink-0 mt-0.5"></i>
+                <div>
+                  <span class="text-[#1A1E29] font-semibold">Jam Operasional Showroom:</span>
+                  <p class="text-[#525966] text-[11px] mt-0.5" id="locHours">Senin – Jumat: 08:30 – 17:30 WIB | Sabtu: 08:30 – 14:00 WIB (Minggu/Hari Libur Tutup)</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i data-lucide="phone" class="w-4 h-4 text-[#8C6618] shrink-0 mt-0.5"></i>
+                <div>
+                  <span class="text-[#1A1E29] font-semibold">Telepon Kantor & Saluran Khusus:</span>
+                  <p class="text-[#525966] text-[11px] mt-0.5" id="locPhone">(021) 5890-7788 / WhatsApp: +62 812-3456-7890</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i data-lucide="check-check" class="w-4 h-4 text-[#8C6618] shrink-0 mt-0.5"></i>
+                <div>
+                  <span class="text-[#1A1E29] font-semibold">Fasilitas Kunjungan Rekanan:</span>
+                  <p class="text-[#525966] text-[11px] mt-0.5" id="locFacilities">Ruang Mock-Up Kamar Hotel, Bedding Texture Gallery, Meja Uji Amenities, Area Parkir Truk & Kontainer</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Appointment Card -->
+          <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#1A1E29] via-[#242A38] to-[#1F2430] border border-[#3A4252] shadow-lg flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4 text-white">
+            <div>
+              <p class="text-xs font-bold text-white uppercase tracking-wider flex items-center gap-2">
+                <i data-lucide="calendar" class="w-4 h-4 text-detasco-gold"></i>
+                Jadwalkan Kunjungan Tim Proyek
+              </p>
+              <p class="text-[11px] text-gray-300 mt-1">
+                Dapatkan pendampingan langsung dari konsultan teknis dan sampel gratis untuk diuji di properti Anda.
+              </p>
+            </div>
+            <a id="btnShowroomWA" href="https://wa.me/6281234567890?text=Halo%20Detasco,%20saya%20ingin%20menjadwalkan%20kunjungan%20ke%20showroom%20Jakarta%20untuk%20melihat%20sampel%20produk%20hotel" target="_blank" class="w-full sm:w-auto text-center justify-center shrink-0 px-4 py-2.5 rounded-xl bg-detasco-gold text-black text-xs font-bold uppercase tracking-wider hover:bg-detasco-goldHover transition shadow-[0_0_15px_rgba(229,177,58,0.3)] flex items-center gap-1.5">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              Jadwalkan Kunjungan
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <footer class="border-t border-white/10 bg-[#06080D] pt-16 pb-12 text-xs text-gray-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Col 1: DETASCO Brand -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-2.5">
+            <img src="logo.png" alt="DES DETASCO Logo" class="h-8 w-auto object-contain">
+            <span class="font-cinzel text-base font-bold text-white tracking-[0.15em]">DETASCO</span>
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Mitra pengadaan terpercaya perlengkapan perhotelan bintang 5 dan resor terkemuka di seluruh nusantara.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigasi -->
+        <div class="space-y-2">
+          <p class="font-cinzel font-bold text-white uppercase tracking-wider text-xs mb-3">NAVIGASI</p>
+          <ul class="space-y-1.5">
+            <li><a href="#beranda" class="hover:text-detasco-gold transition">Beranda</a></li>
+            <li><a href="#katalog" class="hover:text-detasco-gold transition">Katalog Unggulan</a></li>
+            <li><a href="#kategori" class="hover:text-detasco-gold transition">Kategori Pasokan</a></li>
+            <li><a href="#inspirasi" class="hover:text-detasco-gold transition">Inspirasi Suasana Kamar</a></li>
+            <li><a href="#standar" class="hover:text-detasco-gold transition">Standar Kualitas</a></li>
+            <li><a href="#kontak" class="hover:text-detasco-gold transition">Kontak & Quotation</a></li>
+            <li><a href="#lokasi" class="hover:text-detasco-gold transition">Lokasi & Showroom</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Lini Pasokan -->
+        <div class="space-y-2">
+          <p class="font-cinzel font-bold text-white uppercase tracking-wider text-xs mb-3">LINI PASOKAN</p>
+          <ul class="space-y-1.5">
+            <li><a href="#katalog" class="hover:text-detasco-gold transition">Bed Linen 300 - 600 TC</a></li>
+            <li><a href="#katalog" class="hover:text-detasco-gold transition">Custom Scented Amenities</a></li>
+            <li><a href="#katalog" class="hover:text-detasco-gold transition">Silent In-Room Mini Refrigerator</a></li>
+            <li><a href="#katalog" class="hover:text-detasco-gold transition">Digital Safe Box & Keycard System</a></li>
+            <li><a href="#katalog" class="hover:text-detasco-gold transition">Banquet Tableware & Chafing Dish</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Fasilitas B2B -->
+        <div class="space-y-3">
+          <p class="font-cinzel font-bold text-white uppercase tracking-wider text-xs mb-3">FASILITAS B2B</p>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Mendukung faktur pajak resmi, dokumen kelayakan tender korporat, serta skema termin pembayaran PO.
+          </p>
+          <div class="pt-2 flex gap-3 text-gray-400">
+            <a href="#" class="hover:text-detasco-gold transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+            <a href="#" class="hover:text-detasco-gold transition"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+            <a href="#" class="hover:text-detasco-gold transition"><i data-lucide="mail" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Line -->
+      <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-500">
+        <p>&copy; 2026 DETASCO. Hak Cipta Dilindungi. Luxury Hotel & Hospitality Supplier.</p>
+        <div class="flex gap-6">
+          <a href="javascript:void(0)" onclick="alert('Kebijakan Privasi: Seluruh data PIC & properti hotel dilindungi secara konfidensial.')" class="hover:text-detasco-gold transition">Kebijakan Privasi</a>
+          <a href="javascript:void(0)" onclick="alert('Syarat Pengadaan: Pembayaran B2B mendukung DP, termin PO Net 30, dan faktur pajak PPN.')" class="hover:text-detasco-gold transition">Syarat Pengadaan</a>
+          <a href="javascript:void(0)" onclick="alert('Garansi Kualitas: Jaminan 100% penggantian barang cacat produksi dalam 14 hari kerja.')" class="hover:text-detasco-gold transition">Garansi Kualitas</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: PRODUCT DETAIL SPECIFICATION (NO CHECKOUT - PURE SPECS & INQUIRY)  -->
+  <!-- ========================================================================= -->
+  <div id="productModal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+    <div class="relative w-full max-w-3xl rounded-2xl bg-detasco-cardBg border border-detasco-borderGold shadow-2xl p-4 sm:p-8 max-h-[94vh] overflow-y-auto">
+      
+      <!-- Close Button -->
+      <button onclick="closeModal()" aria-label="Tutup Detail Produk" class="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 text-gray-400 hover:text-white p-2 rounded-full hover:bg-white/10 transition bg-black/40 backdrop-blur-sm sm:bg-transparent">
+        <i data-lucide="x" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+      </button>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        
+        <!-- Left: Image Preview & SKU -->
+        <div>
+          <div class="rounded-xl overflow-hidden border border-white/10 relative h-48 sm:h-72 bg-black/40">
+            <img id="modalImg" src="" alt="Product Image" class="w-full h-full object-cover">
+            <span id="modalBadge" class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-black/80 border border-detasco-gold text-detasco-gold">
+              B2B READY
+            </span>
+          </div>
+          <div class="mt-4 p-3 rounded-lg bg-[#0B0E14] border border-white/5 text-[11px] text-gray-400 space-y-1">
+            <p><span class="text-white font-medium">Lini Kategori:</span> <span id="modalCategory" class="text-gray-300">Room Linen & Bedding</span></p>
+            <p><span class="text-white font-medium">Kode Item / SKU:</span> <span id="modalSKU" class="text-detasco-gold font-mono">DTS-LIN-500TC</span></p>
+            <p><span class="text-white font-medium">Standar Kualitas:</span> <span class="text-emerald-400 font-medium">Hotel Grade Commercial Certified</span></p>
+          </div>
+        </div>
+
+        <!-- Right: Technical Specifications -->
+        <div class="flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-1.5">
+              <span id="modalCategoryTag" class="text-[10px] uppercase font-bold tracking-widest text-detasco-gold">Bedding Series</span>
+              <span class="text-detasco-gold text-xs">★</span>
+              <span id="modalRating" class="text-white text-xs font-semibold">5.0</span>
+            </div>
+            
+            <h3 id="modalTitle" class="font-cinzel text-xl sm:text-2xl font-bold text-white mb-2 leading-snug">
+              Nama Produk
+            </h3>
+            
+            <p id="modalDesc" class="text-xs text-gray-300 leading-relaxed mb-4">
+              Deskripsi lengkap produk perlengkapan hotel.
+            </p>
+
+            <!-- Specs Table -->
+            <div class="rounded-xl border border-white/10 bg-[#0B0E14] overflow-hidden mb-5">
+              <table class="w-full text-left text-xs">
+                <tbody id="modalSpecsTable" class="divide-y divide-white/5">
+                  <!-- Injected via JS -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Custom Option Badge -->
+            <div class="p-2.5 rounded-lg bg-detasco-gold/10 border border-detasco-gold/30 mb-6">
+              <p class="text-[11px] text-detasco-champagne font-medium flex items-center gap-1.5">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0"></i>
+                Tersedia Kustomisasi Bordir Logo / Emboss Foil Nama Hotel
+              </p>
+            </div>
+          </div>
+
+          <!-- Actions: WhatsApp Quote & Download PDF -->
+          <div class="space-y-2.5 pt-2 border-t border-white/10">
+            <a id="modalWhatsAppBtn" href="#" target="_blank" class="w-full py-3 px-4 rounded-xl bg-detasco-gold text-black font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-detasco-goldHover transition shadow-lg">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              Minta Penawaran Resmi via WhatsApp
+            </a>
+            <button onclick="downloadSpecSheet()" class="w-full py-2.5 px-4 rounded-xl border border-white/20 text-gray-300 font-semibold text-xs uppercase tracking-wider hover:bg-white/5 hover:text-white transition flex items-center justify-center gap-2">
+              <i data-lucide="download" class="w-3.5 h-3.5"></i>
+              Unduh Lembar Spesifikasi Teknis (PDF)
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/6281234567890?text=Halo%20Detasco,%20saya%20ingin%20berkonsultasi%20mengenai%20pengadaan%20perlengkapan%20hotel" target="_blank" class="fixed bottom-6 right-6 z-40 p-3.5 rounded-full bg-emerald-500 text-white hover:bg-emerald-400 transition-all duration-300 shadow-[0_0_25px_rgba(16,185,129,0.5)] flex items-center gap-2 group">
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+    <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 ease-in-out text-xs font-bold uppercase tracking-wider pr-1">
+      Chat Sales B2B
+    </span>
+  </a>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT: DATA & INTERACTIVE LOGIC                                      -->
+  <!-- ========================================================================= -->
+  <script>
+    // Master Products Database (Loaded centrally from products-data.js)
+    if (typeof products === 'undefined' && typeof window.products !== 'undefined') {
+      var products = window.products;
+    }
+
+    // Render Cards in Featured Section (Tampil Hanya 1 Baris - 4 Produk Teratas)
+    function renderCards(items) {
+      const grid = document.getElementById('productGrid');
+      grid.innerHTML = '';
+
+      if (!items || items.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-12 text-center text-gray-400">
+            <i data-lucide="package-x" class="w-12 h-12 mx-auto mb-3 text-gray-500"></i>
+            <p class="text-sm font-semibold text-[#1A1E29]">Tidak ada koleksi produk yang sesuai filter.</p>
+            <button onclick="filterByTab('all')" class="mt-4 px-4 py-2 text-xs rounded-full border border-[#1A1E29] bg-[#1A1E29] text-[#E5B13A] hover:bg-[#B88B2A] hover:text-black transition">
+              Tampilkan Semua Koleksi
+            </button>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+
+      // Tampilkan hanya satu baris saja (4 kartu teratas untuk desktop)
+      const displayedItems = items.slice(0, 4);
+
+      displayedItems.forEach(p => {
+        const card = document.createElement('div');
+        card.className = "rounded-2xl bg-white border border-[#DDD5C5] overflow-hidden hover:border-[#B88B2A] transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-xl";
+
+        card.innerHTML = `
+          <!-- Card Image & Top Right Badge -->
+          <div class="relative h-48 sm:h-52 overflow-hidden bg-[#F3EDE0]">
+            <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 right-3 text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-black/85 backdrop-blur-md text-detasco-gold border border-detasco-gold/50">
+              ${p.badge}
+            </span>
+          </div>
+
+          <!-- Card Body -->
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <!-- Series & Star Rating -->
+              <div class="flex items-center justify-between text-[11px] mb-1.5">
+                <span class="text-[#8C6618] font-semibold">${p.seriesTag}</span>
+                <div class="flex items-center gap-1 text-[#B88B2A]">
+                  <i data-lucide="star" class="w-3 h-3 fill-[#B88B2A]"></i>
+                  <span class="text-[#1A1E29] font-bold text-xs">${p.rating}</span>
+                </div>
+              </div>
+
+              <!-- Product Title -->
+              <h3 class="font-cinzel font-bold text-base text-[#1A1E29] group-hover:text-[#8C6618] transition mb-2">
+                ${p.title}
+              </h3>
+
+              <!-- Short Description -->
+              <p class="text-xs text-[#525966] line-clamp-2 leading-relaxed mb-4">
+                ${p.shortDesc}
+              </p>
+            </div>
+
+            <!-- Inset Box (Exact 2-Column Status & MOQ Box from Image) -->
+            <div class="bg-[#F4EFE6] border border-[#DDD5C5] rounded-lg p-2.5 mb-4 grid grid-cols-2 gap-2 text-[11px]">
+              <div>
+                <span class="block text-[9px] uppercase font-bold tracking-wider text-[#7A8190]">${p.highlightLabel}</span>
+                <span class="text-[#1A1E29] font-semibold truncate block">${p.highlightVal}</span>
+              </div>
+              <div class="text-right">
+                <span class="block text-[9px] uppercase font-bold tracking-wider text-[#7A8190]">MOQ</span>
+                <span class="text-[#8C6618] font-bold block">${p.moq}</span>
+              </div>
+            </div>
+
+            <!-- Full-Width Minta Penawaran Button (Exact from Image) -->
+            <button onclick="openProductModal(${p.id})" class="w-full py-2.5 rounded-lg bg-[#1A1E29] border border-[#1A1E29] text-[#E5B13A] group-hover:bg-[#B88B2A] group-hover:border-[#B88B2A] group-hover:text-black font-semibold text-xs tracking-wider uppercase transition-all duration-300 flex items-center justify-center gap-2 shadow-sm">
+              <i data-lucide="file-edit" class="w-3.5 h-3.5"></i>
+              MINTA PENAWARAN
+            </button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+
+      lucide.createIcons();
+    }
+
+    // Modal Details Logic
+    function openProductModal(productId) {
+      const p = products.find(item => item.id === productId);
+      if (!p) return;
+
+      document.getElementById('modalImg').src = p.image;
+      document.getElementById('modalBadge').innerText = p.badge;
+      document.getElementById('modalBadge').className = `absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-black/80 border ${p.badgeColor}`;
+      document.getElementById('modalCategoryTag').innerText = p.seriesTag;
+      document.getElementById('modalRating').innerText = p.rating;
+      document.getElementById('modalCategory').innerText = p.categoryName;
+      document.getElementById('modalSKU').innerText = p.sku;
+      document.getElementById('modalTitle').innerText = p.title;
+      document.getElementById('modalDesc').innerText = p.fullDesc;
+
+      // Table specs rows
+      const tbody = document.getElementById('modalSpecsTable');
+      tbody.innerHTML = '';
+      for (const [key, value] of Object.entries(p.specs)) {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="py-1.5 sm:py-2 px-2.5 sm:px-3 text-gray-400 font-medium w-1/3 bg-white/[0.02] text-[11px] sm:text-xs">${key}</td>
+          <td class="py-1.5 sm:py-2 px-2.5 sm:px-3 text-gray-200 font-normal text-[11px] sm:text-xs">${value}</td>
+        `;
+        tbody.appendChild(tr);
+      }
+
+      // Pre-filled WhatsApp Inquiry
+      const msg = encodeURIComponent(`Halo Tim DETASCO,\n\nSaya tertarik untuk meminta penawaran harga grosir B2B dan sampel spesifikasi produk:\n\n*Produk:* ${p.title}\n*SKU:* ${p.sku}\n*Kategori:* ${p.categoryName}\n*MOQ:* ${p.moq}\n\nMohon informasi prosedur dan penawaran resminya. Terima kasih.`);
+      document.getElementById('modalWhatsAppBtn').href = `https://wa.me/6281234567890?text=${msg}`;
+
+      document.getElementById('productModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      lucide.createIcons();
+    }
+
+    function closeModal() {
+      document.getElementById('productModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    function downloadSpecSheet() {
+      alert("Lembar spesifikasi teknis (Technical Spec Sheet PDF) untuk unit komersial DETASCO siap diunduh!");
+    }
+
+    function downloadCatalogPDF() {
+      alert("Mengunduh E-Katalog Komprehensif DETASCO 2026 (PDF - 42 Halaman).");
+    }
+
+    // Tab Filtering
+    function filterByTab(category, btnElement) {
+      if (!btnElement) {
+        document.querySelectorAll('.tab-pill').forEach(btn => {
+          const onclickAttr = btn.getAttribute('onclick') || '';
+          if (onclickAttr.includes(`'${category}'`)) {
+            btnElement = btn;
+          }
+        });
+      }
+
+      if (btnElement) {
+        document.querySelectorAll('.tab-pill').forEach(btn => {
+          btn.classList.remove('active', 'border-[#1A1E29]', 'bg-[#1A1E29]', 'text-[#E5B13A]', 'shadow-md', 'border-detasco-gold', 'bg-detasco-gold', 'text-black');
+          btn.classList.add('border-[#DDD5C5]', 'bg-white', 'text-[#525966]');
+        });
+        btnElement.classList.add('active', 'border-[#1A1E29]', 'bg-[#1A1E29]', 'text-[#E5B13A]', 'shadow-md');
+        btnElement.classList.remove('border-[#DDD5C5]', 'bg-white', 'text-[#525966]');
+      }
+
+      if (category === 'all') {
+        renderCards(products);
+      } else {
+        const filtered = products.filter(p => p.category === category);
+        renderCards(filtered);
+      }
+
+      // Update URL dan label tombol See All sesuai tab yang aktif
+      const seeAllBtn = document.getElementById('seeAllBtn');
+      const seeAllText = document.getElementById('seeAllText');
+      if (seeAllBtn && seeAllText) {
+        if (category === 'all') {
+          seeAllBtn.href = 'katalog.html';
+          seeAllText.innerText = 'See All Products (Lihat Seluruh Koleksi)';
+        } else if (category === 'linen') {
+          seeAllBtn.href = 'katalog.html?category=linen';
+          seeAllText.innerText = 'See All Linen & Bedding (Katalog Lengkap)';
+        } else if (category === 'amenities') {
+          seeAllBtn.href = 'katalog.html?category=amenities';
+          seeAllText.innerText = 'See All Guest Amenities (Katalog Lengkap)';
+        } else if (category === 'equipment') {
+          seeAllBtn.href = 'katalog.html?category=equipment';
+          seeAllText.innerText = 'See All In-Room & Housekeeping (Katalog Lengkap)';
+        } else if (category === 'banquet') {
+          seeAllBtn.href = 'katalog.html?category=banquet';
+          seeAllText.innerText = 'See All F&B & Banquet Supplies (Katalog Lengkap)';
+        }
+      }
+    }
+
+    // Select category directly from navbar dropdown (Arahkan langsung ke laman katalog.html)
+    function selectCatalogCategory(category, e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      if (category === 'all' || !category) {
+        window.location.href = 'katalog.html';
+      } else {
+        window.location.href = `katalog.html?category=${encodeURIComponent(category)}`;
+      }
+    }
+
+    // Toggle Mobile Katalog Accordion
+    function toggleMobileCatalog(e) {
+      if (e) e.stopPropagation();
+      const drop = document.getElementById('mobileCatalogDropdown');
+      const chev = document.getElementById('mobileCatChevron');
+      if (drop) {
+        drop.classList.toggle('hidden');
+        if (chev) {
+          chev.classList.toggle('rotate-180');
+        }
+      }
+    }
+
+
+    // Handle Form Submit
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const pic = document.getElementById('picName').value;
+      const hotel = document.getElementById('hotelName').value;
+      const cat = document.getElementById('formCategory').value;
+      const rooms = document.getElementById('roomCount').value;
+      const notes = document.getElementById('notes').value;
+
+      const waText = encodeURIComponent(`*PERMINTAAN PENAWARAN RESMI DETASCO*\n\nNama PIC: ${pic}\nNama Hotel/Properti: ${hotel}\nKategori Kebutuhan: ${cat}\nJumlah Kamar: ${rooms}\nCatatan: ${notes}\n\nMohon proposal harga dan pengiriman sampel mock-up kamar.`);
+      
+      window.open(`https://wa.me/6281234567890?text=${waText}`, '_blank');
+      alert(`Terima kasih, Bpk/Ibu ${pic}. Formulir penawaran untuk ${hotel} telah terkirim ke tim sales kami. Tim kami akan segera menindaklanjuti via WhatsApp & Email.`);
+      e.target.reset();
+    }
+
+    // ============================================================
+    // GOOGLE MAPS & LOCATION SWITCHER LOGIC
+    // ============================================================
+    const companyLocations = {
+      jakarta: {
+        tag: "KANTOR PUSAT & PERGUDANGAN SENTRAL",
+        badge: "Headquarters & Central Warehouse - Pantai Indah Kapuk, Jakarta",
+        name: "DETASCO Hospitality HQ & Showroom",
+        desc: "Pusat inventori nasional, display room perlengkapan kamar hotel bintang 5, serta laboratorium pengujian benang linen & formula aroma amenities.",
+        address: "Kawasan Niaga & Pergudangan Terpadu Pantai Indah Kapuk (PIK), Blok D No. 88, Jakarta Utara, DKI Jakarta 14470, Indonesia",
+        hours: "Senin – Jumat: 08:30 – 17:30 WIB | Sabtu: 08:30 – 14:00 WIB (Minggu/Hari Libur Tutup)",
+        phone: "(021) 5890-7788 / WhatsApp: +62 812-3456-7890",
+        facilities: "Ruang Mock-Up Kamar Hotel, Bedding Texture Gallery, Meja Uji Amenities, Area Parkir Truk & Kontainer",
+        mapSrc: "https://maps.google.com/maps?q=Pantai%20Indah%20Kapuk%2C%20Jakarta%20Utara%2C%20Indonesia&t=&z=14&ie=UTF8&iwloc=&output=embed",
+        directionsUrl: "https://maps.google.com/?q=Pantai+Indah+Kapuk,+Jakarta+Utara,+Indonesia",
+        waMessage: "Halo Detasco, saya ingin menjadwalkan kunjungan ke showroom Jakarta untuk melihat sampel produk hotel"
+      },
+      bali: {
+        tag: "HUB DISTRIBUSI & SHOWROOM REGIONAL",
+        badge: "Regional Hub & Showroom - Kuta, Badung, Bali",
+        name: "DETASCO Regional Hub & Showroom Bali",
+        desc: "Pusat pasokan cepat dan showroom hotel & villa luxury untuk wilayah Bali, Lombok, dan Nusa Tenggara dengan stok darurat tersedia.",
+        address: "Jl. Sunset Road No. 108, Seminyak - Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+        hours: "Senin – Sabtu: 09:00 – 18:00 WITA (Minggu Tutup)",
+        phone: "(0361) 894-2200 / WhatsApp: +62 812-3456-7890",
+        facilities: "Resort & Villa Linen Showcase, Scented Amenities Testing Bar, Buffer Stock Room, Area Parkir Tamu",
+        mapSrc: "https://maps.google.com/maps?q=Sunset%20Road%20Kuta%2C%20Badung%2C%20Bali%2C%20Indonesia&t=&z=14&ie=UTF8&iwloc=&output=embed",
+        directionsUrl: "https://maps.google.com/?q=Sunset+Road+Kuta,+Badung,+Bali,+Indonesia",
+        waMessage: "Halo Detasco, saya ingin menjadwalkan kunjungan ke showroom Bali untuk melihat sampel produk hotel"
+      }
+    };
+
+    let currentLocationKey = 'jakarta';
+
+    function switchMapLocation(key, btnElement) {
+      const loc = companyLocations[key];
+      if (!loc) return;
+      currentLocationKey = key;
+
+      // Update Map iframe
+      const gmap = document.getElementById('gmapFrame');
+      if (gmap) gmap.src = loc.mapSrc;
+
+      // Update Text Fields
+      document.getElementById('mapBadgeText').innerText = loc.badge;
+      document.getElementById('locTag').innerText = loc.tag;
+      document.getElementById('locName').innerText = loc.name;
+      document.getElementById('locDesc').innerText = loc.desc;
+      document.getElementById('locAddress').innerText = loc.address;
+      document.getElementById('locHours').innerText = loc.hours;
+      document.getElementById('locPhone').innerText = loc.phone;
+      document.getElementById('locFacilities').innerText = loc.facilities;
+
+      // Update Links
+      document.getElementById('btnDirections').href = loc.directionsUrl;
+      document.getElementById('btnOpenMaps').href = loc.directionsUrl;
+      document.getElementById('locMapLink').href = loc.directionsUrl;
+      document.getElementById('btnShowroomWA').href = `https://wa.me/6281234567890?text=${encodeURIComponent(loc.waMessage)}`;
+
+      // Update Tabs styling
+      document.querySelectorAll('.loc-tab').forEach(b => {
+        b.classList.remove('active', 'border-[#1A1E29]', 'bg-[#1A1E29]', 'text-[#E5B13A]', 'shadow-md', 'font-bold', 'border-detasco-gold', 'bg-detasco-gold', 'text-black', 'shadow-[0_0_20px_rgba(229,177,58,0.35)]');
+        b.classList.add('border-[#DDD5C5]', 'bg-white', 'text-[#525966]', 'font-semibold');
+      });
+
+      if (btnElement) {
+        btnElement.classList.add('active', 'border-[#1A1E29]', 'bg-[#1A1E29]', 'text-[#E5B13A]', 'shadow-md', 'font-bold');
+        btnElement.classList.remove('border-[#DDD5C5]', 'bg-white', 'text-[#525966]', 'font-semibold');
+      }
+
+      lucide.createIcons();
+    }
+
+    function copyAddressToClipboard() {
+      const loc = companyLocations[currentLocationKey];
+      if (!loc) return;
+
+      navigator.clipboard.writeText(loc.address).then(() => {
+        const copyBtn = document.getElementById('copyBtnText');
+        if (copyBtn) {
+          const original = copyBtn.innerText;
+          copyBtn.innerText = "Tersalin! ✓";
+          setTimeout(() => {
+            copyBtn.innerText = original;
+          }, 2000);
+        }
+      }).catch(err => {
+        alert("Alamat: " + loc.address);
+      });
+    }
+
+    // Mobile Menu Toggle
+    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    // Close on escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // Navigation Active Selection (Kolom bercahaya hanya saat tombol dipilih)
+    const navItems = document.querySelectorAll('.nav-item');
+    const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+
+    function selectNavItem(targetHref) {
+      navItems.forEach(item => {
+        if (item.getAttribute('href') === targetHref) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+
+      mobileNavItems.forEach(item => {
+        if (item.getAttribute('href') === targetHref) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+    }
+
+    // Smooth scroll helper with exact header clearance
+    function smoothScrollTo(targetId) {
+      if (!targetId || targetId === '#') return;
+
+      // Close mobile menu if open so header is in its collapsed 80px state
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+      }
+
+      if (targetId === '#beranda') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+      const target = document.querySelector(targetId);
+      if (!target) return;
+
+      // Get fixed navbar bar height (always 80px / h-20)
+      const mainNav = document.getElementById('mainNavContainer');
+      const navbarHeight = mainNav ? mainNav.offsetHeight : 80;
+
+      // Use requestAnimationFrame to ensure the DOM layout is settled without mobileMenu
+      requestAnimationFrame(() => {
+        const targetTop = target.getBoundingClientRect().top + window.pageYOffset;
+        const scrollGoal = targetTop - navbarHeight;
+
+        window.scrollTo({
+          top: Math.max(0, scrollGoal),
+          behavior: 'smooth'
+        });
+      });
+    }
+
+    navItems.forEach(item => {
+      item.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          selectNavItem(href);
+          history.pushState(null, null, href);
+          smoothScrollTo(href);
+        }
+      });
+    });
+
+    mobileNavItems.forEach(item => {
+      item.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          selectNavItem(href);
+          history.pushState(null, null, href);
+          const mobileMenu = document.getElementById('mobileMenu');
+          if (mobileMenu) mobileMenu.classList.add('hidden');
+          smoothScrollTo(href);
+        }
+      });
+    });
+
+    // Handle any anchor click (footer, konsultasi, etc.)
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      if (!link.classList.contains('nav-item') && !link.classList.contains('mobile-nav-item')) {
+        link.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href && href !== '#' && href.length > 1) {
+            e.preventDefault();
+            selectNavItem(href);
+            history.pushState(null, null, href);
+            smoothScrollTo(href);
+          }
+        });
+      }
+    });
+
+    // Listen to hashchange
+    window.addEventListener('hashchange', () => {
+      if (window.location.hash) {
+        selectNavItem(window.location.hash);
+        smoothScrollTo(window.location.hash);
+      }
+    });
+
+    // ============================================================
+    // STATS NUMBER COUNTER ANIMATION (Runs every time section is viewed)
+    // ============================================================
+    function initStatsCounter() {
+      const statsSection = document.getElementById('stats-section');
+      if (!statsSection) return;
+
+      const cards = statsSection.querySelectorAll('.stat-card');
+      const numbers = statsSection.querySelectorAll('.stat-number');
+      let isVisible = false;
+      let animFrameIds = [];
+      let timeoutIds = [];
+
+      function stopAllAnimations() {
+        animFrameIds.forEach(id => cancelAnimationFrame(id));
+        animFrameIds = [];
+        timeoutIds.forEach(id => clearTimeout(id));
+        timeoutIds = [];
+      }
+
+      function resetStats() {
+        stopAllAnimations();
+        // Reset card styling to hidden entrance state
+        cards.forEach((card) => {
+          card.classList.remove('opacity-100', 'translate-y-0');
+          card.classList.add('opacity-0', 'translate-y-6');
+        });
+
+        // Reset numbers to 0 with suffix
+        numbers.forEach((el) => {
+          const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+          const suffix = el.getAttribute('data-suffix') || '';
+          const initialVal = decimals > 0 ? (0).toFixed(decimals) : '0';
+          el.textContent = initialVal + suffix;
+        });
+      }
+
+      function playStatsAnimation() {
+        stopAllAnimations();
+
+        // 1. Entrance animation: cards rise smoothly and fade in
+        cards.forEach((card, index) => {
+          const tid = setTimeout(() => {
+            card.classList.remove('opacity-0', 'translate-y-6');
+            card.classList.add('opacity-100', 'translate-y-0');
+          }, index * 90);
+          timeoutIds.push(tid);
+        });
+
+        // 2. Count-up number animation with smooth ease-out curve
+        numbers.forEach((el, elIdx) => {
+          const target = parseFloat(el.getAttribute('data-target') || '0');
+          const duration = parseInt(el.getAttribute('data-duration') || '1800', 10);
+          const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+          const suffix = el.getAttribute('data-suffix') || '';
+          const isLocale = el.getAttribute('data-format') === 'id';
+
+          let startTime = null;
+
+          function animateFrame(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const elapsed = timestamp - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+
+            // Easing: easeOutQuart for gentle deceleration near end
+            const easeProgress = 1 - Math.pow(1 - progress, 4);
+            const currentVal = easeProgress * target;
+
+            let formattedNumber;
+            if (isLocale) {
+              formattedNumber = Math.floor(currentVal).toLocaleString('id-ID');
+            } else if (decimals > 0) {
+              formattedNumber = currentVal.toFixed(decimals);
+            } else {
+              formattedNumber = Math.floor(currentVal).toString();
+            }
+
+            el.textContent = formattedNumber + suffix;
+
+            if (progress < 1) {
+              const frameId = requestAnimationFrame(animateFrame);
+              animFrameIds[elIdx] = frameId;
+            } else {
+              // Ensure final value is exact
+              const finalFormatted = isLocale
+                ? target.toLocaleString('id-ID')
+                : (decimals > 0 ? target.toFixed(decimals) : target.toString());
+              el.textContent = finalFormatted + suffix;
+            }
+          }
+
+          const frameId = requestAnimationFrame(animateFrame);
+          animFrameIds[elIdx] = frameId;
+        });
+      }
+
+      // IntersectionObserver that plays every time section is entered, and resets when scrolled away
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              if (!isVisible) {
+                isVisible = true;
+                playStatsAnimation();
+              }
+            } else {
+              if (isVisible) {
+                isVisible = false;
+                resetStats();
+              }
+            }
+          });
+        }, {
+          threshold: 0.15,
+          rootMargin: '0px 0px -20px 0px'
+        });
+
+        observer.observe(statsSection);
+      } else {
+        // Fallback for older browsers
+        playStatsAnimation();
+      }
+    }
+
+    // Init
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCards(products);
+      lucide.createIcons();
+      initStatsCounter();
+      if (window.location.hash) {
+        selectNavItem(window.location.hash);
+        setTimeout(() => {
+          smoothScrollTo(window.location.hash);
+        }, 150);
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Lengkap Perlengkapan Hotel Bintang 5 | DETASCO</title>
+  <meta name="description" content="Katalog komprehensif pengadaan hospitality supplier hotel bintang 4 & 5 di Indonesia. Bedding, handuk, amenities, housekeeping, dan banquet supplies.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Master Products Data -->
+  <script src="products-data.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            detasco: {
+              gold: '#E5B13A',
+              goldHover: '#F5C452',
+              goldDark: '#B88A20',
+              champagne: '#F8E8C0',
+              bronze: '#C59E47',
+              darkBg: '#0D1017',
+              darker: '#080A0F',
+              cardBg: '#131822',
+              cardHover: '#181E2B',
+              cardInset: '#0B0E14',
+              borderCard: 'rgba(255, 255, 255, 0.08)',
+              borderGold: 'rgba(229, 177, 58, 0.3)',
+              borderGoldHover: 'rgba(229, 177, 58, 0.7)',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            script: ['"Playfair Display"', 'serif'],
+            cinzel: ['"Cinzel"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #F8F5EE;
+      color: #1A1E29;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    
+    .font-luxury-script {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+    }
+
+    /* Page scrollbar (Light Luxury Palette) */
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #ECE5D8;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #C4B59D;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #B88B2A;
+    }
+
+    /* Refined Luxury Scrollbar for Toolbar & Filter Pills */
+    .custom-light-scrollbar {
+      scrollbar-width: thin;
+      scrollbar-color: #C5A059 #EAE3D6;
+    }
+    .custom-light-scrollbar::-webkit-scrollbar {
+      height: 5px;
+      width: 5px;
+    }
+    .custom-light-scrollbar::-webkit-scrollbar-track {
+      background: #EAE3D6;
+      border-radius: 9999px;
+      margin: 0 4px;
+    }
+    .custom-light-scrollbar::-webkit-scrollbar-thumb {
+      background: #C5A059;
+      border-radius: 9999px;
+      transition: background-color 0.2s;
+    }
+    .custom-light-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #8C6618;
+    }
+
+    .glass-nav {
+      background: rgba(13, 16, 23, 0.98);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .solid-dropdown {
+      border: 1px solid rgba(229, 177, 58, 0.4);
+      box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.9);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-detasco-gold selection:text-black">
+
+  <!-- ============================================================ -->
+  <!-- TOP ANNOUNCEMENT BAR                                         -->
+  <!-- ============================================================ -->
+  <div class="bg-[#0A0D13] border-b border-white/5 py-2 px-4 text-[11px] text-gray-300 font-medium tracking-wider">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1.5 sm:gap-4">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded bg-detasco-gold/15 text-detasco-gold border border-detasco-gold/30 font-bold text-[9px] uppercase tracking-widest">
+          B2B Portal
+        </span>
+        <span class="truncate">Solusi Pasokan & Pengadaan Resmi Hotel Bintang 4 & 5 Seluruh Indonesia</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs font-semibold">
+        <a href="tel:+622158907788" class="hover:text-detasco-gold transition flex items-center gap-1">
+          <i data-lucide="phone-call" class="w-3 h-3 text-detasco-gold"></i>
+          <span>(021) 5890-7788</span>
+        </a>
+        <span class="text-white/20 hidden sm:inline">|</span>
+        <a href="https://wa.me/6281234567890?text=Halo%20Detasco,%20saya%20ingin%20berkonsultasi%20pengadaan%20hotel" target="_blank" class="hover:text-detasco-gold transition flex items-center gap-1 text-detasco-gold">
+          <i data-lucide="message-square" class="w-3 h-3"></i>
+          <span>WhatsApp Resmi B2B</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- MAIN NAVBAR (Sticky Header)                                  -->
+  <!-- ============================================================ -->
+  <header class="sticky top-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGO -->
+      <a href="index.html#beranda" class="flex items-center gap-3.5 group">
+        <div class="relative">
+          <div class="w-11 h-11 rounded-full bg-gradient-to-br from-[#1C2331] to-[#0A0D13] border border-detasco-gold flex items-center justify-center p-1.5 shadow-lg group-hover:scale-105 transition-transform duration-300">
+            <img src="logo.png" alt="DETASCO Logo" class="w-full h-full object-contain filter brightness-110 drop-shadow-[0_0_8px_rgba(229,177,58,0.5)]">
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-[0.2em] text-white group-hover:text-detasco-gold transition duration-300">
+            DETASCO
+          </span>
+          <span class="text-[9px] uppercase font-bold tracking-[0.3em] text-detasco-gold">
+            HOSPITALITY SUPPLIER
+          </span>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAVIGATION -->
+      <nav class="hidden lg:flex items-center gap-3 xl:gap-4 text-xs font-semibold tracking-wider uppercase text-gray-300">
+        <a href="index.html#beranda" class="px-3 py-1.5 rounded-full hover:text-detasco-gold hover:bg-white/5 transition-all duration-300">
+          Beranda
+        </a>
+
+        <!-- KATALOG (Active State on dedicated catalog page) -->
+        <a href="katalog.html" class="px-4 py-1.5 rounded-full font-bold text-black bg-detasco-gold border border-detasco-gold shadow-[0_0_15px_rgba(229,177,58,0.35)] transition-all duration-300 inline-flex items-center gap-1">
+          <span>Katalog</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-black/60"></span>
+        </a>
+
+        <a href="index.html#kategori" class="px-3 py-1.5 rounded-full hover:text-detasco-gold hover:bg-white/5 transition-all duration-300">
+          Kategori
+        </a>
+
+        <a href="index.html#inspirasi" class="px-3 py-1.5 rounded-full hover:text-detasco-gold hover:bg-white/5 transition-all duration-300">
+          Inspirasi
+        </a>
+
+        <a href="index.html#standar" class="px-3 py-1.5 rounded-full hover:text-detasco-gold hover:bg-white/5 transition-all duration-300">
+          Standar
+        </a>
+
+        <a href="index.html#kontak" class="px-3 py-1.5 rounded-full hover:text-detasco-gold hover:bg-white/5 transition-all duration-300">
+          Kontak
+        </a>
+
+        <a href="index.html#lokasi" class="px-3 py-1.5 rounded-full hover:text-detasco-gold hover:bg-white/5 transition-all duration-300">
+          Lokasi
+        </a>
+      </nav>
+
+      <!-- CTA BUTTON & MOBILE TOGGLE -->
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/6281234567890?text=Halo%20Detasco,%20saya%20ingin%20berkonsultasi%20mengenai%20katalog%20produk" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-detasco-gold to-detasco-goldHover text-black font-bold text-xs uppercase tracking-wider hover:shadow-[0_0_20px_rgba(229,177,58,0.4)] transition-all duration-300">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Konsultasi</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Menu Navigasi" class="lg:hidden text-gray-300 hover:text-detasco-gold p-2 rounded-lg hover:bg-white/5 transition">
+          <i data-lucide="menu" id="menuIcon" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-[#0D1017] border-b border-detasco-gold/30 px-5 py-4 space-y-2 text-sm font-semibold tracking-wider uppercase">
+      <a href="index.html#beranda" class="block py-2.5 text-gray-300 hover:text-detasco-gold border-b border-white/5">Beranda</a>
+      <a href="katalog.html" class="block py-2.5 text-detasco-gold font-bold border-b border-white/5 flex items-center justify-between">
+        <span>Katalog Lengkap</span>
+        <span class="text-[10px] px-2 py-0.5 rounded bg-detasco-gold/20 text-detasco-gold border border-detasco-gold/40">Aktif</span>
+      </a>
+      <a href="index.html#kategori" class="block py-2.5 text-gray-300 hover:text-detasco-gold border-b border-white/5">Kategori Pasokan</a>
+      <a href="index.html#inspirasi" class="block py-2.5 text-gray-300 hover:text-detasco-gold border-b border-white/5">Inspirasi Kemewahan</a>
+      <a href="index.html#standar" class="block py-2.5 text-gray-300 hover:text-detasco-gold border-b border-white/5">Standar & Kualitas</a>
+      <a href="index.html#kontak" class="block py-2.5 text-gray-300 hover:text-detasco-gold border-b border-white/5">Kontak & Penawaran</a>
+      <a href="index.html#lokasi" class="block py-2.5 text-gray-300 hover:text-detasco-gold">Lokasi Showroom</a>
+      
+      <div class="pt-3">
+        <a href="https://wa.me/6281234567890?text=Halo%20Detasco,%20saya%20ingin%20berkonsultasi%20pengadaan%20hotel" target="_blank" class="w-full py-3 rounded-xl bg-detasco-gold text-black font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Hubungi Tim Penjualan B2B</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- PAGE HEADER & BREADCRUMB                                     -->
+  <!-- ============================================================ -->
+  <section class="bg-[#0D1017] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-b border-[#E2D8C7]/20 relative overflow-hidden">
+    <!-- Background gold radial highlight -->
+    <div class="absolute top-0 right-1/4 w-96 h-96 bg-detasco-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+    
+    <div class="max-w-7xl mx-auto relative z-10">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-gray-400 mb-4">
+        <a href="index.html#beranda" class="hover:text-detasco-gold transition flex items-center gap-1">
+          <i data-lucide="home" class="w-3.5 h-3.5"></i>
+          <span>Beranda</span>
+        </a>
+        <span>/</span>
+        <span class="text-detasco-gold font-semibold">Katalog Produk Lengkap</span>
+      </nav>
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-detasco-gold">
+            PORTOFOLIO PENGADAAN LENGKAP
+          </span>
+          <h1 class="font-cinzel text-2xl sm:text-4xl lg:text-5xl font-bold tracking-wide text-white mt-1.5">
+            KATALOG PRODUK UNGGULAN
+          </h1>
+          <div class="w-20 h-0.5 bg-detasco-gold my-3"></div>
+          <p class="text-xs sm:text-sm text-gray-300 max-w-2xl leading-relaxed">
+            Jelajahi seluruh 20 koleksi pasokan esensial perhotelan bintang 4 & 5. Seluruh unit siap suplai dalam skala proyek baru, peremajaan kamar, maupun kontrak pasokan berkala dengan garansi mutu resmi.
+          </p>
+        </div>
+
+        <!-- Quick Counter Badge -->
+        <div class="shrink-0 flex items-center gap-3 bg-[#131822] border border-detasco-gold/30 rounded-2xl px-5 py-3 shadow-lg">
+          <div class="w-10 h-10 rounded-full bg-detasco-gold/15 border border-detasco-gold/40 flex items-center justify-center text-detasco-gold">
+            <i data-lucide="package-check" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <span class="text-[10px] uppercase tracking-wider text-gray-400 block font-semibold">Total Koleksi</span>
+            <span class="font-cinzel text-xl font-bold text-detasco-gold"><span id="totalProductsCounter">20</span> Produk B2B</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- INTERACTIVE TOOLBAR: SEARCH, CATEGORY PILLS & SORTING        -->
+  <!-- ============================================================ -->
+  <section class="sticky top-20 z-40 bg-[#F8F5EE]/95 backdrop-blur-md border-b border-[#E2D8C7] py-3.5 px-4 sm:px-6 lg:px-8 shadow-sm">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-start justify-between gap-3 lg:gap-4">
+      
+      <!-- Category Filter Pills (Scrollable with refined luxury scrollbar & generous distance) -->
+      <div class="overflow-x-auto custom-light-scrollbar flex-1 min-w-0 pt-1 pb-3 px-1 -mx-1">
+        <div class="inline-flex items-center gap-2 whitespace-nowrap">
+          <button onclick="filterCategory('all', this)" id="tab-all" class="cat-btn active shrink-0 h-[38px] px-4 rounded-full text-xs font-bold tracking-wide border border-[#1A1E29] bg-[#1A1E29] text-[#E5B13A] transition shadow-sm inline-flex items-center gap-1.5">
+            <span>Semua Koleksi</span>
+            <span class="px-1.5 py-0.5 rounded-full text-[10px] bg-black/40 text-detasco-gold leading-none">(20)</span>
+          </button>
+          <button onclick="filterCategory('linen', this)" id="tab-linen" class="cat-btn shrink-0 h-[38px] px-4 rounded-full text-xs font-semibold tracking-wide border border-[#DDD5C5] bg-white text-[#525966] hover:border-[#B88B2A] hover:text-[#1A1E29] transition inline-flex items-center gap-1.5">
+            <span>Linen & Bedding</span>
+            <span class="px-1.5 py-0.5 rounded-full text-[10px] bg-gray-100 text-[#525966] leading-none">(5)</span>
+          </button>
+          <button onclick="filterCategory('amenities', this)" id="tab-amenities" class="cat-btn shrink-0 h-[38px] px-4 rounded-full text-xs font-semibold tracking-wide border border-[#DDD5C5] bg-white text-[#525966] hover:border-[#B88B2A] hover:text-[#1A1E29] transition inline-flex items-center gap-1.5">
+            <span>Guest Amenities</span>
+            <span class="px-1.5 py-0.5 rounded-full text-[10px] bg-gray-100 text-[#525966] leading-none">(5)</span>
+          </button>
+          <button onclick="filterCategory('equipment', this)" id="tab-equipment" class="cat-btn shrink-0 h-[38px] px-4 rounded-full text-xs font-semibold tracking-wide border border-[#DDD5C5] bg-white text-[#525966] hover:border-[#B88B2A] hover:text-[#1A1E29] transition inline-flex items-center gap-1.5">
+            <span>In-Room & Housekeeping</span>
+            <span class="px-1.5 py-0.5 rounded-full text-[10px] bg-gray-100 text-[#525966] leading-none">(5)</span>
+          </button>
+          <button onclick="filterCategory('banquet', this)" id="tab-banquet" class="cat-btn shrink-0 h-[38px] px-4 rounded-full text-xs font-semibold tracking-wide border border-[#DDD5C5] bg-white text-[#525966] hover:border-[#B88B2A] hover:text-[#1A1E29] transition inline-flex items-center gap-1.5">
+            <span>F&B & Banquet Supplies</span>
+            <span class="px-1.5 py-0.5 rounded-full text-[10px] bg-gray-100 text-[#525966] leading-none">(5)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Search & Sort Controls (Aligned horizontally & vertically with the category pills) -->
+      <div class="flex flex-col sm:flex-row items-center gap-2.5 shrink-0 pt-1 lg:pb-3">
+        <!-- Search Input -->
+        <div class="relative w-full sm:w-64">
+          <i data-lucide="search" class="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+          <input type="text" id="searchInput" oninput="handleSearch()" placeholder="Cari nama produk, SKU, bahan..." class="w-full h-[38px] pl-9 pr-8 rounded-xl bg-white border border-[#DDD5C5] text-xs text-[#1A1E29] placeholder-gray-400 focus:outline-none focus:border-[#1A1E29] focus:ring-1 focus:ring-[#1A1E29] transition shadow-sm">
+          <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
+            <i data-lucide="x" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- Sort Select -->
+        <div class="relative w-full sm:w-44">
+          <select id="sortSelect" onchange="handleSort()" class="w-full h-[38px] px-3.5 rounded-xl bg-white border border-[#DDD5C5] text-xs text-[#1A1E29] font-medium focus:outline-none focus:border-[#1A1E29] cursor-pointer appearance-none pr-8 shadow-sm">
+            <option value="default">Urutkan: Rekomendasi</option>
+            <option value="rating">Rating Tertinggi</option>
+            <option value="title-asc">Nama Produk (A-Z)</option>
+            <option value="title-desc">Nama Produk (Z-A)</option>
+          </select>
+          <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PRODUCT CATALOG GRID & RESULTS STATUS                        -->
+  <!-- ============================================================ -->
+  <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 w-full">
+    
+    <!-- Results Header / Filter Info -->
+    <div class="flex items-center justify-between mb-6 pb-3 border-b border-[#E2D8C7]">
+      <p class="text-xs text-[#525966]">
+        Menampilkan <span id="visibleCount" class="font-bold text-[#1A1E29]">20</span> dari <span class="font-bold text-[#1A1E29]">20</span> koleksi produk
+      </p>
+      <div class="text-xs text-[#8C6618] font-semibold flex items-center gap-1">
+        <i data-lucide="shield-check" class="w-4 h-4"></i>
+        <span>Spesifikasi Komersial B2B Ready</span>
+      </div>
+    </div>
+
+    <!-- Product Cards Grid -->
+    <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <!-- Populated dynamically via renderCatalog() -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="hidden py-20 text-center">
+      <div class="w-16 h-16 rounded-full bg-white border border-[#DDD5C5] flex items-center justify-center mx-auto mb-4 text-[#8C6618] shadow-sm">
+        <i data-lucide="package-search" class="w-8 h-8"></i>
+      </div>
+      <h3 class="font-cinzel text-lg font-bold text-[#1A1E29] mb-1">Tidak Ditemukan Produk yang Cocok</h3>
+      <p class="text-xs text-[#525966] max-w-md mx-auto mb-5">
+        Pencarian Anda tidak membuahkan hasil. Coba kata kunci lain atau bersihkan filter untuk menampilkan seluruh koleksi.
+      </p>
+      <button onclick="resetAllFilters()" class="px-5 py-2.5 rounded-full bg-[#1A1E29] text-[#E5B13A] text-xs font-bold uppercase tracking-wider hover:bg-[#B88B2A] hover:text-black transition shadow-md">
+        Tampilkan Seluruh Koleksi (20)
+      </button>
+    </div>
+
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- WHOLESALE & CUSTOM ORDER BANNER                              -->
+  <!-- ============================================================ -->
+  <section class="bg-[#F3EDE0] border-t border-b border-[#DEC89A]/60 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      <div>
+        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C6618]">KUSTOMISASI & PROYEK BARU</span>
+        <h3 class="font-cinzel text-xl sm:text-2xl font-bold text-[#1A1E29] mt-1">
+          Memerlukan Bordir Logo atau Spesifikasi Ukuran Khusus?
+        </h3>
+        <p class="text-xs text-[#525966] mt-1.5 max-w-2xl leading-relaxed">
+          Tim spesifikasi teknis DETASCO melayani pesanan khusus (OEM/ODM), formulasi *signature scent* amenities, hingga cetak jacquard tenun khusus untuk memperkuat identitas brand hotel Anda.
+        </p>
+      </div>
+      <div class="shrink-0 flex flex-col sm:flex-row gap-3">
+        <a href="https://wa.me/6281234567890?text=Halo%20Detasco,%20saya%20ingin%20berkonsultasi%20mengenai%20custom%20order%20spesifikasi%20hotel" target="_blank" class="px-6 py-3 rounded-xl bg-[#1A1E29] text-[#E5B13A] hover:bg-[#B88B2A] hover:text-black font-bold text-xs tracking-wider uppercase transition-all duration-300 shadow-md flex items-center justify-center gap-2">
+          <i data-lucide="message-square" class="w-4 h-4"></i>
+          <span>Konsultasi Kustomisasi</span>
+        </a>
+        <a href="index.html#kontak" class="px-6 py-3 rounded-xl bg-white border border-[#DDD5C5] text-[#1A1E29] hover:border-[#1A1E29] font-bold text-xs tracking-wider uppercase transition flex items-center justify-center gap-2">
+          <i data-lucide="file-text" class="w-4 h-4"></i>
+          <span>Formulir Penawaran</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER                                                       -->
+  <!-- ============================================================ -->
+  <footer class="bg-[#06080D] border-t border-white/10 text-gray-400 text-xs py-14 px-4 sm:px-6 lg:px-8 mt-auto">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      
+      <!-- Brand & Info -->
+      <div class="md:col-span-1">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-full bg-[#131822] border border-detasco-gold/50 flex items-center justify-center p-1.5">
+            <img src="logo.png" alt="DETASCO Logo" class="w-full h-full object-contain filter brightness-110">
+          </div>
+          <div>
+            <span class="font-cinzel text-lg font-bold text-white tracking-widest block">DETASCO</span>
+            <span class="text-[9px] uppercase tracking-[0.25em] text-detasco-gold block">HOSPITALITY SUPPLIER</span>
+          </div>
+        </div>
+        <p class="text-gray-400 text-xs leading-relaxed mb-4">
+          Mitra strategis terpercaya pengadaan perlengkapan komersial hotel, resor mewah, serviced apartment, dan rumah sakit kelas atas di seluruh Indonesia.
+        </p>
+        <span class="text-[11px] text-gray-500">PT Detasco Hospitality Nusantara</span>
+      </div>
+
+      <!-- Quick Nav Links -->
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-detasco-gold mb-4 font-cinzel">Navigasi Cepat</h4>
+        <ul class="space-y-2.5">
+          <li><a href="index.html#beranda" class="hover:text-white transition flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3 h-3 text-detasco-gold"></i> Beranda</a></li>
+          <li><a href="katalog.html" class="text-detasco-gold font-bold flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3 h-3 text-detasco-gold"></i> Seluruh Katalog Produk (20)</a></li>
+          <li><a href="index.html#kategori" class="hover:text-white transition flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3 h-3 text-detasco-gold"></i> Kategori Pasokan Utama</a></li>
+          <li><a href="index.html#inspirasi" class="hover:text-white transition flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3 h-3 text-detasco-gold"></i> Inspirasi Kemewahan</a></li>
+          <li><a href="index.html#standar" class="hover:text-white transition flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3 h-3 text-detasco-gold"></i> Standar & SLA Pasokan</a></li>
+          <li><a href="index.html#kontak" class="hover:text-white transition flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3 h-3 text-detasco-gold"></i> Permintaan Penawaran Harga</a></li>
+          <li><a href="index.html#lokasi" class="hover:text-white transition flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3 h-3 text-detasco-gold"></i> Lokasi Showroom & Kantor</a></li>
+        </ul>
+      </div>
+
+      <!-- Product Categories -->
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-detasco-gold mb-4 font-cinzel">Lini Produk</h4>
+        <ul class="space-y-2.5">
+          <li><a href="katalog.html?category=linen" class="hover:text-white transition">Bedding & Duvet Cover 500TC</a></li>
+          <li><a href="katalog.html?category=linen" class="hover:text-white transition">Handuk Hotel 650 GSM</a></li>
+          <li><a href="katalog.html?category=amenities" class="hover:text-white transition">Guest Amenities & Dental Kit</a></li>
+          <li><a href="katalog.html?category=equipment" class="hover:text-white transition">Housekeeping Luggage Cart</a></li>
+          <li><a href="katalog.html?category=banquet" class="hover:text-white transition">Hydraulic Chafing Dish & Dispenser</a></li>
+          <li><a href="katalog.html" class="hover:text-white transition text-detasco-gold">Lihat 20+ Produk Selengkapnya &rarr;</a></li>
+        </ul>
+      </div>
+
+      <!-- Showroom Contacts -->
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-detasco-gold mb-4 font-cinzel">Kantor & Showroom</h4>
+        <p class="leading-relaxed text-gray-400 mb-2">
+          <strong class="text-white block mb-0.5">Sentral Jakarta:</strong>
+          Kawasan Bisnis Pantai Indah Kapuk (PIK), Rukan Crown Golf Blok D No. 28-30, Kamal Muara, Jakarta Utara
+        </p>
+        <p class="leading-relaxed text-gray-400 mb-4">
+          <strong class="text-white block mb-0.5">Hub Distribusi Bali:</strong>
+          Jl. Sunset Road No. 88, Kuta, Badung, Bali
+        </p>
+        <p class="text-gray-300 font-medium flex items-center gap-2">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-detasco-gold"></i>
+          <span>sales@detasco.co.id</span>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-gray-500 text-[11px]">
+      <p>© 2026 PT Detasco Hospitality Nusantara. All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <a href="index.html#beranda" class="hover:text-gray-300 transition">Beranda</a>
+        <span>•</span>
+        <a href="katalog.html" class="text-detasco-gold">Katalog Lengkap</a>
+        <span>•</span>
+        <a href="index.html#kontak" class="hover:text-gray-300 transition">Kontak</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================ -->
+  <!-- PRODUCT DETAIL MODAL (Quick View & Technical Specs)          -->
+  <!-- ============================================================ -->
+  <div id="productModal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div class="relative w-full max-w-3xl bg-[#0D1017] border border-detasco-gold/40 rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.8)] overflow-hidden text-white my-auto animate-in fade-in zoom-in-95 duration-200">
+      
+      <!-- Close Button -->
+      <button onclick="closeProductModal()" class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-white/10 hover:bg-detasco-gold hover:text-black flex items-center justify-center transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <!-- Left: Image Box -->
+        <div class="relative h-64 md:h-full min-h-[260px] bg-black/50">
+          <img id="modalImg" src="" alt="Product Image" class="w-full h-full object-cover">
+          <span id="modalBadge" class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-black/80 border border-detasco-gold text-detasco-gold">
+            B2B READY
+          </span>
+          <div class="absolute bottom-3 left-3 right-3 p-2.5 rounded-lg bg-black/80 backdrop-blur-sm border border-white/10 text-[11px]">
+            <p><span class="text-gray-400 font-medium">Kategori:</span> <span id="modalCategory" class="text-white font-semibold"></span></p>
+            <p><span class="text-gray-400 font-medium">Kode SKU:</span> <span id="modalSKU" class="text-detasco-gold font-mono font-bold"></span></p>
+          </div>
+        </div>
+
+        <!-- Right: Specs & Info -->
+        <div class="p-6 flex flex-col justify-between max-h-[85vh] overflow-y-auto">
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <span id="modalCategoryTag" class="text-[10px] uppercase font-bold tracking-widest text-detasco-gold"></span>
+              <div class="flex items-center gap-1 text-detasco-gold text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-detasco-gold"></i>
+                <span id="modalRating" class="text-white font-semibold">5.0</span>
+              </div>
+            </div>
+            
+            <h3 id="modalTitle" class="font-cinzel text-xl sm:text-2xl font-bold text-white mb-2 leading-snug"></h3>
+            <p id="modalDesc" class="text-xs text-gray-300 leading-relaxed mb-4"></p>
+
+            <!-- Specs Table -->
+            <div class="border border-white/10 rounded-xl overflow-hidden mb-6 bg-white/[0.02]">
+              <div class="px-3.5 py-2 bg-white/5 border-b border-white/10 text-[10px] uppercase font-bold tracking-wider text-detasco-gold flex items-center justify-between">
+                <span>Spesifikasi Komersial B2B</span>
+                <i data-lucide="cpu" class="w-3 h-3 text-detasco-gold"></i>
+              </div>
+              <div class="max-h-48 overflow-y-auto">
+                <table class="w-full text-left text-xs">
+                  <tbody id="modalSpecsTable" class="divide-y divide-white/5">
+                    <!-- Dynamic Spec Rows -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="space-y-2 pt-2 border-t border-white/10">
+            <a id="modalWhatsAppBtn" href="#" target="_blank" class="w-full py-3 px-4 rounded-xl bg-detasco-gold hover:bg-detasco-goldHover text-black font-bold text-xs uppercase tracking-wider transition flex items-center justify-center gap-2 shadow-lg">
+              <i data-lucide="message-square" class="w-4 h-4"></i>
+              <span>Minta Penawaran Resmi via WhatsApp</span>
+            </a>
+            <button onclick="closeProductModal()" class="w-full py-2.5 px-4 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 text-xs font-semibold tracking-wider transition">
+              Kembali ke Katalog
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/6281234567890?text=Halo%20Detasco,%20saya%20ingin%20berkonsultasi%20mengenai%20katalog%20produk%20hotel" target="_blank" class="fixed bottom-6 right-6 z-40 p-3.5 rounded-full bg-emerald-500 text-white hover:bg-emerald-400 transition-all duration-300 shadow-[0_0_25px_rgba(16,185,129,0.5)] flex items-center gap-2 group">
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+    <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 ease-in-out text-xs font-bold uppercase tracking-wider pr-1">
+      Chat Sales B2B
+    </span>
+  </a>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT: CATALOG SEARCH, FILTER, SORT & MODAL LOGIC                   -->
+  <!-- ========================================================================= -->
+  <script>
+    let activeCategory = 'all';
+    let searchQuery = '';
+    let currentSort = 'default';
+
+    // Toggle Mobile Menu
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const icon = document.getElementById('menuIcon');
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        icon.setAttribute('data-lucide', 'x');
+      } else {
+        menu.classList.add('hidden');
+        icon.setAttribute('data-lucide', 'menu');
+      }
+      lucide.createIcons();
+    }
+
+    // Filter by category
+    function filterCategory(category, btnElement) {
+      activeCategory = category;
+
+      // Update button styling
+      document.querySelectorAll('.cat-btn').forEach(btn => {
+        btn.classList.remove('active', 'border-[#1A1E29]', 'bg-[#1A1E29]', 'text-[#E5B13A]', 'shadow-sm');
+        btn.classList.add('border-[#DDD5C5]', 'bg-white', 'text-[#525966]');
+      });
+
+      if (!btnElement) {
+        btnElement = document.getElementById('tab-' + category);
+      }
+
+      if (btnElement) {
+        btnElement.classList.add('active', 'border-[#1A1E29]', 'bg-[#1A1E29]', 'text-[#E5B13A]', 'shadow-sm');
+        btnElement.classList.remove('border-[#DDD5C5]', 'bg-white', 'text-[#525966]');
+      }
+
+      renderCatalog();
+    }
+
+    // Search input handling
+    function handleSearch() {
+      const input = document.getElementById('searchInput');
+      searchQuery = input.value.trim().toLowerCase();
+      
+      const clearBtn = document.getElementById('clearSearchBtn');
+      if (searchQuery.length > 0) {
+        clearBtn.classList.remove('hidden');
+      } else {
+        clearBtn.classList.add('hidden');
+      }
+
+      renderCatalog();
+    }
+
+    function clearSearch() {
+      const input = document.getElementById('searchInput');
+      input.value = '';
+      searchQuery = '';
+      document.getElementById('clearSearchBtn').classList.add('hidden');
+      renderCatalog();
+    }
+
+    // Sorting handling
+    function handleSort() {
+      currentSort = document.getElementById('sortSelect').value;
+      renderCatalog();
+    }
+
+    // Reset all filters
+    function resetAllFilters() {
+      searchQuery = '';
+      document.getElementById('searchInput').value = '';
+      document.getElementById('clearSearchBtn').classList.add('hidden');
+      currentSort = 'default';
+      document.getElementById('sortSelect').value = 'default';
+      filterCategory('all', document.getElementById('tab-all'));
+    }
+
+    // Main render function
+    function renderCatalog() {
+      if (!window.products) return;
+
+      let list = [...window.products];
+
+      // 1. Filter Category
+      if (activeCategory !== 'all') {
+        list = list.filter(p => p.category === activeCategory);
+      }
+
+      // 2. Filter Search Query
+      if (searchQuery.length > 0) {
+        list = list.filter(p => {
+          const inTitle = p.title.toLowerCase().includes(searchQuery);
+          const inDesc = p.shortDesc.toLowerCase().includes(searchQuery) || (p.fullDesc && p.fullDesc.toLowerCase().includes(searchQuery));
+          const inSku = p.sku.toLowerCase().includes(searchQuery);
+          const inSeries = p.seriesTag.toLowerCase().includes(searchQuery);
+          const inSpecs = p.specs && Object.entries(p.specs).some(([k, v]) => k.toLowerCase().includes(searchQuery) || v.toLowerCase().includes(searchQuery));
+          return inTitle || inDesc || inSku || inSeries || inSpecs;
+        });
+      }
+
+      // 3. Sorting
+      if (currentSort === 'rating') {
+        list.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));
+      } else if (currentSort === 'title-asc') {
+        list.sort((a, b) => a.title.localeCompare(b.title));
+      } else if (currentSort === 'title-desc') {
+        list.sort((a, b) => b.title.localeCompare(a.title));
+      }
+
+      // Update counters
+      document.getElementById('visibleCount').innerText = list.length;
+      document.getElementById('totalProductsCounter').innerText = window.products.length;
+
+      const grid = document.getElementById('productGrid');
+      const emptyState = document.getElementById('emptyState');
+
+      grid.innerHTML = '';
+
+      if (list.length === 0) {
+        emptyState.classList.remove('hidden');
+        grid.classList.add('hidden');
+        lucide.createIcons();
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      grid.classList.remove('hidden');
+
+      list.forEach(p => {
+        const card = document.createElement('div');
+        card.className = "rounded-2xl bg-white border border-[#DDD5C5] overflow-hidden hover:border-[#B88B2A] transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-xl";
+
+        card.innerHTML = `
+          <!-- Card Image & Top Right Badge -->
+          <div class="relative h-48 sm:h-52 overflow-hidden bg-[#F3EDE0] cursor-pointer" onclick="openProductModal(${p.id})">
+            <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 right-3 text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-black/85 backdrop-blur-md text-detasco-gold border border-detasco-gold/50">
+              ${p.badge}
+            </span>
+          </div>
+
+          <!-- Card Body -->
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <!-- Series & Star Rating -->
+              <div class="flex items-center justify-between text-[11px] mb-1.5">
+                <span class="text-[#8C6618] font-semibold">${p.seriesTag}</span>
+                <div class="flex items-center gap-1 text-[#B88B2A]">
+                  <i data-lucide="star" class="w-3 h-3 fill-[#B88B2A]"></i>
+                  <span class="text-[#1A1E29] font-bold text-xs">${p.rating}</span>
+                </div>
+              </div>
+
+              <!-- Product Title -->
+              <h3 onclick="openProductModal(${p.id})" class="font-cinzel font-bold text-base text-[#1A1E29] group-hover:text-[#8C6618] transition mb-2 cursor-pointer">
+                ${p.title}
+              </h3>
+
+              <!-- Short Description -->
+              <p class="text-xs text-[#525966] line-clamp-2 leading-relaxed mb-4">
+                ${p.shortDesc}
+              </p>
+            </div>
+
+            <!-- Inset Box (Status & MOQ) -->
+            <div class="bg-[#F4EFE6] border border-[#DDD5C5] rounded-lg p-2.5 mb-4 grid grid-cols-2 gap-2 text-[11px]">
+              <div>
+                <span class="block text-[9px] uppercase font-bold tracking-wider text-[#7A8190]">${p.highlightLabel}</span>
+                <span class="text-[#1A1E29] font-semibold truncate block">${p.highlightVal}</span>
+              </div>
+              <div class="text-right">
+                <span class="block text-[9px] uppercase font-bold tracking-wider text-[#7A8190]">MOQ</span>
+                <span class="text-[#8C6618] font-bold block">${p.moq}</span>
+              </div>
+            </div>
+
+            <!-- Action Button -->
+            <button onclick="openProductModal(${p.id})" class="w-full py-2.5 rounded-lg bg-[#1A1E29] border border-[#1A1E29] text-[#E5B13A] group-hover:bg-[#B88B2A] group-hover:border-[#B88B2A] group-hover:text-black font-semibold text-xs tracking-wider uppercase transition-all duration-300 flex items-center justify-center gap-2 shadow-sm">
+              <i data-lucide="file-edit" class="w-3.5 h-3.5"></i>
+              MINTA PENAWARAN
+            </button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+
+      lucide.createIcons();
+    }
+
+    // Modal Handling
+    function openProductModal(productId) {
+      if (!window.products) return;
+      const p = window.products.find(item => item.id === productId);
+      if (!p) return;
+
+      document.getElementById('modalImg').src = p.image;
+      document.getElementById('modalBadge').innerText = p.badge;
+      document.getElementById('modalCategoryTag').innerText = p.seriesTag;
+      document.getElementById('modalRating').innerText = p.rating;
+      document.getElementById('modalCategory').innerText = p.categoryName;
+      document.getElementById('modalSKU').innerText = p.sku;
+      document.getElementById('modalTitle').innerText = p.title;
+      document.getElementById('modalDesc').innerText = p.fullDesc;
+
+      const specsTable = document.getElementById('modalSpecsTable');
+      specsTable.innerHTML = '';
+      if (p.specs) {
+        for (const [key, value] of Object.entries(p.specs)) {
+          const row = document.createElement('tr');
+          row.className = "hover:bg-white/[0.04]";
+          row.innerHTML = `
+            <td class="py-2 px-3.5 font-medium text-gray-400 w-2/5 border-r border-white/5">${key}</td>
+            <td class="py-2 px-3.5 text-white font-semibold w-3/5">${value}</td>
+          `;
+          specsTable.appendChild(row);
+        }
+      }
+
+      const waMsg = encodeURIComponent(`Halo Detasco, saya ingin meminta penawaran harga grosir B2B untuk: ${p.title} (SKU: ${p.sku}). Mohon info ketersediaan stok & harga per quantity.`);
+      document.getElementById('modalWhatsAppBtn').href = `https://wa.me/6281234567890?text=${waMsg}`;
+
+      document.getElementById('productModal').classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+      lucide.createIcons();
+    }
+
+    function closeProductModal() {
+      document.getElementById('productModal').classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    // Close modal on Escape or backdrop click
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeProductModal();
+    });
+    document.getElementById('productModal').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('productModal')) closeProductModal();
+    });
+
+    // Check query params on page load (e.g. katalog.html?category=linen)
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const catParam = params.get('category');
+      if (catParam && ['linen', 'amenities', 'equipment', 'banquet'].includes(catParam)) {
+        filterCategory(catParam);
+      } else {
+        renderCatalog();
+      }
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
