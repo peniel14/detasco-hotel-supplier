@@ -17,7 +17,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Master Products Data (Single Source of Truth) -->
-  <script src="products-data.js"></script>
+  <script src="products-data.js?v=20260929_2"></script>
 
   <script>
     tailwind.config = {
@@ -1401,8 +1401,8 @@
   <!-- ========================================================================= -->
   <!-- THEME (LIGHT/DARK) & LANGUAGE (ID/EN) SWITCHERS                           -->
   <!-- ========================================================================= -->
-  <script src="theme.js"></script>
-  <script src="i18n.js"></script>
+  <script src="theme.js?v=20260929_2"></script>
+  <script src="i18n.js?v=20260929_2"></script>
 
   <!-- ========================================================================= -->
   <!-- JAVASCRIPT: DATA & INTERACTIVE LOGIC                                      -->
@@ -1432,8 +1432,20 @@
         return;
       }
 
-      // Tampilkan hanya satu baris saja (4 kartu teratas untuk desktop)
-      const displayedItems = items.slice(0, 4);
+      // Tampilkan produk yang relevan:
+      // - Pada tab 'all' (Semua Koleksi): Tampilkan 8 produk unggulan representatif dari setiap kategori (termasuk Custom Laundry Bag yang baru!)
+      // - Pada tab kategori spesifik: Tampilkan SELURUH produk kategori tersebut agar tidak ada koleksi yang terpotong
+      let displayedItems = items;
+      if (typeof activeTabCategory === 'undefined' || activeTabCategory === 'all') {
+        const pLinen = products.filter(p => p.category === 'linen').slice(0, 2);
+        const pAmenities = products.filter(p => p.category === 'amenities').slice(0, 2);
+        const pEquipment = [
+          products.find(p => p.id === 21) || products.find(p => p.category === 'equipment'),
+          products.filter(p => p.category === 'equipment' && p.id !== 21)[0]
+        ].filter(Boolean);
+        const pBanquet = products.filter(p => p.category === 'banquet').slice(0, 2);
+        displayedItems = [...pLinen, ...pAmenities, ...pEquipment, ...pBanquet];
+      }
 
       displayedItems.forEach(p => {
         const card = document.createElement('div');
@@ -1441,10 +1453,10 @@
 
         card.innerHTML = `
           <!-- Card Image & Top Right Badge -->
-          <div class="relative h-48 sm:h-52 overflow-hidden bg-[#F3EDE0]">
+          <div class="relative h-48 sm:h-52 overflow-hidden bg-[#F3EDE0] cursor-pointer" onclick="openProductModal(${p.id})">
             <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             <span class="absolute top-3 right-3 text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-black/85 backdrop-blur-md text-detasco-gold border border-detasco-gold/50">
-              ${p.badge}
+              ${(window.DetascoI18n && DetascoI18n.pick(p, 'badge')) || p.badge}
             </span>
           </div>
 

@@ -51,6 +51,7 @@
 
     // ---- Product card template (dynamic, but static wrapper text) ----
     "MINTA PENAWARAN": "REQUEST A QUOTE",
+    "PRODUK BARU": "NEW ARRIVAL",
 
     // ---- Kategori Pasokan Utama (index.html) ----
     "RUANG LINGKUP PENGADAAN KOMPREHENSIF": "COMPREHENSIVE PROCUREMENT SCOPE",
