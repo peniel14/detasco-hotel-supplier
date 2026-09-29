@@ -17,10 +17,12 @@
     "Lokasi Showroom": "Showroom Location",
     "Kategori Suplai": "Supply Categories",
     "20 Produk": "20 Products",
+    "21 Produk": "21 Products",
     "Semua Koleksi": "All Collections",
     "Katalog lengkap hotel": "Complete hotel catalog",
     "Sprei, duvet & handuk": "Sheets, duvets & towels",
     "Buka Seluruh Katalog (20 Koleksi)": "View Full Catalog (20 Collections)",
+    "Buka Seluruh Katalog (21 Koleksi)": "View Full Catalog (21 Collections)",
     "Konsultasi": "Consultation",
     "Buka Laman Katalog Lengkap →": "View Full Catalog Page →",
     "Menu Navigasi": "Navigation Menu",
@@ -34,6 +36,7 @@
     "KATALOG PRODUK UNGGULAN": "FEATURED PRODUCT CATALOG",
     "Koleksi esensial perhotelan dengan spesifikasi komersial teruji, didesain untuk durabilitas tinggi dan kemewahan sentuhan tamu.": "Essential hospitality collections with field-tested commercial specifications, built for high durability and a luxurious guest touch.",
     "Semua Koleksi (20)": "All Collections (20)",
+    "Semua Koleksi (21)": "All Collections (21)",
     "Tidak ada koleksi produk yang sesuai filter.": "No product collection matches this filter.",
     "Tampilkan Semua Koleksi": "Show All Collections",
     "See All Products (Lihat Seluruh Koleksi)": "See All Products (View Full Collection)",
@@ -42,6 +45,7 @@
     "See All In-Room & Housekeeping (Katalog Lengkap)": "See All In-Room & Housekeeping (Full Catalog)",
     "See All F&B & Banquet Supplies (Katalog Lengkap)": "See All F&B & Banquet Supplies (Full Catalog)",
     "Tersedia 20+ koleksi lengkap dengan filter spesifikasi komersial di laman katalog": "20+ full collections available with commercial spec filters on the catalog page",
+    "Tersedia 21+ koleksi lengkap dengan filter spesifikasi komersial di laman katalog": "21+ full collections available with commercial spec filters on the catalog page",
     "*Memerlukan penyesuaian dimensi matras, bordir lambang khusus, atau formulasi aroma (*signature scent*) hotel Anda?": "*Need custom mattress dimensions, special logo embroidery, or a signature scent formulation for your hotel?",
     "Hubungi Tim Spesifikasi Teknis B2B": "Contact Our B2B Technical Specification Team",
 
@@ -209,6 +213,7 @@
     "Katalog Produk Lengkap": "Full Product Catalog",
     "PORTOFOLIO PENGADAAN LENGKAP": "FULL PROCUREMENT PORTFOLIO",
     "Jelajahi seluruh 20 koleksi pasokan esensial perhotelan bintang 4 & 5. Seluruh unit siap suplai dalam skala proyek baru, peremajaan kamar, maupun kontrak pasokan berkala dengan garansi mutu resmi.": "Explore all 20 essential 4 & 5-star hospitality supply collections. Every unit is ready to supply for new projects, room renovations, or periodic supply contracts with an official quality guarantee.",
+    "Jelajahi seluruh 21 koleksi pasokan esensial perhotelan bintang 4 & 5. Seluruh unit siap suplai dalam skala proyek baru, peremajaan kamar, maupun kontrak pasokan berkala dengan garansi mutu resmi.": "Explore all 21 essential 4 & 5-star hospitality supply collections. Every unit is ready to supply for new projects, room renovations, or periodic supply contracts with an official quality guarantee.",
     "Total Koleksi": "Total Collections",
     "Produk B2B": "B2B Products",
 
@@ -227,6 +232,7 @@
     "Tidak Ditemukan Produk yang Cocok": "No Matching Products Found",
     "Pencarian Anda tidak membuahkan hasil. Coba kata kunci lain atau bersihkan filter untuk menampilkan seluruh koleksi.": "Your search returned no results. Try different keywords or clear the filters to show the full collection.",
     "Tampilkan Seluruh Koleksi (20)": "Show Full Collection (20)",
+    "Tampilkan Seluruh Koleksi (21)": "Show Full Collection (21)",
 
     // ---- katalog.html: Wholesale banner ----
     "KUSTOMISASI & PROYEK BARU": "CUSTOMIZATION & NEW PROJECTS",
@@ -239,6 +245,7 @@
     "Mitra strategis terpercaya pengadaan perlengkapan komersial hotel, resor mewah, serviced apartment, dan rumah sakit kelas atas di seluruh Indonesia.": "A trusted strategic partner for commercial procurement of hotels, luxury resorts, serviced apartments, and upscale hospitals across Indonesia.",
     "Navigasi Cepat": "Quick Navigation",
     "Seluruh Katalog Produk (20)": "Full Product Catalog (20)",
+    "Seluruh Katalog Produk (21)": "Full Product Catalog (21)",
     "Kategori Pasokan Utama": "Core Supply Categories",
     "Standar & SLA Pasokan": "Supply Standards & SLA",
     "Permintaan Penawaran Harga": "Price Quote Request",
@@ -246,6 +253,7 @@
     "Lini Produk": "Product Line",
     "Handuk Hotel 650 GSM": "Hotel Towels 650 GSM",
     "Lihat 20+ Produk Selengkapnya →": "View 20+ More Products →",
+    "Lihat 21+ Produk Selengkapnya →": "View 21+ More Products →",
     "Kantor & Showroom": "Office & Showroom",
     "Sentral Jakarta:": "Jakarta Central:",
     "Hub Distribusi Bali:": "Bali Distribution Hub:"

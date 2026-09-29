@@ -798,6 +798,47 @@
           "Beverage Tap": "Solid Brass Chrome Anti-Drip Durable Spigot",
           "Minimum Order (MOQ)": "2 Units"
         }
+      },
+      {
+        id: 21,
+        title: "CUSTOM HOTEL LAUNDRY BAG",
+        seriesTag: "Housekeeping Series",
+        rating: "4.9",
+        category: "equipment",
+        categoryName: "In-Room & Housekeeping",
+        grade: "bintang5",
+        badge: "CUSTOM PRINT",
+        badgeColor: "text-detasco-gold border-detasco-gold/60",
+        sku: "DTS-EQP-LB01",
+        image: "laundry-bag.jpg",
+        shortDesc: "Kantong laundry hotel premium dengan sablon logo custom hotel, alamat website, dan form data tamu (Room, Name, Date)...",
+        shortDesc_en: "Premium hotel laundry bag with custom hotel logo print, website URL, and guest identification form (Room, Name, Date)...",
+        fullDesc: "Kantong laundry eksklusif untuk kamar hotel & serviced residence bintang 4 dan 5. Dibuat dengan material tebal berkualitas, tahan robek, dan kedap kelembapan. Dilengkapi area sablon custom untuk logo hotel serta format isian checklist tamu (Room No, Name, Date) untuk memudahkan pencatatan layanan valet & laundry harian properti Anda.",
+        fullDesc_en: "Exclusive laundry bag for 4 and 5-star hotel & serviced residence rooms. Crafted from high-density, tear-resistant, and moisture-proof material. Equipped with custom branding print for hotel logo and a guest checklist format (Room No, Name, Date) for streamlined daily valet and laundry management.",
+        highlightLabel: "KUSTOMISASI",
+        highlightLabel_en: "CUSTOMIZATION",
+        highlightVal: "Cetak Logo & Checklist",
+        highlightVal_en: "Custom Logo & Checklist",
+        moq: "500 Pcs",
+        moq_en: "500 Pcs",
+        specs: {
+          "Material Bahan": "Non-Woven Spunbond / Biodegradable Eco-Plastic (Tahan Air)",
+          "Ketebalan": "60 – 80 GSM (Spunbond) / 40 Micron (Plastic)",
+          "Dimensi Ukuran": "40 x 60 cm (Standar Kamar Hotel & Valet)",
+          "Sistem Penutup": "Tali Serut Ganda (Drawstring) / Seal Klip",
+          "Area Cetak / Sablon": "Logo Hotel, Alamat Web, dan Form Tamu (Room, Name, Date)",
+          "Pilihan Warna": "Putih Bersih (White), Cream, atau Custom Sesuai Brand",
+          "Minimum Order (MOQ)": "500 Pcs (Custom Sablon Logo Hotel)"
+        },
+        specs_en: {
+          "Raw Material": "Non-Woven Spunbond / Biodegradable Eco-Plastic (Water-Resistant)",
+          "Thickness": "60 – 80 GSM (Spunbond) / 40 Micron (Plastic)",
+          "Dimensions": "40 x 60 cm (Standard Hotel Room & Valet)",
+          "Closure System": "Double Drawstring / Seal Clip",
+          "Print Area": "Custom Hotel Logo, Website URL, and Guest Form (Room, Name, Date)",
+          "Color Options": "Crisp White, Cream, or Custom Brand Colors",
+          "Minimum Order (MOQ)": "500 Pcs (Custom Hotel Logo Print)"
+        }
       }
     ];
 
