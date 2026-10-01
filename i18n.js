@@ -98,7 +98,7 @@
     "Empat Langkah Mudah": "Four Easy Steps",
     "Proses pemesanan yang singkat dan transparan, dari memilih produk sampai barang tiba.": "A short, transparent ordering process, from choosing products to delivery.",
     "Pilih Produk": "Choose Products",
-    "Telusuri katalog dan catat produk, jumlah, serta kebutuhan kustomisasi Anda.": "Browse the catalog and note the products, quantities, and customization needs.",
+    "Pilih kategori produk dan catat kebutuhan, spesifikasi, serta kustomisasi Anda.": "Select product categories and note your needs, specifications, and customization.",
     "Minta Penawaran": "Request a Quote",
     "Kirim daftar kebutuhan lewat WhatsApp atau formulir. Kami balas dengan penawaran harga grosir.": "Send your requirements via WhatsApp or the form. We'll reply with wholesale pricing.",
     "Konfirmasi & Persiapan": "Confirm & Prepare",
