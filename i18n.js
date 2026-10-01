@@ -125,7 +125,7 @@
     "Kami melayani pembelian partai besar, tender pengadaan, pengiriman sampel fisik (": "We handle bulk purchases, procurement tenders, physical sample shipping (",
     "), serta kontrak pasokan jangka panjang dengan termin fleksibel.": "), and long-term supply contracts with flexible terms.",
     "Kantor Pusat & Pergudangan Terpadu": "Head Office & Integrated Warehouse",
-    "Sentra Logistik & Pergudangan Modern, Jakarta & Kantor Perwakilan Bali": "Modern Logistics & Warehouse Hub, Jakarta & Bali Representative Office",
+    "Sentra Logistik & Pergudangan Modern, Medan": "Modern Logistics & Warehouse Hub, Medan",
     "Email Resmi Procurement": "Official Procurement Email",
     "Hotline WhatsApp Sales Proyek": "Project Sales WhatsApp Hotline",
     "(Senin - Sabtu, 08:30 - 17:30 WIB)": "(Mon - Sat, 08:30 - 17:30 WIB)",
