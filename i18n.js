@@ -83,6 +83,15 @@
     "Tingkat Ketepatan Pengiriman (SLA)": "On-Time Delivery Rate (SLA)",
     "Pengalaman Industri Supplier": "Years of Supplier Industry Experience",
 
+    // ---- What You Need? / Our Categories ----
+    "our categories": "our categories",
+    "What you Need?": "What you Need?",
+    "Tingkatkan kenyamanan tamu dengan linen hotel berkualitas tinggi lembut, tahan lama, dan elegan. Tersedia dalam berbagai ukuran dan warna. cocok untuk hotel bintang 3 hingga 5. Bisa custom dengan logo hotel Anda untuk tampilan yang lebih eksklusif.": "Enhance guest comfort with high-quality, soft, durable, and elegant hotel linen. Available in multiple sizes and colors, suitable for 3 to 5-star hotels. Customizable with your hotel logo for a more exclusive look.",
+    "Ciptakan kesan pertama yang berkesan dengan amenities hotel yang tampil bersih, wangi, dan premium. Kami menyediakan paket sabun, sampo, sikat gigi, shower cap, hingga sandal hotel bisa dikemas custom sesuai branding hotel Anda.": "Create a memorable first impression with clean, fragrant, and premium hotel amenities. We provide soap, shampoo, dental kits, shower caps, and hotel slippers that can be custom packaged to match your hotel branding.",
+    "Percantik kamar dan atur pencahayaan alami dengan gorden hotel elegan dari bahan pilihan. Tersedia dalam berbagai model: blackout, sheer, atau kombinasi. Cocok untuk suasana kamar yang tenang, hangat, dan eksklusif.": "Beautify rooms and manage natural lighting with elegant hotel curtains crafted from selected fabrics. Available in blackout, sheer, or combination models. Perfect for calm, warm, and exclusive guest rooms.",
+    "Handuk tebal, lembut, dan cepat menyerap memberikan pengalaman mandi yang menyenangkan bagi tamu Anda. Tersedia berbagai jenis: hand towel, bath towel, face towel, dan pool towel. Bisa bordir nama atau logo hotel.": "Thick, plush, and highly absorbent towels provide a delightful bathing experience for your guests. Available in hand, bath, face, and pool towels. Custom embroidery with your hotel name or logo available.",
+    "SEE MORE": "SEE MORE",
+
     // ---- Mengapa Memilih Detasco ----
     "MENGAPA MEMILIH DETASCO": "WHY CHOOSE DETASCO",
     "Kemitraan pengadaan jangka panjang dengan kepastian kualitas konsisten, transparansi harga pabrik, dan dedikasi layanan purna jual.": "A long-term procurement partnership built on consistent quality, transparent factory pricing, and dedicated after-sales service.",
