@@ -8,6 +8,10 @@
   var DICTIONARY = {
     // ---- Shared Nav ----
     "Beranda": "Home",
+    "Linen": "Linen",
+    "Amenities": "Amenities",
+    "Gorden": "Curtains",
+    "Towel": "Towels",
     "Katalog": "Catalog",
     "Kategori": "Categories",
     "Inspirasi": "Inspiration",
