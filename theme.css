@@ -66,21 +66,3 @@ html.light-mode .theme-icon-sun { display: none !important; }
 html.light-mode .theme-icon-moon { display: inline-flex !important; }
 .theme-icon-moon { display: none !important; }
 
-/* Our Categories (Terracotta Warm Section) - Preserve contrast in light mode */
-html.light-mode #our-categories {
-  background-color: #9E623A !important;
-}
-html.light-mode #our-categories [class*="text-white"],
-html.light-mode #our-categories .text-white {
-  color: #FFFFFF !important;
-}
-html.light-mode #our-categories [class*="text-white/"] {
-  color: rgba(255, 255, 255, 0.92) !important;
-}
-html.light-mode #our-categories [class*="border-white/"] {
-  border-color: rgba(255, 255, 255, 0.35) !important;
-}
-html.light-mode #our-categories [class*="bg-white/"] {
-  background-color: rgba(255, 255, 255, 0.08) !important;
-}
-
