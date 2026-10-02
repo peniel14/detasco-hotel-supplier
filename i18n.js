@@ -1078,7 +1078,7 @@
     if (titleEl) {
       var titleMap = {
         "Katalog Lengkap Perlengkapan Hotel Bintang 5 | DETASCO": "Complete 5-Star Hotel Supplies Catalog | DETASCO",
-        "DETASCO | Solusi Pengadaan Hospitality Bintang 5 di Seluruh Indonesia": "DETASCO | 5-Star Hospitality Procurement Solutions Across Indonesia",
+        "DETASCO | Supplier Perlengkapan Hotel & Rumah Sakit di Medan": "DETASCO | Hotel & Hospital Supplies Supplier in Medan",
         "Linen & Bedding Hotel Bintang 5 | DETASCO": "5-Star Hotel Linen & Bedding | DETASCO",
         "Handuk Hotel Premium | DETASCO": "5-Star Hotel Towels & Bathrobes | DETASCO",
         "Amenities Hotel Premium | DETASCO": "5-Star Hotel Guest Amenities | DETASCO",
