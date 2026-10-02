@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Handuk Hotel Premium | DETASCO</title>
-  <meta name="description" content="Handuk hotel premium 650 GSM: tebal, lembut, cepat menyerap. Bath, hand, face, dan pool towel, bisa bordir nama/logo hotel. Minta penawaran B2B.">
+  <meta name="description" content="Koleksi handuk hotel & bathrobe bintang 5: luxury bath towel 650 GSM, hand towel, face towel, pool cabana, bath mat 800 GSM, dan bathrobe waffle & velour. 100% combed cotton. Minta penawaran B2B.">
   <link rel="canonical" href="https://www.detasco.co.id/towel.html">
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@1.48.0"></script>
 
   <script>
@@ -21,10 +25,16 @@
         extend: {
           colors: {
             detasco: {
-              gold: '#E5B13A', goldHover: '#F5C452', goldDark: '#B88A20',
-              champagne: '#F8E8C0', bronze: '#C59E47',
-              darkBg: '#0D1017', darker: '#080A0F',
-              cardBg: '#131822', cardHover: '#181E2B', cardInset: '#0B0E14',
+              gold: '#E5B13A',
+              goldHover: '#F5C452',
+              goldDark: '#B88A20',
+              champagne: '#F8E8C0',
+              bronze: '#C59E47',
+              darkBg: '#0D1017',
+              darker: '#080A0F',
+              cardBg: '#131822',
+              cardHover: '#181E2B',
+              cardInset: '#0B0E14',
               borderCard: 'rgba(255, 255, 255, 0.08)',
               borderGold: 'rgba(229, 177, 58, 0.3)',
               borderGoldHover: 'rgba(229, 177, 58, 0.7)',
@@ -41,20 +51,68 @@
   </script>
 
   <style>
-    body { background-color: #0D1017; color: #E2E8F0; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
-    .glass-nav { background: rgba(13, 16, 23, 0.95); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
-    .nav-item { transition: background-color 0.25s, color 0.25s, box-shadow 0.25s; display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; flex-shrink: 0; }
-    .nav-item.active { background-color: #E5B13A !important; color: #000000 !important; font-weight: 700 !important; box-shadow: 0 0 20px rgba(229, 177, 58, 0.65), 0 0 8px rgba(229, 177, 58, 0.45) !important; }
-    .mobile-nav-item.active { background-color: #E5B13A !important; color: #000000 !important; font-weight: 700 !important; }
-    .lang-toggle-group { display: inline-flex; align-items: center; border-radius: 9999px; border: 1px solid rgba(255, 255, 255, 0.15); overflow: hidden; }
-    .lang-toggle-group button { padding: 4px 9px; font-size: 10px; font-weight: 700; letter-spacing: 0.05em; color: #9CA3AF; transition: all 0.2s; }
-    .lang-toggle-group button.lang-btn-active { background: #E5B13A; color: #000; }
-    .theme-toggle-btn { display: inline-flex; align-items: center; justify-content: center; }
+    body {
+      background-color: #0D1017;
+      color: #E2E8F0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    .glass-nav {
+      background: rgba(13, 16, 23, 0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .nav-item {
+      transition: background-color 0.25s, color 0.25s, box-shadow 0.25s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .nav-item.active {
+      background-color: #E5B13A !important;
+      color: #000000 !important;
+      font-weight: 700 !important;
+      box-shadow: 0 0 20px rgba(229, 177, 58, 0.65), 0 0 8px rgba(229, 177, 58, 0.45) !important;
+    }
+    .mobile-nav-item.active {
+      background-color: #E5B13A !important;
+      color: #000000 !important;
+      font-weight: 700 !important;
+    }
+    .lang-toggle-group {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      overflow: hidden;
+    }
+    .lang-toggle-group button {
+      padding: 4px 9px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #9CA3AF;
+      transition: all 0.2s;
+    }
+    .lang-toggle-group button.lang-btn-active {
+      background: #E5B13A;
+      color: #000;
+    }
+    .theme-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
   </style>
   <link rel="stylesheet" href="theme.css">
 </head>
 <body class="antialiased selection:bg-detasco-gold selection:text-black">
 
+  <!-- ========================================== -->
+  <!-- NAVIGATION BAR                             -->
+  <!-- ========================================== -->
   <header class="sticky top-0 z-40 glass-nav transition-all duration-300">
     <div id="mainNavContainer" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3 group shrink-0">
@@ -71,7 +129,6 @@
         <a href="amenities.html" class="nav-item px-2.5 py-1.5 rounded-full text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition-all duration-300">Amenities</a>
         <a href="gorden.html" class="nav-item px-2.5 py-1.5 rounded-full text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition-all duration-300">Gorden</a>
         <a href="towel.html" class="nav-item active px-2.5 py-1.5 rounded-full text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition-all duration-300">Towel</a>
-        <a href="hospital.html" class="nav-item px-2.5 py-1.5 rounded-full text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition-all duration-300">Rumah Sakit</a>
         <a href="index.html#lokasi" class="nav-item px-2.5 py-1.5 rounded-full text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition-all duration-300">Lokasi</a>
       </nav>
 
@@ -111,7 +168,6 @@
       <a href="amenities.html" class="mobile-nav-item block px-3.5 py-2.5 rounded-xl text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition">Amenities</a>
       <a href="gorden.html" class="mobile-nav-item block px-3.5 py-2.5 rounded-xl text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition">Gorden</a>
       <a href="towel.html" class="mobile-nav-item active block px-3.5 py-2.5 rounded-xl text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition">Towel</a>
-      <a href="hospital.html" class="mobile-nav-item block px-3.5 py-2.5 rounded-xl text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition">Rumah Sakit</a>
       <a href="index.html#lokasi" class="mobile-nav-item block px-3.5 py-2.5 rounded-xl text-gray-300 hover:text-detasco-gold hover:bg-white/5 transition">Lokasi Showroom</a>
       <div class="pt-3">
         <a href="index.html#kontak" class="mobile-nav-item block w-full py-3 rounded-xl bg-detasco-gold text-black text-center font-bold uppercase tracking-wider text-xs shadow-lg">Konsultasi</a>
@@ -119,12 +175,18 @@
     </div>
   </header>
 
+  <!-- ========================================== -->
+  <!-- BREADCRUMB                                 -->
+  <!-- ========================================== -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 text-xs text-gray-400 flex items-center gap-2">
     <a href="index.html" class="hover:text-detasco-gold transition flex items-center gap-1"><i data-lucide="home" class="w-3.5 h-3.5"></i><span>Beranda</span></a>
     <span>/</span>
     <span class="text-detasco-gold font-semibold">Towel</span>
   </div>
 
+  <!-- ========================================== -->
+  <!-- HERO                                       -->
+  <!-- ========================================== -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
     <div class="lg:col-span-6 space-y-4">
       <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-detasco-gold">Lini Pasokan</span>
@@ -144,6 +206,9 @@
     </div>
   </section>
 
+  <!-- ========================================== -->
+  <!-- FEATURES RIBBON                            -->
+  <!-- ========================================== -->
   <section class="bg-[#0A0D13] border-y border-white/5 py-14 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <div class="p-5 rounded-2xl bg-detasco-cardBg border border-white/10 text-center">
@@ -169,122 +234,510 @@
     </div>
   </section>
 
-  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-[#F8F5EE]">
+  <!-- ========================================== -->
+  <!-- PRODUCTS: ALL-IN TOWEL & BATHROBE SOLUTION -->
+  <!-- ========================================== -->
+  <section id="towel-solution" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-[#F8F5EE] border-b border-[#E2D8C7]/80">
     <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12">
-        <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-[#8C6618]">All-In Towel Solution</span>
-        <h2 class="font-cinzel text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1A1E29] mt-2">Smooth &amp; Soft Towel | 100% Cotton</h2>
-        <div class="w-14 h-0.5 bg-[#B88B2A] mx-auto my-4"></div>
+      
+      <!-- Section Header -->
+      <div class="text-center mb-12 sm:mb-16">
+        <span class="text-xs sm:text-sm font-bold tracking-[0.25em] text-[#8C6618] uppercase">ALL-IN TOWEL & BATHROBE SOLUTION</span>
+        <h2 class="font-cinzel text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#1A1E29] mt-2 tracking-tight">
+          #1 Best Quality | 100% Combed Cotton
+        </h2>
+        <div class="w-16 h-0.5 bg-[#B88B2A] mx-auto mt-4"></div>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-        <div class="rounded-2xl bg-white border border-[#DDD5C5] overflow-hidden hover:border-[#B88B2A] transition-all duration-300 shadow-sm hover:shadow-xl">
-          <img src="https://images.unsplash.com/photo-1631015108968-ba3b87f89005?auto=format&fit=crop&w=600&q=80" alt="Tumpukan handuk mandi hotel warna putih terlipat rapi, katun tebal 650 GSM" loading="lazy" width="600" height="400" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="font-cinzel font-bold text-sm text-[#1A1E29] mb-2">Bath Towel</h3>
-            <ul class="space-y-1.5">
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Lembut &amp; halus di kulit</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Cepat menyerap air</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Tahan lama &amp; anti-kuman</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Terbuat dari katun tebal</span></li>
-            </ul>
+      <!-- 12 Products Responsive Grid (4 Columns on Desktop) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7 items-stretch">
+
+        <!-- Item 1: Luxury Hotel Bath Towel 650 GSM -->
+        <div class="rounded-2xl sm:rounded-3xl bg-white border border-[#DDD5C5] hover:border-[#B88B2A] shadow-sm hover:shadow-xl p-4 sm:p-5 flex flex-col group overflow-hidden transition-all duration-300">
+          <div class="aspect-square bg-[#F3EDE0] relative border border-[#E2D8C7]/60 overflow-hidden rounded-xl sm:rounded-2xl mb-4 group-hover:scale-105 transition-transform duration-500">
+            <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=600&q=80" alt="Luxury Hotel Bath Towel 650 GSM putih katun combed tebal" loading="lazy" width="600" height="600" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-cinzel font-bold text-base sm:text-lg text-[#1A1E29] mb-3 group-hover:text-[#8C6618] transition">
+            Luxury Hotel Bath Towel 650 GSM
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-[13px] text-[#4A5568] flex-1 mb-4">
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Gramasi 650 GSM super empuk & tebal</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Penyerapan instan berdaya serap tinggi</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>100% benang katun combed ring-spun 20/2</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Jahitan dobel anti-runtas tahan cuci industri</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Opsi bordir logo hotel benang emas</span>
+            </li>
+          </ul>
+          <div class="mt-auto pt-3 border-t border-[#E2D8C7]/60">
+            <a href="https://wa.me/6281234567890?text=Halo%20DETASCO%2C%20saya%20tertarik%20untuk%20meminta%20penawaran%20Luxury%20Hotel%20Bath%20Towel%20650%20GSM" target="_blank" class="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-xs font-bold uppercase tracking-wider text-[#8C6618] hover:text-black border border-[#DEC89A] hover:border-[#B88B2A] bg-[#FDFBF7] hover:bg-detasco-gold transition-all duration-200 shadow-sm group/btn">
+              <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+              <span>Minta Penawaran</span>
+              <span class="group-hover/btn:translate-x-0.5 transition-transform">&rarr;</span>
+            </a>
           </div>
         </div>
 
-        <div class="rounded-2xl bg-white border border-[#DDD5C5] overflow-hidden hover:border-[#B88B2A] transition-all duration-300 shadow-sm hover:shadow-xl">
-          <img src="https://images.unsplash.com/photo-1764114656382-6ad79e1a6b42?auto=format&fit=crop&w=600&q=80" alt="Pool towel hotel bergaris biru putih di atas kursi santai tepi kolam renang" loading="lazy" width="600" height="400" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="font-cinzel font-bold text-sm text-[#1A1E29] mb-2">Pool Towel</h3>
-            <ul class="space-y-1.5">
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Ukuran extra (custom)</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Bahan halus &amp; lembut</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Cepat kering dan mudah dicuci</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Warna tidak mudah pudar</span></li>
-            </ul>
+        <!-- Item 2: Executive Hand Towel 500 GSM -->
+        <div class="rounded-2xl sm:rounded-3xl bg-white border border-[#DDD5C5] hover:border-[#B88B2A] shadow-sm hover:shadow-xl p-4 sm:p-5 flex flex-col group overflow-hidden transition-all duration-300">
+          <div class="aspect-square bg-[#F3EDE0] relative border border-[#E2D8C7]/60 overflow-hidden rounded-xl sm:rounded-2xl mb-4 group-hover:scale-105 transition-transform duration-500">
+            <img src="https://images.unsplash.com/photo-1600369671236-e74521d4b6ad?auto=format&fit=crop&w=600&q=80" alt="Executive Hand Towel 500 GSM wastafel hotel katun combed" loading="lazy" width="600" height="600" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-cinzel font-bold text-base sm:text-lg text-[#1A1E29] mb-3 group-hover:text-[#8C6618] transition">
+            Executive Hand Towel 500 GSM
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-[13px] text-[#4A5568] flex-1 mb-4">
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Gramasi 500 GSM ideal wastafel & vanity</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Cepat kering antar pemakaian tamu</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>100% combed cotton bebas serat rontok (lint-free)</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Aksen dobby border elegan & rapi</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Tahan pencucian suhu tinggi 85°C</span>
+            </li>
+          </ul>
+          <div class="mt-auto pt-3 border-t border-[#E2D8C7]/60">
+            <a href="https://wa.me/6281234567890?text=Halo%20DETASCO%2C%20saya%20tertarik%20untuk%20meminta%20penawaran%20Executive%20Hand%20Towel%20500%20GSM" target="_blank" class="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-xs font-bold uppercase tracking-wider text-[#8C6618] hover:text-black border border-[#DEC89A] hover:border-[#B88B2A] bg-[#FDFBF7] hover:bg-detasco-gold transition-all duration-200 shadow-sm group/btn">
+              <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+              <span>Minta Penawaran</span>
+              <span class="group-hover/btn:translate-x-0.5 transition-transform">&rarr;</span>
+            </a>
           </div>
         </div>
 
-        <div class="rounded-2xl bg-white border border-[#DDD5C5] overflow-hidden hover:border-[#B88B2A] transition-all duration-300 shadow-sm hover:shadow-xl">
-          <img src="https://images.unsplash.com/photo-1646592491934-70310e515618?auto=format&fit=crop&w=600&q=80" alt="Hand towel hotel tergantung di ring dekat wastafel kamar mandi" loading="lazy" width="600" height="400" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="font-cinzel font-bold text-sm text-[#1A1E29] mb-2">Hand Towel</h3>
-            <ul class="space-y-1.5">
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Mudah digantung dan dilipat rapi</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Aman untuk kulit sensitif</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Cocok untuk tangan, wajah, dan dekorasi</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Banyak variasi model, bahan, dan ukuran</span></li>
-            </ul>
+        <!-- Item 3: Deluxe Face Towel / Washcloth 450 GSM -->
+        <div class="rounded-2xl sm:rounded-3xl bg-white border border-[#DDD5C5] hover:border-[#B88B2A] shadow-sm hover:shadow-xl p-4 sm:p-5 flex flex-col group overflow-hidden transition-all duration-300">
+          <div class="aspect-square bg-[#F3EDE0] relative border border-[#E2D8C7]/60 overflow-hidden rounded-xl sm:rounded-2xl mb-4 group-hover:scale-105 transition-transform duration-500">
+            <img src="https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?auto=format&fit=crop&w=600&q=80" alt="Deluxe Face Towel Washcloth 450 GSM lembut higienis" loading="lazy" width="600" height="600" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-cinzel font-bold text-base sm:text-lg text-[#1A1E29] mb-3 group-hover:text-[#8C6618] transition">
+            Deluxe Face Towel / Washcloth 450 GSM
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-[13px] text-[#4A5568] flex-1 mb-4">
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Gramasi 450 GSM ekstra halus untuk wajah</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>100% Long-Staple Cotton Zero Twist</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Higienis, hypoallergenic & anti-bakteri</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Jahitan obras ganda presisi anti-terurai</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Tahan sterilisasi suhu tinggi & pemutih oksigen</span>
+            </li>
+          </ul>
+          <div class="mt-auto pt-3 border-t border-[#E2D8C7]/60">
+            <a href="https://wa.me/6281234567890?text=Halo%20DETASCO%2C%20saya%20tertarik%20untuk%20meminta%20penawaran%20Deluxe%20Face%20Towel%20%2F%20Washcloth%20450%20GSM" target="_blank" class="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-xs font-bold uppercase tracking-wider text-[#8C6618] hover:text-black border border-[#DEC89A] hover:border-[#B88B2A] bg-[#FDFBF7] hover:bg-detasco-gold transition-all duration-200 shadow-sm group/btn">
+              <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+              <span>Minta Penawaran</span>
+              <span class="group-hover/btn:translate-x-0.5 transition-transform">&rarr;</span>
+            </a>
           </div>
         </div>
 
-        <div class="rounded-2xl bg-white border border-[#DDD5C5] overflow-hidden hover:border-[#B88B2A] transition-all duration-300 shadow-sm hover:shadow-xl">
-          <img src="https://images.unsplash.com/photo-1623504557008-5b62c1f53765?auto=format&fit=crop&w=600&q=80" alt="Face towel hotel 100 persen katun ukuran kecil terlipat rapi untuk wajah" loading="lazy" width="600" height="400" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="font-cinzel font-bold text-sm text-[#1A1E29] mb-2">Face Towel</h3>
-            <ul class="space-y-1.5">
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Bahan 100% katun lembut, aman untuk kulit wajah sensitif</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Ukuran kecil dan ringkas, mudah digenggam</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Menyerap sisa air &amp; krim wajah tanpa menggores kulit</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Warna netral &amp; elegan, cocok untuk interior kamar mana pun</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Praktis digunakan dan mudah disimpan di rak kecil</span></li>
-            </ul>
+        <!-- Item 4: Bath Mat Jacquard Anti-Slip 800 GSM -->
+        <div class="rounded-2xl sm:rounded-3xl bg-white border border-[#DDD5C5] hover:border-[#B88B2A] shadow-sm hover:shadow-xl p-4 sm:p-5 flex flex-col group overflow-hidden transition-all duration-300">
+          <div class="aspect-square bg-[#F3EDE0] relative border border-[#E2D8C7]/60 overflow-hidden rounded-xl sm:rounded-2xl mb-4 group-hover:scale-105 transition-transform duration-500">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Bath Mat Jacquard Anti-Slip 800 GSM keset kaki kamar mandi hotel" loading="lazy" width="600" height="600" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-cinzel font-bold text-base sm:text-lg text-[#1A1E29] mb-3 group-hover:text-[#8C6618] transition">
+            Bath Mat Jacquard Anti-Slip 800 GSM
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-[13px] text-[#4A5568] flex-1 mb-4">
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Gramasi ekstra padat 800 GSM serap seketika</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Motif embossed jacquard anti-selip</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>100% combed cotton benang dobel loop 20/2</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Tepi rapat anti-melengkung (anti-curling)</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Teruji tahan mesin cuci tunnel industri</span>
+            </li>
+          </ul>
+          <div class="mt-auto pt-3 border-t border-[#E2D8C7]/60">
+            <a href="https://wa.me/6281234567890?text=Halo%20DETASCO%2C%20saya%20tertarik%20untuk%20meminta%20penawaran%20Bath%20Mat%20Jacquard%20Anti-Slip%20800%20GSM" target="_blank" class="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-xs font-bold uppercase tracking-wider text-[#8C6618] hover:text-black border border-[#DEC89A] hover:border-[#B88B2A] bg-[#FDFBF7] hover:bg-detasco-gold transition-all duration-200 shadow-sm group/btn">
+              <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+              <span>Minta Penawaran</span>
+              <span class="group-hover/btn:translate-x-0.5 transition-transform">&rarr;</span>
+            </a>
           </div>
         </div>
 
-        <div class="rounded-2xl bg-white border border-[#DDD5C5] overflow-hidden hover:border-[#B88B2A] transition-all duration-300 shadow-sm hover:shadow-xl">
-          <img src="https://images.unsplash.com/photo-1687526360728-f1af24aac201?auto=format&fit=crop&w=600&q=80" alt="Bath mat hotel bertekstur anti-slip di lantai kamar mandi" loading="lazy" width="600" height="400" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="font-cinzel font-bold text-sm text-[#1A1E29] mb-2">Bath Mat</h3>
-            <ul class="space-y-1.5">
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Alas anti-slip untuk keamanan ekstra di lantai basah</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Bulu lembut namun kuat menyerap tetesan air dari kaki</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Cepat kering sehingga lantai kamar mandi tetap higienis</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Tahan lama dan tidak mudah kusut meski sering diinjak</span></li>
-            </ul>
+        <!-- Item 5: Pool & Beach Cabana Stripe Towel 600 GSM -->
+        <div class="rounded-2xl sm:rounded-3xl bg-white border border-[#DDD5C5] hover:border-[#B88B2A] shadow-sm hover:shadow-xl p-4 sm:p-5 flex flex-col group overflow-hidden transition-all duration-300">
+          <div class="aspect-square bg-[#F3EDE0] relative border border-[#E2D8C7]/60 overflow-hidden rounded-xl sm:rounded-2xl mb-4 group-hover:scale-105 transition-transform duration-500">
+            <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=600&q=80" alt="Pool & Beach Cabana Stripe Towel 600 GSM handuk kolam renang pantai" loading="lazy" width="600" height="600" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-cinzel font-bold text-base sm:text-lg text-[#1A1E29] mb-3 group-hover:text-[#8C6618] transition">
+            Pool & Beach Cabana Stripe Towel 600 GSM
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-[13px] text-[#4A5568] flex-1 mb-4">
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Gramasi 600 GSM ukuran jumbo 90x180 cm</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Vat-dyed tahan klorin & sinar UV matahari</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Motif garis cabana stripe klasik mewah</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>100% 2-ply combed cotton tebal & awet</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Cepat kering di sirkulasi udara terbuka</span>
+            </li>
+          </ul>
+          <div class="mt-auto pt-3 border-t border-[#E2D8C7]/60">
+            <a href="https://wa.me/6281234567890?text=Halo%20DETASCO%2C%20saya%20tertarik%20untuk%20meminta%20penawaran%20Pool%20%26%20Beach%20Cabana%20Stripe%20Towel%20600%20GSM" target="_blank" class="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-xs font-bold uppercase tracking-wider text-[#8C6618] hover:text-black border border-[#DEC89A] hover:border-[#B88B2A] bg-[#FDFBF7] hover:bg-detasco-gold transition-all duration-200 shadow-sm group/btn">
+              <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+              <span>Minta Penawaran</span>
+              <span class="group-hover/btn:translate-x-0.5 transition-transform">&rarr;</span>
+            </a>
           </div>
         </div>
 
-        <div class="rounded-2xl bg-white border border-[#DDD5C5] overflow-hidden hover:border-[#B88B2A] transition-all duration-300 shadow-sm hover:shadow-xl">
-          <img src="https://images.unsplash.com/photo-1638232928539-6e91c47ddec5?auto=format&fit=crop&w=600&q=80" alt="Bath sheet hotel ukuran jumbo berwarna abu-abu, digulung dan dilipat" loading="lazy" width="600" height="400" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="font-cinzel font-bold text-sm text-[#1A1E29] mb-2">Bath Sheet</h3>
-            <ul class="space-y-1.5">
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Ukuran jumbo, cukup untuk membalut tubuh secara penuh</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Nyaman digunakan sebagai pelapis usai mandi atau spa</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Bahan tebal dan lembut, menyerap air lebih banyak dalam sekali usap</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Cocok untuk kebutuhan hotel bintang lima &amp; layanan spa premium</span></li>
-            </ul>
+        <!-- Item 6: Kimono Waffle Hotel Bathrobe 450 GSM -->
+        <div class="rounded-2xl sm:rounded-3xl bg-white border border-[#DDD5C5] hover:border-[#B88B2A] shadow-sm hover:shadow-xl p-4 sm:p-5 flex flex-col group overflow-hidden transition-all duration-300">
+          <div class="aspect-square bg-[#F3EDE0] relative border border-[#E2D8C7]/60 overflow-hidden rounded-xl sm:rounded-2xl mb-4 group-hover:scale-105 transition-transform duration-500">
+            <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=600&q=80" alt="Kimono Waffle Hotel Bathrobe 450 GSM jubah mandi waffle hotel" loading="lazy" width="600" height="600" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-cinzel font-bold text-base sm:text-lg text-[#1A1E29] mb-3 group-hover:text-[#8C6618] transition">
+            Kimono Waffle Hotel Bathrobe 450 GSM
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-[13px] text-[#4A5568] flex-1 mb-4">
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Tenunan sarang lebah (honeycomb) sejuk & ringan</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>100% katun combed serap air cepat & lekas kering</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Kerah kimono elegan dengan 2 saku depan luas</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Sabuk pengikat loop ganda finishing pre-shrunk</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Opsi bordir logo hotel di dada kiri</span>
+            </li>
+          </ul>
+          <div class="mt-auto pt-3 border-t border-[#E2D8C7]/60">
+            <a href="https://wa.me/6281234567890?text=Halo%20DETASCO%2C%20saya%20tertarik%20untuk%20meminta%20penawaran%20Kimono%20Waffle%20Hotel%20Bathrobe%20450%20GSM" target="_blank" class="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-xs font-bold uppercase tracking-wider text-[#8C6618] hover:text-black border border-[#DEC89A] hover:border-[#B88B2A] bg-[#FDFBF7] hover:bg-detasco-gold transition-all duration-200 shadow-sm group/btn">
+              <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+              <span>Minta Penawaran</span>
+              <span class="group-hover/btn:translate-x-0.5 transition-transform">&rarr;</span>
+            </a>
           </div>
         </div>
 
-        <div class="rounded-2xl bg-white border border-[#DDD5C5] overflow-hidden hover:border-[#B88B2A] transition-all duration-300 shadow-sm hover:shadow-xl">
-          <img src="https://images.unsplash.com/photo-1684248655527-46bee8e79029?auto=format&fit=crop&w=600&q=80" alt="Oshibori towel hotel digulung rapi untuk menyambut tamu" loading="lazy" width="600" height="400" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="font-cinzel font-bold text-sm text-[#1A1E29] mb-2">Oshibori Towel</h3>
-            <ul class="space-y-1.5">
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Handuk gulung kecil untuk ritual sambutan tamu yang berkesan</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Dapat disajikan hangat maupun dingin sesuai kebutuhan</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Higienis &amp; praktis, sekali pakai untuk setiap tamu</span></li>
-            </ul>
+        <!-- Item 7: Plush Velour Hooded Bathrobe 550 GSM -->
+        <div class="rounded-2xl sm:rounded-3xl bg-white border border-[#DDD5C5] hover:border-[#B88B2A] shadow-sm hover:shadow-xl p-4 sm:p-5 flex flex-col group overflow-hidden transition-all duration-300">
+          <div class="aspect-square bg-[#F3EDE0] relative border border-[#E2D8C7]/60 overflow-hidden rounded-xl sm:rounded-2xl mb-4 group-hover:scale-105 transition-transform duration-500">
+            <img src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=600&q=80" alt="Plush Velour Hooded Bathrobe 550 GSM jubah mandi bertudung mewah" loading="lazy" width="600" height="600" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-cinzel font-bold text-base sm:text-lg text-[#1A1E29] mb-3 group-hover:text-[#8C6618] transition">
+            Plush Velour Hooded Bathrobe 550 GSM
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-[13px] text-[#4A5568] flex-1 mb-4">
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Gramasi mewah 550 GSM dengan tudung (hood)</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Luar velour beludru, dalam terry serap air</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Sensasi hangat eksklusif suite hotel bintang 5</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>100% combed cotton dengan kelim tebal anti-runtas</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Tahan pencucian mesin komersial berulang kali</span>
+            </li>
+          </ul>
+          <div class="mt-auto pt-3 border-t border-[#E2D8C7]/60">
+            <a href="https://wa.me/6281234567890?text=Halo%20DETASCO%2C%20saya%20tertarik%20untuk%20meminta%20penawaran%20Plush%20Velour%20Hooded%20Bathrobe%20550%20GSM" target="_blank" class="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-xs font-bold uppercase tracking-wider text-[#8C6618] hover:text-black border border-[#DEC89A] hover:border-[#B88B2A] bg-[#FDFBF7] hover:bg-detasco-gold transition-all duration-200 shadow-sm group/btn">
+              <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+              <span>Minta Penawaran</span>
+              <span class="group-hover/btn:translate-x-0.5 transition-transform">&rarr;</span>
+            </a>
           </div>
         </div>
 
-        <div class="rounded-2xl bg-white border border-[#DDD5C5] overflow-hidden hover:border-[#B88B2A] transition-all duration-300 shadow-sm hover:shadow-xl">
-          <img src="https://images.unsplash.com/photo-1568342086387-e56f7ce38195?auto=format&fit=crop&w=600&q=80" alt="Bath robe hotel premium warna putih tergantung di gantungan kayu" loading="lazy" width="600" height="400" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="font-cinzel font-bold text-sm text-[#1A1E29] mb-2">Bath Robe</h3>
-            <ul class="space-y-1.5">
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Bahan lembut, halus, dan tahan lama (premium)</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Daya serap air tinggi</span></li>
-              <li class="flex items-start gap-1.5 text-xs text-[#525966] leading-relaxed"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-detasco-gold shrink-0 mt-0.5"></i><span>Tebal &amp; anti-bakteri</span></li>
-            </ul>
+        <!-- Item 8: Spa & Sauna Towel 500 GSM -->
+        <div class="rounded-2xl sm:rounded-3xl bg-white border border-[#DDD5C5] hover:border-[#B88B2A] shadow-sm hover:shadow-xl p-4 sm:p-5 flex flex-col group overflow-hidden transition-all duration-300">
+          <div class="aspect-square bg-[#F3EDE0] relative border border-[#E2D8C7]/60 overflow-hidden rounded-xl sm:rounded-2xl mb-4 group-hover:scale-105 transition-transform duration-500">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Spa & Sauna Towel 500 GSM handuk relaksasi spa sauna hotel" loading="lazy" width="600" height="600" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-cinzel font-bold text-base sm:text-lg text-[#1A1E29] mb-3 group-hover:text-[#8C6618] transition">
+            Spa & Sauna Towel 500 GSM
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-[13px] text-[#4A5568] flex-1 mb-4">
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Dimensi panjang 80x180 cm menutup tubuh sempurna</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Tahan uap panas sauna & minyak aromaterapi</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>100% low-twist combed cotton sangat empuk</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Mudah dilipat & digulung rapi untuk spa display</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Tahan deterjen alkali & proses sterilisasi rutin</span>
+            </li>
+          </ul>
+          <div class="mt-auto pt-3 border-t border-[#E2D8C7]/60">
+            <a href="https://wa.me/6281234567890?text=Halo%20DETASCO%2C%20saya%20tertarik%20untuk%20meminta%20penawaran%20Spa%20%26%20Sauna%20Towel%20500%20GSM" target="_blank" class="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-xs font-bold uppercase tracking-wider text-[#8C6618] hover:text-black border border-[#DEC89A] hover:border-[#B88B2A] bg-[#FDFBF7] hover:bg-detasco-gold transition-all duration-200 shadow-sm group/btn">
+              <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+              <span>Minta Penawaran</span>
+              <span class="group-hover/btn:translate-x-0.5 transition-transform">&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Item 9: Gym & Fitness Active Towel 450 GSM -->
+        <div class="rounded-2xl sm:rounded-3xl bg-white border border-[#DDD5C5] hover:border-[#B88B2A] shadow-sm hover:shadow-xl p-4 sm:p-5 flex flex-col group overflow-hidden transition-all duration-300">
+          <div class="aspect-square bg-[#F3EDE0] relative border border-[#E2D8C7]/60 overflow-hidden rounded-xl sm:rounded-2xl mb-4 group-hover:scale-105 transition-transform duration-500">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80" alt="Gym & Fitness Active Towel 450 GSM handuk olahraga fitness gym hotel" loading="lazy" width="600" height="600" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-cinzel font-bold text-base sm:text-lg text-[#1A1E29] mb-3 group-hover:text-[#8C6618] transition">
+            Gym & Fitness Active Towel 450 GSM
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-[13px] text-[#4A5568] flex-1 mb-4">
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Bentuk memanjang 30x100 cm pas di leher</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Menyerap keringat seketika saat berolahraga</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>100% combed cotton anti-bakteri & anti-odor</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Jahitan bisban tepi rapat tahan gesekan tinggi</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Cepat kering, efisien untuk rotasi laundry harian</span>
+            </li>
+          </ul>
+          <div class="mt-auto pt-3 border-t border-[#E2D8C7]/60">
+            <a href="https://wa.me/6281234567890?text=Halo%20DETASCO%2C%20saya%20tertarik%20untuk%20meminta%20penawaran%20Gym%20%26%20Fitness%20Active%20Towel%20450%20GSM" target="_blank" class="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-xs font-bold uppercase tracking-wider text-[#8C6618] hover:text-black border border-[#DEC89A] hover:border-[#B88B2A] bg-[#FDFBF7] hover:bg-detasco-gold transition-all duration-200 shadow-sm group/btn">
+              <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+              <span>Minta Penawaran</span>
+              <span class="group-hover/btn:translate-x-0.5 transition-transform">&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Item 10: Embossed Foot Towel 750 GSM -->
+        <div class="rounded-2xl sm:rounded-3xl bg-white border border-[#DDD5C5] hover:border-[#B88B2A] shadow-sm hover:shadow-xl p-4 sm:p-5 flex flex-col group overflow-hidden transition-all duration-300">
+          <div class="aspect-square bg-[#F3EDE0] relative border border-[#E2D8C7]/60 overflow-hidden rounded-xl sm:rounded-2xl mb-4 group-hover:scale-105 transition-transform duration-500">
+            <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=600&q=80" alt="Embossed Foot Towel 750 GSM handuk kaki motif jacquard timbul" loading="lazy" width="600" height="600" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-cinzel font-bold text-base sm:text-lg text-[#1A1E29] mb-3 group-hover:text-[#8C6618] transition">
+            Embossed Foot Towel 750 GSM
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-[13px] text-[#4A5568] flex-1 mb-4">
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Gramasi 750 GSM padat dengan daya serap maksimal</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Border embossed jacquard FOOT TOWEL rapi</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>100% ring spun combed cotton 20/2 tidak licin</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Tahan abrasi gesekan pemakaian harian</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Memenuhi standar higienitas kamar mandi bintang 5</span>
+            </li>
+          </ul>
+          <div class="mt-auto pt-3 border-t border-[#E2D8C7]/60">
+            <a href="https://wa.me/6281234567890?text=Halo%20DETASCO%2C%20saya%20tertarik%20untuk%20meminta%20penawaran%20Embossed%20Foot%20Towel%20750%20GSM" target="_blank" class="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-xs font-bold uppercase tracking-wider text-[#8C6618] hover:text-black border border-[#DEC89A] hover:border-[#B88B2A] bg-[#FDFBF7] hover:bg-detasco-gold transition-all duration-200 shadow-sm group/btn">
+              <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+              <span>Minta Penawaran</span>
+              <span class="group-hover/btn:translate-x-0.5 transition-transform">&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Item 11: Classic Shawl Collar Terry Bathrobe 500 GSM -->
+        <div class="rounded-2xl sm:rounded-3xl bg-white border border-[#DDD5C5] hover:border-[#B88B2A] shadow-sm hover:shadow-xl p-4 sm:p-5 flex flex-col group overflow-hidden transition-all duration-300">
+          <div class="aspect-square bg-[#F3EDE0] relative border border-[#E2D8C7]/60 overflow-hidden rounded-xl sm:rounded-2xl mb-4 group-hover:scale-105 transition-transform duration-500">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Classic Shawl Collar Terry Bathrobe 500 GSM jubah mandi kerah syal terry tebal" loading="lazy" width="600" height="600" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-cinzel font-bold text-base sm:text-lg text-[#1A1E29] mb-3 group-hover:text-[#8C6618] transition">
+            Classic Shawl Collar Terry Bathrobe 500 GSM
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-[13px] text-[#4A5568] flex-1 mb-4">
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Kerah syal (shawl collar) tebal mewah klasik</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Gramasi 500 GSM serap tetesan air seketika</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>100% combed cotton double-sided terry loop</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Manset lengan lipat fleksibel & dua saku depan dalam</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Tahan proses setrika uap industri (steam press)</span>
+            </li>
+          </ul>
+          <div class="mt-auto pt-3 border-t border-[#E2D8C7]/60">
+            <a href="https://wa.me/6281234567890?text=Halo%20DETASCO%2C%20saya%20tertarik%20untuk%20meminta%20penawaran%20Classic%20Shawl%20Collar%20Terry%20Bathrobe%20500%20GSM" target="_blank" class="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-xs font-bold uppercase tracking-wider text-[#8C6618] hover:text-black border border-[#DEC89A] hover:border-[#B88B2A] bg-[#FDFBF7] hover:bg-detasco-gold transition-all duration-200 shadow-sm group/btn">
+              <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+              <span>Minta Penawaran</span>
+              <span class="group-hover/btn:translate-x-0.5 transition-transform">&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Item 12: Salon & Massage Treatment Towel 480 GSM -->
+        <div class="rounded-2xl sm:rounded-3xl bg-white border border-[#DDD5C5] hover:border-[#B88B2A] shadow-sm hover:shadow-xl p-4 sm:p-5 flex flex-col group overflow-hidden transition-all duration-300">
+          <div class="aspect-square bg-[#F3EDE0] relative border border-[#E2D8C7]/60 overflow-hidden rounded-xl sm:rounded-2xl mb-4 group-hover:scale-105 transition-transform duration-500">
+            <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=600&q=80" alt="Salon & Massage Treatment Towel 480 GSM handuk perawatan spa salon hotel tahan kimia" loading="lazy" width="600" height="600" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-cinzel font-bold text-base sm:text-lg text-[#1A1E29] mb-3 group-hover:text-[#8C6618] transition">
+            Salon & Massage Treatment Towel 480 GSM
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-[13px] text-[#4A5568] flex-1 mb-4">
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Formula tahan luntur minyak pijat & zat salon</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Katun combed 480 GSM tetap lembut di kulit</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Pilihan warna gelap menyamarkan noda kosmetik</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Jahitan nilon dobel tepi ganda tahan kimia</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-[#EA580C]/15 text-[#EA580C] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[10px]">✓</span>
+              <span>Pilihan ideal fasilitas salon, massage & spa resor</span>
+            </li>
+          </ul>
+          <div class="mt-auto pt-3 border-t border-[#E2D8C7]/60">
+            <a href="https://wa.me/6281234567890?text=Halo%20DETASCO%2C%20saya%20tertarik%20untuk%20meminta%20penawaran%20Salon%20%26%20Massage%20Treatment%20Towel%20480%20GSM" target="_blank" class="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-xs font-bold uppercase tracking-wider text-[#8C6618] hover:text-black border border-[#DEC89A] hover:border-[#B88B2A] bg-[#FDFBF7] hover:bg-detasco-gold transition-all duration-200 shadow-sm group/btn">
+              <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+              <span>Minta Penawaran</span>
+              <span class="group-hover/btn:translate-x-0.5 transition-transform">&rarr;</span>
+            </a>
           </div>
         </div>
 
       </div>
+
+      <!-- Prominent Bottom CTA Button: Pesan Sekarang! -->
+      <div class="text-center mt-12 sm:mt-16">
+        <a href="https://wa.me/6281234567890?text=Halo%20DETASCO%2C%20saya%20tertarik%20untuk%20memesan%20produk%20Handuk%20Hotel%20(All-In%20Towel%20%26%20Bathrobe%20Solution)" 
+           target="_blank" 
+           class="inline-flex items-center justify-center gap-2.5 px-8 sm:px-12 py-3.5 sm:py-4 rounded-xl bg-[#E53935] hover:bg-[#D32F2F] text-white font-bold text-sm sm:text-base uppercase tracking-wider transition-all duration-300 shadow-[0_6px_20px_rgba(229,57,53,0.38)] hover:shadow-[0_8px_26px_rgba(229,57,53,0.55)] transform hover:-translate-y-0.5 active:scale-95">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <span>Pesan Sekarang!</span>
+        </a>
+      </div>
+
     </div>
   </section>
 
+  <!-- ========================================== -->
+  <!-- CTA BANNER                                 -->
+  <!-- ========================================== -->
   <section class="bg-[#F3EDE0] border-t border-b border-[#DEC89A]/50 py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
       <div>
@@ -298,6 +751,9 @@
     </div>
   </section>
 
+  <!-- ========================================== -->
+  <!-- FOOTER                                     -->
+  <!-- ========================================== -->
   <footer class="border-t border-white/10 bg-[#06080D] pt-16 pb-12 text-xs text-gray-400">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
@@ -316,7 +772,6 @@
             <li><a href="amenities.html" class="hover:text-detasco-gold transition">Amenities</a></li>
             <li><a href="gorden.html" class="hover:text-detasco-gold transition">Gorden</a></li>
             <li><a href="towel.html" class="hover:text-detasco-gold transition">Towel</a></li>
-            <li><a href="hospital.html" class="hover:text-detasco-gold transition">Rumah Sakit</a></li>
             <li><a href="index.html#lokasi" class="hover:text-detasco-gold transition">Lokasi & Showroom</a></li>
           </ul>
         </div>
@@ -327,7 +782,6 @@
             <li><a href="amenities.html" class="hover:text-detasco-gold transition">Amenities Hotel</a></li>
             <li><a href="gorden.html" class="hover:text-detasco-gold transition">Gorden Hotel</a></li>
             <li><a href="towel.html" class="hover:text-detasco-gold transition">Handuk Hotel</a></li>
-            <li><a href="hospital.html" class="hover:text-detasco-gold transition">Rumah Sakit</a></li>
           </ul>
         </div>
         <div class="space-y-3">
@@ -341,11 +795,17 @@
     </div>
   </footer>
 
+  <!-- ========================================== -->
+  <!-- FLOATING WHATSAPP BUTTON                   -->
+  <!-- ========================================== -->
   <a href="https://wa.me/6281234567890?text=Halo%20Detasco,%20saya%20ingin%20berkonsultasi%20mengenai%20pengadaan%20perlengkapan%20hotel" target="_blank" class="fixed bottom-6 right-6 z-40 p-3.5 rounded-full bg-emerald-500 text-white hover:bg-emerald-400 transition-all duration-300 shadow-[0_0_25px_rgba(16,185,129,0.5)] flex items-center gap-2 group">
     <i data-lucide="message-circle" class="w-6 h-6"></i>
     <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 ease-in-out text-xs font-bold uppercase tracking-wider pr-1">Chat Sales B2B</span>
   </a>
 
+  <!-- ========================================== -->
+  <!-- SCRIPTS                                    -->
+  <!-- ========================================== -->
   <script src="theme.js"></script>
   <script src="i18n.js"></script>
   <script>
