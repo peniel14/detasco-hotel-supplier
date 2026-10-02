@@ -46,8 +46,6 @@
     "See All Products (Lihat Seluruh Koleksi)": "See All Products (View Full Collection)",
     "See All Linen & Bedding (Katalog Lengkap)": "See All Linen & Bedding (Full Catalog)",
     "See All Guest Amenities (Katalog Lengkap)": "See All Guest Amenities (Full Catalog)",
-    "See All In-Room & Housekeeping (Katalog Lengkap)": "See All In-Room & Housekeeping (Full Catalog)",
-    "See All F&B & Banquet Supplies (Katalog Lengkap)": "See All F&B & Banquet Supplies (Full Catalog)",
     "Tersedia 20+ koleksi lengkap dengan filter spesifikasi komersial di laman katalog": "20+ full collections available with commercial spec filters on the catalog page",
     "Tersedia 21+ koleksi lengkap dengan filter spesifikasi komersial di laman katalog": "21+ full collections available with commercial spec filters on the catalog page",
     "*Memerlukan penyesuaian dimensi matras, bordir lambang khusus, atau formulasi aroma (*signature scent*) hotel Anda?": "*Need custom mattress dimensions, special logo embroidery, or a signature scent formulation for your hotel?",
@@ -65,12 +63,6 @@
     "Sprei, duvet cover, bantal microfibre bulu angsa, matras topper, dan handuk tebal 650 GSM dengan penyerapan prima.": "Sheets, duvet covers, down-alternative microfibre pillows, mattress toppers, and thick 650 GSM towels with superior absorbency.",
     "Dental kit ramah lingkungan, sabun alami esensial, sampo herbal, serta sandal hotel tebal dengan sol anti-slip.": "Eco-friendly dental kits, natural essential soaps, herbal shampoo, and thick hotel slippers with anti-slip soles.",
     "Formulasi Tersertifikasi BPOM": "BPOM-Certified Formulation",
-    "Peralatan prasmanan chafing dish roll-top, cutlery stainless steel 18/10, kristal glassware, dan trolley room service.": "Roll-top chafing dish buffet equipment, 18/10 stainless steel cutlery, crystal glassware, and room service trolleys.",
-    "Hidrolik Soft-Close Roll-top": "Hydraulic Soft-Close Roll-top",
-    "Porselen Anti-Gores Restoran": "Scratch-Resistant Restaurant Porcelain",
-    "Deposit box digital dengan audit trail, kettle elektrik 304 food-grade, gantungan kayu solid, dan trolley housekeeping.": "Digital safe boxes with audit trail, food-grade 304 electric kettles, solid wood hangers, and housekeeping trolleys.",
-    "Brankas Kamar Digital Audit": "Digital Audit-Trail Room Safe",
-    "Trolley Housekeeping Heavy Duty": "Heavy-Duty Housekeeping Trolley",
 
     // ---- Inspirasi (index.html) ----
     "PORTOFOLIO SUASANA PROPERTI": "PROPERTY AMBIENCE PORTFOLIO",
