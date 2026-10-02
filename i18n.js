@@ -96,7 +96,6 @@
     "GARANSI & SLA PENGIRIMAN": "WARRANTY & DELIVERY SLA",
     "Jaminan penggantian unit cacat pabrik secara cepat (": "Fast factory-defect replacement guarantee (",
     ") dan kepastian tanggal serah terima proyek.": ") and guaranteed project handover dates.",
-    "DIPERCAYA OLEH RESOR DAN JARINGAN HOTEL TERNAMA": "TRUSTED BY LEADING RESORTS AND HOTEL CHAINS",
 
     // ---- Cara Pemesanan ----
     "CARA PEMESANAN": "HOW TO ORDER",
