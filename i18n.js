@@ -980,7 +980,32 @@
     "Nyaman bagi pasien": "Comfortable for patients",
     "Menjaga obat tetap rapi dan bersih": "Keeps medication neat and clean",
     "Praktis untuk layanan farmasi": "Practical for pharmacy service",
-    "Bisa dicetak sesuai identitas fasilitas": "Can be printed with your facility's identity"
+    "Bisa dicetak sesuai identitas fasilitas": "Can be printed with your facility's identity",
+
+    // ---- general-benefit feature strips and home category cards ----
+    "Pilihan bahan lembut, nyaman, dan awet untuk dipakai sehari-hari.": "Soft, comfortable, durable fabrics chosen for everyday use.",
+    "Custom Sesuai Kebutuhan": "Customized to Your Needs",
+    "Ukuran dan warna bisa disesuaikan dengan brand hotel Anda.": "Sizes and colors can be tailored to your hotel brand.",
+    "Tampil eksklusif dengan logo dan warna hotel Anda pada kemasan.": "Look exclusive with your hotel's logo and colors on the packaging.",
+    "Lembut dan nyaman digunakan oleh tamu hotel.": "Gentle and comfortable for your hotel guests.",
+    "Tersedia pilihan produk dan kemasan yang lebih ramah lingkungan.": "Eco-friendlier product and packaging options available.",
+    "Pilih model gorden sesuai suasana dan kebutuhan ruangan.": "Choose the curtain style that suits your room's mood and needs.",
+    "Kain pilihan yang awet, mudah dirawat, dan tampil elegan.": "Select fabrics that are durable, easy to care for, and elegant.",
+    "Terasa Mewah": "Luxurious Feel",
+    "Lembut, tebal, dan tetap awet meski dicuci berulang.": "Soft, plush, and durable even after repeated washing.",
+    "Menyerap air dengan baik dan cepat kering di antara pemakaian.": "Absorbs water well and dries quickly between uses.",
+    "DETASCO menyediakan lini lengkap tekstil dan seragam medis untuk rumah sakit, klinik, dan fasilitas kesehatan: mulai dari linen medis, gorden anti darah, hingga baju pasien dan scrub suit. Seluruh produk dipilih agar higienis, nyaman, dan awet untuk pemakaian berulang. Kami juga melayani custom sesuai kebutuhan instansi kesehatan Anda.": "DETASCO provides a complete line of medical textiles and uniforms for hospitals, clinics, and healthcare facilities: from medical linen and blood-resistant curtains to patient gowns and scrub suits. Every product is chosen to be hygienic, comfortable, and durable for repeated use. We also offer customization to match your healthcare institution's needs.",
+    "Higienis & Mudah Dirawat": "Hygienic & Easy to Care For",
+    "Tekstil bersih dan higienis yang praktis dirawat untuk lingkungan medis.": "Clean, hygienic textiles that are practical to maintain in medical settings.",
+    "Awet Dipakai Berulang": "Durable for Repeated Use",
+    "Tetap rapi dan nyaman meski sering dicuci.": "Stays neat and comfortable even with frequent washing.",
+    "Sesuai Kebutuhan Rumah Sakit": "Made for Hospital Needs",
+    "Dirancang untuk memenuhi kebutuhan kebersihan dan kenyamanan di lingkungan kesehatan.": "Designed to meet the cleanliness and comfort needs of healthcare environments.",
+    "Sprei, duvet cover, bantal, selimut, dan handuk berkualitas yang nyaman dan awet untuk kamar hotel Anda.": "Quality sheets, duvet covers, pillows, blankets, and towels that are comfortable and durable for your hotel rooms.",
+    "Tampilan elegan khas hotel": "Elegant, hotel-style look",
+    "Dental kit, sabun, sampo, serta sandal hotel yang nyaman dan berkesan untuk tamu Anda.": "Dental kits, soap, shampoo, and hotel slippers that are comfortable and memorable for your guests.",
+    "Kemasan bisa custom branding hotel": "Packaging can carry your hotel branding",
+    "Wangi dan lembut untuk tamu": "Pleasant and gentle for guests"
   };
 
   var textNodes = [];
