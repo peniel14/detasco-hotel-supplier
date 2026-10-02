@@ -40,6 +40,33 @@ html.light-mode [class*="text-gray-300"] { color: #525966 !important; }
 html.light-mode [class*="text-gray-400"] { color: #7A8190 !important; }
 html.light-mode [class*="text-gray-500"] { color: #8A93A6 !important; }
 
+/* Preserve high contrast on solid colored & dark CTA buttons in light mode */
+html.light-mode [class*="bg-[#E53935]"],
+html.light-mode [class*="bg-[#E53935]"] *,
+html.light-mode [class*="bg-emerald-"],
+html.light-mode [class*="bg-emerald-"] *,
+html.light-mode [class*="bg-[#25D366]"],
+html.light-mode [class*="bg-[#25D366]"] *,
+html.light-mode [class*="bg-[#1A1E29]"][class*="text-white"],
+html.light-mode [class*="bg-[#1A1E29]"] [class*="text-white"],
+html.light-mode .btn-primary,
+html.light-mode .btn-primary * {
+  color: #FFFFFF !important;
+}
+
+/* Form inputs & controls in light mode */
+html.light-mode input:not([type="checkbox"]):not([type="radio"]),
+html.light-mode textarea,
+html.light-mode select {
+  background-color: #FFFFFF !important;
+  color: #1A1E29 !important;
+  border-color: rgba(26, 30, 41, 0.22) !important;
+}
+html.light-mode input::placeholder,
+html.light-mode textarea::placeholder {
+  color: #8A93A6 !important;
+}
+
 /* Translucent white borders/backgrounds (only meaningful on dark bg) */
 html.light-mode [class*="border-white/"] { border-color: rgba(26, 30, 41, 0.14) !important; }
 html.light-mode [class*="bg-white/"] { background-color: rgba(26, 30, 41, 0.045) !important; }
