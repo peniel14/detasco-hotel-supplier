@@ -1005,7 +1005,15 @@
     "Tampilan elegan khas hotel": "Elegant, hotel-style look",
     "Dental kit, sabun, sampo, serta sandal hotel yang nyaman dan berkesan untuk tamu Anda.": "Dental kits, soap, shampoo, and hotel slippers that are comfortable and memorable for your guests.",
     "Kemasan bisa custom branding hotel": "Packaging can carry your hotel branding",
-    "Wangi dan lembut untuk tamu": "Pleasant and gentle for guests"
+    "Wangi dan lembut untuk tamu": "Pleasant and gentle for guests",
+
+    // ---- office location (no showroom visits) ----
+    "ALAMAT PERUSAHAAN": "COMPANY ADDRESS",
+    "LOKASI PERUSAHAAN": "COMPANY LOCATION",
+    "Kantor pusat DETASCO berada di Medan. Untuk kebutuhan produk dan penawaran, hubungi tim kami melalui WhatsApp atau formulir permintaan penawaran.": "DETASCO head office is located in Medan. For product needs and quotations, contact our team via WhatsApp or the quote request form.",
+    "KANTOR PUSAT": "HEAD OFFICE",
+    "Kantor pusat DETASCO sebagai pusat koordinasi pengadaan perlengkapan hotel dan rumah sakit.": "DETASCO head office, the coordination center for hotel and hospital supply procurement.",
+    "Lokasi Kantor": "Office Location"
   };
 
   var textNodes = [];
