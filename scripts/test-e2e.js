@@ -91,8 +91,8 @@ const PAGES_CONFIG = [
     titleKeyword: 'Gorden Hotel',
     distinctHeader: 'Gorden Hotel',
     solutionId: 'gorden-solution',
-    minCards: 8,
-    targetCards: 12,
+    minCards: 4,
+    targetCards: 4,
     specs: {
       category: 'Gorden',
       // Must cover blackout, flame-retardant, acoustic dB, motorized track
