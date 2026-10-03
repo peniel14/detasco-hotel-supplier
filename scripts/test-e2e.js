@@ -73,8 +73,8 @@ const PAGES_CONFIG = [
     titleKeyword: 'Amenities Hotel Premium',
     distinctHeader: 'Amenities Hotel',
     solutionId: 'amenities-solution',
-    minCards: 8,
-    targetCards: 12,
+    minCards: 4,
+    targetCards: 4,
     specs: {
       category: 'Amenities',
       // Must cover BPOM, eco-friendly, custom logo
