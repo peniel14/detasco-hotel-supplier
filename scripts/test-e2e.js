@@ -111,7 +111,7 @@ const PAGES_CONFIG = [
     distinctHeader: 'Handuk Hotel',
     solutionId: 'towel-solution',
     minCards: 8,
-    targetCards: 12,
+    targetCards: 8,
     specs: {
       category: 'Towel',
       // Must cover 450-800 GSM, combed cotton, industrial laundry
