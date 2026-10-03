@@ -55,6 +55,14 @@
     "MINTA PENAWARAN": "REQUEST A QUOTE",
     "PRODUK BARU": "NEW ARRIVAL",
 
+    // ---- Solusi Pasokan Terpadu (index.html) ----
+    "SUPPLIER & MITRA OPERASIONAL HOTEL": "HOTEL SUPPLIER & OPERATIONAL PARTNER",
+    "Solusi Pasokan Terpadu untuk Kenyamanan Tamu Anda": "Integrated Supply Solutions for Your Guest Comfort",
+    "Solusi Pasokan Terpadu": "Integrated Supply Solutions",
+    "untuk Kenyamanan Tamu Anda": "for Your Guest Comfort",
+    "DETASCO hadir sebagai mitra terpercaya dalam memenuhi seluruh kebutuhan perlengkapan perhotelan dan hospitality. Kami memastikan operasional properti Anda berjalan mulus lewat produk berstandar tinggi, kepastian rantai pasok yang tepat waktu, serta skema harga volume yang efisien.": "DETASCO is your trusted partner in fulfilling all hospitality and hotel supply needs. We ensure your property operations run smoothly with high-standard products, reliable on-time supply chains, and cost-efficient volume pricing.",
+    "Konsultasikan Kebutuhan": "Consult Your Needs",
+
     // ---- Kategori Pasokan Utama (index.html) ----
     "RUANG LINGKUP PENGADAAN KOMPREHENSIF": "COMPREHENSIVE PROCUREMENT SCOPE",
     "KATEGORI PASOKAN UTAMA": "CORE SUPPLY CATEGORIES",
