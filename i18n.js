@@ -1054,7 +1054,61 @@
     "Solusi Sesuai Kebutuhan": "Tailored Solutions",
     "Pilihan produk dan kustomisasi yang disesuaikan dengan hotel dan rumah sakit Anda.": "Product choices and customization tailored to your hotel or hospital.",
     "Ingin Bekerja Sama?": "Want to Work With Us?",
-    "Hubungi Tim DETASCO untuk Kebutuhan Anda": "Contact the DETASCO Team for Your Needs"
+    "Hubungi Tim DETASCO untuk Kebutuhan Anda": "Contact the DETASCO Team for Your Needs",
+
+    // ---- general benefits after Josep catalog rewrite ----
+    "Nyaman dan lembut di kaki": "Comfortable and soft on the feet",
+    "Logo hotel bisa dikustomisasi": "Hotel logo can be customized",
+    "Lembut di kulit tamu": "Gentle on guests' skin",
+    "Aroma segar ala spa": "Fresh, spa-style scent",
+    "Kemasan estetik dan elegan": "Aesthetic and elegant packaging",
+    "Aroma mewah yang menenangkan": "Luxurious, soothing scent",
+    "Rambut terasa segar dan wangi": "Hair feels fresh and fragrant",
+    "Botol tampil rapi dan mewah": "Neat and luxurious-looking bottle",
+    "Nyaman digunakan setiap hari": "Comfortable for everyday use",
+    "Terasa bersih dan segar": "Feels clean and fresh",
+    "Logo dan warna hotel tampil elegan di setiap kemasan.": "Your hotel's logo and colors look elegant on every package.",
+    "Lembut di Kulit": "Gentle on Skin",
+    "Terasa nyaman dan lembut bagi tamu hotel Anda.": "Feels comfortable and gentle for your hotel guests.",
+    "Kesan Segar dan Alami": "Fresh and Natural Feel",
+    "Tampilan natural yang menyenangkan dan berkesan bagi tamu.": "A natural look that delights guests and leaves a lasting impression.",
+    "Menolak noda dan mudah dibersihkan": "Resists stains and easy to clean",
+    "Pas untuk rumah sakit dan klinik": "Ideal for hospitals and clinics",
+    "Gorden Elegan untuk Kenyamanan Setiap Kamar": "Elegant Curtains for the Comfort of Every Room",
+    "Kain pilihan yang awet, mudah dirawat, dan tetap tampak indah.": "Selected fabrics that are durable, easy to care for, and always look beautiful.",
+    "Santai dan nyaman di tepi kolam": "Relaxed comfort by the pool",
+    "Cepat kering dan mudah dirawat": "Quick-drying and easy to care for",
+    "Tampilan segar bergaya resor": "Fresh, resort-style look",
+    "Praktis untuk tangan dan wastafel": "Handy for hands and the vanity",
+    "Lembut dan ramah di kulit": "Soft and gentle on the skin",
+    "Rapi saat digantung atau dilipat": "Neat when hung or folded",
+    "Sentuhan ekstra lembut untuk wajah": "Extra-soft touch for the face",
+    "Tampilan netral dan elegan": "Neutral, elegant look",
+    "Nyaman di kaki setelah mandi": "Comfortable underfoot after bathing",
+    "Menyerap tetesan air dengan baik": "Absorbs water drips well",
+    "Awet dan tetap tampil rapi": "Durable and stays neat-looking",
+    "Terasa lapang dan mewah": "Feels generous and luxurious",
+    "Membungkus tubuh dengan nyaman": "Wraps the body comfortably",
+    "Lembut dan mudah dicuci": "Soft and easy to wash",
+    "Kesan eksklusif dan menyegarkan": "Exclusive, refreshing impression",
+    "Praktis dan rapi disajikan": "Practical and neat to serve",
+    "Bisa dibordir logo hotel": "Hotel logo embroidery available",
+    "Mudah menyerap air setelah mandi": "Easily absorbs water after bathing",
+    "Tampilan mewah ala spa hotel": "Luxurious hotel-spa look",
+    "Sentuhan lembut dan awet, tetap nyaman meski dicuci berulang.": "Soft touch and durable, staying comfortable even after repeated washing.",
+    "Menyerap air dengan baik dan cepat kering antar pemakaian.": "Absorbs water well and dries quickly between uses.",
+    "Smooth & Soft Towel | Premium Quality": "Smooth & Soft Towel | Premium Quality",
+
+    // ---- gorden bullets kept from catalog rewrite ----
+    "Mudah mengontrol cahaya": "Easy to control light",
+    "Desain compact yang cocok untuk ruangan kecil": "Compact design suited for small rooms",
+    "Tahan dari debu & noda": "Resistant to dust & stains",
+    "Perawatannya cukup simpel": "Fairly simple to maintain",
+
+    // ---- footer supply-line labels ----
+    "Handuk Hotel": "Hotel Towels",
+    "Gorden Hotel": "Hotel Curtains",
+    "Amenities Hotel": "Hotel Amenities"
   };
 
   var textNodes = [];
