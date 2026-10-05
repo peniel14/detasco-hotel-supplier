@@ -1108,7 +1108,11 @@
     // ---- footer supply-line labels ----
     "Handuk Hotel": "Hotel Towels",
     "Gorden Hotel": "Hotel Curtains",
-    "Amenities Hotel": "Hotel Amenities"
+    "Amenities Hotel": "Hotel Amenities",
+
+    // ---- about: quality statement ----
+    "PT. Detasco Elca Sarana mengutamakan kualitas dan produk berkelas. Kami percaya perlengkapan yang baik membuat tamu dan pasien merasa lebih nyaman dan dihargai.": "PT. Detasco Elca Sarana puts quality and classy, premium products first. We believe good supplies make guests and patients feel more comfortable and valued.",
+    "Kami mengutamakan kualitas dan produk berkelas yang nyaman, higienis, dan awet dipakai.": "We put quality and premium products first, so they are comfortable, hygienic, and durable."
   };
 
   var textNodes = [];
