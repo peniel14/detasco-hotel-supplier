@@ -1021,7 +1021,40 @@
     "Kantor pusat DETASCO berada di Medan. Untuk kebutuhan produk dan penawaran, hubungi tim kami melalui WhatsApp atau formulir permintaan penawaran.": "DETASCO head office is located in Medan. For product needs and quotations, contact our team via WhatsApp or the quote request form.",
     "KANTOR PUSAT": "HEAD OFFICE",
     "Kantor pusat DETASCO sebagai pusat koordinasi pengadaan perlengkapan hotel dan rumah sakit.": "DETASCO head office, the coordination center for hotel and hospital supply procurement.",
-    "Lokasi Kantor": "Office Location"
+    "Lokasi Kantor": "Office Location",
+
+    // ---- about.html ----
+    "Tentang Kami": "About Us",
+    "Sejak 2006, PT. Detasco Elca Sarana menjadi mitra pengadaan perlengkapan bagi hotel dan rumah sakit. Kami memenuhi beragam kebutuhan amenities agar tamu dan pasien merasa nyaman, bersih, dan terlayani dengan baik.": "Since 2006, PT. Detasco Elca Sarana has been a supply partner for hotels and hospitals. We meet a wide range of amenity needs so that guests and patients feel comfortable, clean, and well cared for.",
+    "Hubungi Kami": "Contact Us",
+    "Sejak 2006": "Since 2006",
+    "Melayani kebutuhan hotel dan rumah sakit dengan pengalaman bertahun-tahun.": "Serving hotels and hospitals with years of experience.",
+    "Hotel & Rumah Sakit": "Hotels & Hospitals",
+    "Mitra pengadaan amenities untuk berbagai hotel dan rumah sakit.": "Amenity supply partner for a variety of hotels and hospitals.",
+    "Kebutuhan Lengkap": "Complete Supply",
+    "Linen, amenities, gorden, handuk, hingga perlengkapan rumah sakit.": "Linen, amenities, curtains, towels, and hospital supplies.",
+    "Konsultasi Mudah": "Easy Consultation",
+    "Tim kami siap membantu menentukan produk yang sesuai kebutuhan Anda.": "Our team is ready to help you choose the products that fit your needs.",
+    "Cerita Kami": "Our Story",
+    "Mitra Kebutuhan Hotel dan Rumah Sakit": "Your Hotel and Hospital Supply Partner",
+    "Sejak 2006, PT. Detasco Elca Sarana telah memenuhi kebutuhan amenities bagi banyak hotel dan rumah sakit. Kami memahami bahwa kenyamanan tamu dan pasien dimulai dari perlengkapan yang bersih, terawat, dan berkualitas.": "Since 2006, PT. Detasco Elca Sarana has met the amenity needs of many hotels and hospitals. We understand that guest and patient comfort begins with clean, well-kept, quality supplies.",
+    "Kini kami melayani kebutuhan linen, amenities, gorden, handuk, dan perlengkapan rumah sakit. Kami berkomitmen menjadi mitra yang dapat diandalkan, mulai dari konsultasi kebutuhan hingga pengiriman.": "Today we supply linen, amenities, curtains, towels, and hospital supplies. We are committed to being a reliable partner, from consultation through to delivery.",
+    "Klien Kami": "Our Clients",
+    "Beberapa Mitra yang Kami Layani": "Some of the Partners We Serve",
+    "Berikut contoh hotel dan rumah sakit yang kebutuhan amenities-nya telah kami penuhi.": "Here are examples of hotels and hospitals whose amenity needs we have fulfilled.",
+    "Hotel": "Hotel",
+    "Pemenuhan kebutuhan amenities hotel.": "Fulfilment of hotel amenity needs.",
+    "Pemenuhan kebutuhan amenities rumah sakit.": "Fulfilment of hospital amenity needs.",
+    "Komitmen Kami": "Our Commitment",
+    "Yang Kami Berikan": "What We Offer",
+    "Kualitas Terjaga": "Consistent Quality",
+    "Produk dipilih agar nyaman, higienis, dan awet dipakai.": "Products are chosen to be comfortable, hygienic, and durable.",
+    "Layanan Berkelanjutan": "Ongoing Service",
+    "Kami mendampingi kebutuhan pengadaan Anda, baik rutin maupun proyek baru.": "We support your procurement needs, both routine and for new projects.",
+    "Solusi Sesuai Kebutuhan": "Tailored Solutions",
+    "Pilihan produk dan kustomisasi yang disesuaikan dengan hotel dan rumah sakit Anda.": "Product choices and customization tailored to your hotel or hospital.",
+    "Ingin Bekerja Sama?": "Want to Work With Us?",
+    "Hubungi Tim DETASCO untuk Kebutuhan Anda": "Contact the DETASCO Team for Your Needs"
   };
 
   var textNodes = [];
