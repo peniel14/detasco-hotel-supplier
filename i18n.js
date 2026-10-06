@@ -1117,11 +1117,6 @@
     // ---- Best Price phrase ----
     "Kemitraan pengadaan jangka panjang dengan kepastian kualitas konsisten, Best Price dengan transparansi harga pabrik, dan dedikasi layanan purna jual.": "A long-term procurement partnership built on consistent quality, Best Price with transparent factory pricing, and dedicated after-sales service.",
     "Kirim daftar kebutuhan lewat WhatsApp atau formulir. Kami balas dengan penawaran harga grosir Best Price.": "Send your requirements via WhatsApp or the form. We'll reply with a Best Price wholesale quote.",
-    "Konsultasikan Kebutuhan Linen Hotel Anda, Dapatkan Best Price": "Discuss Your Hotel Linen Needs, Get the Best Price",
-    "Konsultasikan Kebutuhan Amenities Hotel Anda, Dapatkan Best Price": "Consult Us About Your Hotel Amenities Needs, Get the Best Price",
-    "Konsultasikan Kebutuhan Gorden Hotel Anda, Dapatkan Best Price": "Consult Your Hotel Curtain Needs, Get the Best Price",
-    "Konsultasikan Kebutuhan Handuk Hotel Anda, Dapatkan Best Price": "Consult on Your Hotel Towel Needs, Get the Best Price",
-    "Konsultasikan Kebutuhan Rumah Sakit Anda, Dapatkan Best Price": "Consult Your Hospital Needs, Get the Best Price",
     "Pilihan produk dan kustomisasi dengan Best Price, disesuaikan dengan hotel dan rumah sakit Anda.": "Product choices and customization at the Best Price, tailored to your hotel or hospital."
   };
 
