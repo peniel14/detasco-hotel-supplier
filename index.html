@@ -895,12 +895,29 @@
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label class="block text-gray-300 font-medium mb-1">Kategori Kebutuhan</label>
-              <select id="formCategory" class="w-full px-3.5 py-2.5 rounded-lg bg-[#0B0E14] border border-white/10 text-white focus:outline-none focus:border-detasco-gold transition cursor-pointer">
-                <option value="Linen & Bedding">Linen & Bedding (Sprei, Handuk 500TC)</option>
-                <option value="Guest Room Amenities">Guest Room Amenities & Toiletries</option>
-                <option value="Full Pre-Opening Package">Paket Lengkap Hotel Pre-Opening</option>
-              </select>
+              <label class="block text-gray-300 font-medium mb-1" id="formCategoryLabel">Kategori Kebutuhan <span class="text-gray-500 font-normal">(boleh pilih lebih dari satu)</span></label>
+              <div id="formCategoryGroup" role="group" aria-labelledby="formCategoryLabel" class="w-full px-3.5 py-2.5 rounded-lg bg-[#0B0E14] border border-white/10 text-white grid grid-cols-2 gap-x-3 gap-y-2">
+                <label class="flex items-center gap-2 cursor-pointer select-none whitespace-nowrap">
+                  <input type="checkbox" name="formCategory" value="Linen" class="w-3.5 h-3.5 shrink-0 cursor-pointer accent-[#E5B13A]">
+                  <span>Linen</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer select-none whitespace-nowrap">
+                  <input type="checkbox" name="formCategory" value="Amenities" class="w-3.5 h-3.5 shrink-0 cursor-pointer accent-[#E5B13A]">
+                  <span>Amenities</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer select-none whitespace-nowrap">
+                  <input type="checkbox" name="formCategory" value="Gorden" class="w-3.5 h-3.5 shrink-0 cursor-pointer accent-[#E5B13A]">
+                  <span>Gorden</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer select-none whitespace-nowrap">
+                  <input type="checkbox" name="formCategory" value="Towel (Handuk)" class="w-3.5 h-3.5 shrink-0 cursor-pointer accent-[#E5B13A]">
+                  <span>Towel</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer select-none whitespace-nowrap">
+                  <input type="checkbox" name="formCategory" value="Rumah Sakit" class="w-3.5 h-3.5 shrink-0 cursor-pointer accent-[#E5B13A]">
+                  <span>Rumah Sakit</span>
+                </label>
+              </div>
             </div>
             <div>
               <label class="block text-gray-300 font-medium mb-1">Jumlah Kamar / Unit</label>
@@ -909,8 +926,8 @@
           </div>
 
           <div>
-            <label class="block text-gray-300 font-medium mb-1">Spesifikasi Tambahan & Catatan Khusus</label>
-            <textarea id="notes" rows="3" placeholder="Sebutkan detail pesanan (contoh: Katun satin 500TC, logo bordir emas di sudut sprei, butuh mock-up sampel minggu depan)..." class="w-full px-3.5 py-2.5 rounded-lg bg-[#0B0E14] border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-detasco-gold transition"></textarea>
+            <label class="block text-gray-300 font-medium mb-1">Item Spesifik & Catatan Khusus</label>
+            <textarea id="notes" rows="3" placeholder="Tuliskan item yang dibutuhkan (contoh: sprei, handuk mandi, sabun, gorden blackout) beserta catatan lain, misalnya logo bordir atau jadwal pengiriman..." class="w-full px-3.5 py-2.5 rounded-lg bg-[#0B0E14] border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-detasco-gold transition"></textarea>
           </div>
 
           <button type="submit" class="w-full py-3.5 px-6 rounded-lg bg-detasco-gold text-black font-bold text-xs uppercase tracking-wider hover:bg-detasco-goldHover transition shadow-xl flex items-center justify-center gap-2">
@@ -1101,12 +1118,29 @@
   <!-- JAVASCRIPT: DATA & INTERACTIVE LOGIC                                      -->
   <!-- ========================================================================= -->
   <script>
+    // Category checkboxes: clear the "pick at least one" message once something is ticked
+    document.addEventListener('change', function (ev) {
+      if (ev.target && ev.target.name === 'formCategory') {
+        const f = document.querySelector('input[name="formCategory"]');
+        if (f) f.setCustomValidity('');
+      }
+    });
+
     // Handle Form Submit
     function handleFormSubmit(e) {
       e.preventDefault();
       const pic = document.getElementById('picName').value;
       const hotel = document.getElementById('hotelName').value;
-      const cat = document.getElementById('formCategory').value;
+      const checked = Array.from(document.querySelectorAll('input[name="formCategory"]:checked'));
+      const first = document.querySelector('input[name="formCategory"]');
+      if (!checked.length) {
+        const msg = (window.DetascoI18n && DetascoI18n.getLang() === 'en') ? 'Please select at least one category.' : 'Pilih minimal satu kategori kebutuhan.';
+        first.setCustomValidity(msg);
+        first.reportValidity();
+        return;
+      }
+      first.setCustomValidity('');
+      const cat = checked.map(c => c.value).join(', ');
       const rooms = document.getElementById('roomCount').value;
       const notes = document.getElementById('notes').value;
 

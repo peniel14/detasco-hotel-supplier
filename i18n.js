@@ -1147,7 +1147,12 @@
     "Tampilan natural dan elegan": "Natural, elegant look",
 
     // ---- homepage H1 ----
-    "SUPPLIER PERLENGKAPAN HOTEL & RUMAH SAKIT DI MEDAN": "HOTEL & HOSPITAL SUPPLIES SUPPLIER IN MEDAN"
+    "SUPPLIER PERLENGKAPAN HOTEL & RUMAH SAKIT DI MEDAN": "HOTEL & HOSPITAL SUPPLIES SUPPLIER IN MEDAN",
+
+    // ---- quote form: multi-category checkboxes ----
+    "(boleh pilih lebih dari satu)": "(you may select more than one)",
+    "Item Spesifik & Catatan Khusus": "Specific Items & Special Notes",
+    "Tuliskan item yang dibutuhkan (contoh: sprei, handuk mandi, sabun, gorden blackout) beserta catatan lain, misalnya logo bordir atau jadwal pengiriman...": "Describe the items you need (e.g. sheets, bath towels, soap, blackout curtains) and any other notes, such as logo embroidery or delivery schedule..."
   };
 
   var textNodes = [];
