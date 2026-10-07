@@ -1129,7 +1129,18 @@
     "Bisa custom branding hotel": "Hotel branding can be customized",
     "Praktis untuk tamu pria": "Convenient for male guests",
     "Set lengkap dalam kemasan rapi": "A complete set in neat packaging",
-    "Kesan mewah di kamar mandi": "A luxurious touch in the bathroom"
+    "Kesan mewah di kamar mandi": "A luxurious touch in the bathroom",
+
+    // ---- hospital: goodie bag and amenity bag, no scrub/lab coat ----
+    "Tampil eksklusif dengan logo Anda": "Look exclusive with your logo",
+    "Rapi untuk paket pasien dan tamu": "Neat for patient and guest packs",
+    "Praktis dan mudah dibawa": "Practical and easy to carry",
+    "Praktis untuk set perlengkapan pasien": "Practical for patient supply sets",
+    "Bisa custom logo rumah sakit": "Hospital logo can be customized",
+    "Goodie Bag Logo": "Logo Goodie Bag",
+    "Tas Amenities": "Amenities Bag",
+    "DETASCO menyediakan lini lengkap tekstil dan perlengkapan untuk rumah sakit, klinik, dan fasilitas kesehatan: mulai dari linen medis, gorden anti darah, baju pasien, hingga goodie bag dan tas amenities. Seluruh produk dipilih agar higienis, nyaman, dan awet untuk pemakaian berulang. Kami juga melayani custom sesuai kebutuhan instansi kesehatan Anda.": "DETASCO provides a complete line of textiles and supplies for hospitals, clinics, and healthcare facilities: from medical linen and blood-resistant curtains to patient gowns, goodie bags, and amenity bags. Every product is chosen to be hygienic, comfortable, and durable for repeated use. We also offer customization to match your healthcare institution's needs.",
+    "Sprei, gorden, hingga tas amenities dapat disesuaikan dengan kebutuhan fasilitas Anda.": "Sheets, curtains, and amenity bags can be tailored to your facility's needs."
   };
 
   var textNodes = [];
