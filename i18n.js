@@ -1140,7 +1140,11 @@
     "Goodie Bag Logo": "Logo Goodie Bag",
     "Tas Amenities": "Amenities Bag",
     "DETASCO menyediakan lini lengkap tekstil dan perlengkapan untuk rumah sakit, klinik, dan fasilitas kesehatan: mulai dari linen medis, gorden anti darah, baju pasien, hingga goodie bag dan tas amenities. Seluruh produk dipilih agar higienis, nyaman, dan awet untuk pemakaian berulang. Kami juga melayani custom sesuai kebutuhan instansi kesehatan Anda.": "DETASCO provides a complete line of textiles and supplies for hospitals, clinics, and healthcare facilities: from medical linen and blood-resistant curtains to patient gowns, goodie bags, and amenity bags. Every product is chosen to be hygienic, comfortable, and durable for repeated use. We also offer customization to match your healthcare institution's needs.",
-    "Sprei, gorden, hingga tas amenities dapat disesuaikan dengan kebutuhan fasilitas Anda.": "Sheets, curtains, and amenity bags can be tailored to your facility's needs."
+    "Sprei, gorden, hingga tas amenities dapat disesuaikan dengan kebutuhan fasilitas Anda.": "Sheets, curtains, and amenity bags can be tailored to your facility's needs.",
+
+    // ---- amenities: comb ----
+    "Halus dan nyaman di rambut": "Smooth and gentle on hair",
+    "Tampilan natural dan elegan": "Natural, elegant look"
   };
 
   var textNodes = [];

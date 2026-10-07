@@ -69,8 +69,8 @@ const PAGES_CONFIG = [
     titleKeyword: 'Amenities Hotel Premium',
     distinctHeader: 'Amenities Hotel',
     solutionId: 'amenities-solution',
-    minCards: 8,
-    targetCards: 8
+    minCards: 9,
+    targetCards: 9
   },
   {
     file: 'gorden.html',
