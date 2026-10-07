@@ -11,7 +11,7 @@ Dokumen ini adalah panduan standar operasional (SOP) agar dua pengembang di lapt
 
 Setiap model AI memiliki gaya penulisan kode dan asumsi yang berbeda. Jika tidak diarahkan:
 1. Claude bisa saja mengubah desain warna atau tata letak yang sudah dibuat rapi oleh Antigravity (atau sebaliknya).
-2. Salah satu AI bisa saja menulis ulang data produk secara statis dan merusak arsitektur `products-data.js`.
+2. Salah satu AI bisa menulis ulang seluruh halaman produk dan menimpa isi yang sudah disepakati (misalnya spesifikasi yang sengaja dihapus, atau terjemahan EN).
 3. Perubahan bersamaan pada file yang sama tanpa `git pull` bisa memicu *merge conflict*.
 
 Untuk mencegah hal tersebut, proyek ini dilengkapi dengan **`CLAUDE.md`** (yang otomatis dibaca oleh Claude) dan aturan kerja berikut.
@@ -43,7 +43,7 @@ Pastikan server lokal berjalan:
 ```bash
 node server.js
 ```
-Buka `http://localhost:3000` atau `http://localhost:3000/katalog.html` untuk memverifikasi tampilan.
+Buka `http://localhost:3000` untuk memverifikasi tampilan, lalu jalankan `node scripts/test-e2e.js` (harus 100% lolos sebelum push).
 
 ### Langkah 4: Simpan & Kirim ke GitHub
 Jika sudah oke, langsung commit dan push agar teman Anda bisa langsung menariknya:
@@ -61,11 +61,11 @@ Cara paling efektif agar tidak pernah terjadi *conflict*: **bagi kepemilikan fil
 
 | Pengembang | AI | Area Fokus Utama | File yang Diedit |
 | :--- | :--- | :--- | :--- |
-| **Developer 1** | **Antigravity** | Halaman Beranda, Tata Letak Global, Server | `index.html`, `server.js`, `logo.png` |
-| **Developer 2** | **Claude** | Halaman Katalog Lengkap, Filter, Modal Detail | `katalog.html` |
-| **Bersama** | Koordinasi | Data Master Produk | `products-data.js` *(koordinasikan sebelum edit)* |
+| **Developer 1** | **Antigravity** | Tentukan bersama sebelum mulai, misalnya halaman produk | `linen.html`, `amenities.html`, `gorden.html`, `towel.html` |
+| **Developer 2** | **Claude** | Tentukan bersama sebelum mulai, misalnya Beranda, Tentang Kami, SEO, i18n | `index.html`, `about.html`, `hospital.html`, `i18n.js` |
+| **Bersama** | Koordinasi | Aturan konten dan tes | `CLAUDE.md`, `scripts/test-e2e.js` *(kabari teman sebelum mengubah)* |
 
-> 💡 **Tips**: Jika salah satu ingin mengedit `products-data.js` (misalnya menambah produk baru), beri tahu teman terlebih dahulu lewat chat (WhatsApp/Slack) agar tidak bersamaan.
+> 💡 **Tips**: Jika perlu mengedit file yang biasa dikerjakan teman (atau `i18n.js`, yang dipakai semua halaman), kabari dulu lewat chat dan lakukan `git pull` sebelum mulai agar tidak saling menimpa.
 
 ---
 
@@ -78,12 +78,12 @@ Halo Claude! Kita sedang mengerjakan proyek website hotel supplier "Detasco".
 Proyek ini dikembangkan bersama rekan tim yang menggunakan Google Antigravity.
 
 Mohon baca dan patuhi file `CLAUDE.md` yang ada di root direktori proyek ini:
-1. Jangan hardcode data produk di HTML, semua produk wajib melalui `products-data.js`.
+1. Kartu produk hanya berisi 3 kelebihan umum, tanpa spesifikasi teknis (GSM, BPOM, dB, dll). Pembeli diarahkan menghubungi admin.
 2. Pertahankan ritme warna mewah bergantian: Dark Obsidian (#0D1017) dan Warm Linen (#F8F5EE).
 3. Header navigasi setinggi 80px, semua anchor link gunakan scroll-mt-20.
-4. Di index.html katalog hanya 1 baris (4 item) dengan tombol ke katalog.html.
+4. Setiap teks Indonesia baru wajib punya terjemahan EN di `i18n.js` (cocok persis), dan tidak ada showroom, F&B, atau perlengkapan kamar.
 
-Tugas saya hari ini adalah: [Tuliskan tugas Anda di sini, misalnya: Menambahkan filter rentang harga di katalog.html]
+Tugas saya hari ini adalah: [Tuliskan tugas Anda di sini, misalnya: Menambah produk baru di halaman towel.html]
 
 Tolong periksa file terkait dan berikan kode yang presisi tanpa merusak bagian lain.
 ```

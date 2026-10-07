@@ -43,10 +43,10 @@ const PAGES_CONFIG = [
     file: 'index.html',
     url: '/index.html',
     milestone: 'M0',
-    titleExpected: 'DETASCO | Solusi Pengadaan Hospitality Bintang 5 di Seluruh Indonesia',
-    titleKeyword: 'DETASCO | Solusi Pengadaan',
+    titleExpected: 'DETASCO | Supplier Perlengkapan Hotel & Rumah Sakit di Medan',
+    titleKeyword: 'DETASCO | Supplier Perlengkapan',
     distinctHeader: 'SOLUSI PENGADAAN HOSPITALITY',
-    solutionId: null, // Index page features #our-categories instead of a single solution section
+    solutionId: null, // Index page has no single product-solution section
     minCards: 0,
     targetCards: 0
   },
@@ -59,11 +59,7 @@ const PAGES_CONFIG = [
     distinctHeader: 'ALL-IN LINEN SOLUTION',
     solutionId: 'linen-solution',
     minCards: 8,
-    targetCards: 12,
-    specs: {
-      category: 'Linen',
-      requiredKeywords: ['cotton', 'cuci industri', 'lembut']
-    }
+    targetCards: 12
   },
   {
     file: 'amenities.html',
@@ -74,14 +70,7 @@ const PAGES_CONFIG = [
     distinctHeader: 'Amenities Hotel',
     solutionId: 'amenities-solution',
     minCards: 4,
-    targetCards: 4,
-    specs: {
-      category: 'Amenities',
-      // Must cover BPOM, eco-friendly, custom logo
-      bpomPatterns: [/bpom/i, /izin\s*edar/i, /formula\s*aman/i],
-      ecoPatterns: [/eco[- ]friendly/i, /ramah\s*lingkungan/i, /biodegradable/i, /jerami\s*gandum/i, /daur\s*ulang/i],
-      customLogoPatterns: [/custom\s*logo/i, /logo\s*hotel/i, /kemasan\s*custom/i, /branding/i, /hot\s*foil/i]
-    }
+    targetCards: 4
   },
   {
     file: 'gorden.html',
@@ -92,15 +81,7 @@ const PAGES_CONFIG = [
     distinctHeader: 'Gorden Hotel',
     solutionId: 'gorden-solution',
     minCards: 4,
-    targetCards: 4,
-    specs: {
-      category: 'Gorden',
-      // Must cover blackout, flame-retardant, acoustic dB, motorized track
-      blackoutPatterns: [/blackout/i, /penahan\s*cahaya/i, /100%\s*gelap/i],
-      flamePatterns: [/flame[- ]retardant/i, /tahan\s*api/i, /anti\s*api/i, /nfpa\s*701/i, /bs\s*5867/i],
-      acousticPatterns: [/acoustic/i, /peredam\s*suara/i, /soundproof/i, /\bdb\b/i, /desibel/i],
-      motorizedPatterns: [/motorized/i, /smart\s*track/i, /rel\s*otomatis/i, /remote/i, /otomasi/i]
-    }
+    targetCards: 4
   },
   {
     file: 'towel.html',
@@ -111,15 +92,43 @@ const PAGES_CONFIG = [
     distinctHeader: 'Handuk Hotel',
     solutionId: 'towel-solution',
     minCards: 8,
-    targetCards: 8,
-    specs: {
-      category: 'Towel',
-      // Must cover 450-800 GSM, combed cotton, industrial laundry
-      gsmPattern: /\b(450|500|550|600|650|700|750|800)\s*GSM\b/i,
-      combedPattern: [/combed\s*cotton/i, /katun\s*combed/i, /100%\s*katun/i, /100%\s*cotton/i, /katun\s*pilihan/i],
-      laundryPattern: [/cuci\s*industri/i, /industrial\s*laundry/i, /standar\s*cuci/i, /85°C/i, /200\+\s*siklus/i]
-    }
+    targetCards: 8
+  },
+  {
+    file: 'hospital.html',
+    url: '/hospital.html',
+    milestone: 'M0',
+    titleExpected: 'Perlengkapan Rumah Sakit | DETASCO',
+    titleKeyword: 'Perlengkapan Rumah Sakit',
+    distinctHeader: 'Perlengkapan Rumah Sakit',
+    solutionId: null,
+    minCards: 0,
+    targetCards: 0
+  },
+  {
+    file: 'about.html',
+    url: '/about.html',
+    milestone: 'M0',
+    titleExpected: 'Tentang Kami | PT. Detasco Elca Sarana',
+    titleKeyword: 'Tentang Kami',
+    distinctHeader: 'PT. Detasco Elca Sarana',
+    solutionId: null,
+    minCards: 0,
+    targetCards: 0
   }
+];
+
+// Product cards show general benefits only. Technical specs must stay out of the
+// cards so prospects contact the admin for full specifications.
+const BULLETS_PER_CARD = 3;
+const FORBIDDEN_SPEC_PATTERNS = [
+  { label: 'GSM grammage', rx: /\b\d+\s*GSM\b/i },
+  { label: 'BPOM / izin edar', rx: /\bBPOM\b|izin\s*edar/i },
+  { label: 'fire standard (NFPA / BS 5867 / flame-retardant)', rx: /NFPA|BS\s*5867|flame[- ]retardant/i },
+  { label: 'decibel rating', rx: /\b\d+\s*dB\b/i },
+  { label: 'combed cotton', rx: /combed\s*cotton/i },
+  { label: 'thread count', rx: /\b\d+\s*TC\b/i },
+  { label: 'material grade (SUS304)', rx: /SUS\s*304/i }
 ];
 
 // CLI Arguments Parser
@@ -546,14 +555,14 @@ async function runTestSuite() {
       if (testResults.serverOnline) {
         const httpResp = await probeHttpUrl(`${SERVER_BASE_URL}${p.url}`);
         const httpTitle = httpResp.body ? extractTitle(httpResp.body) : '';
-        const indexTitle = 'DETASCO | Solusi Pengadaan Hospitality Bintang 5 di Seluruh Indonesia';
+        const indexTitle = PAGES_CONFIG[0].titleKeyword;
         
         // Assert: HTTP 200
         const is200 = httpResp.statusCode === 200;
         
         // Assert: Non-Fallback content
         // If requesting a subpage (e.g. linen.html, amenities.html), its title MUST NOT match indexTitle!
-        const isNotFallback = p.file === 'index.html' ? true : (httpTitle !== indexTitle && httpTitle.includes(p.titleKeyword));
+        const isNotFallback = p.file === 'index.html' ? true : (!httpTitle.includes(indexTitle) && httpTitle.includes(p.titleKeyword));
         const hasDistinctHeader = httpResp.body ? httpResp.body.includes(p.distinctHeader) : false;
 
         if (is200 && isNotFallback && hasDistinctHeader) {
@@ -727,8 +736,8 @@ async function runTestSuite() {
         if (!cardDetails.hasAspectSquare) issues.push('missing aspect-square wrapper');
         if (!cardDetails.validImg) issues.push('missing or invalid <img> with non-empty alt');
         if (!cardDetails.isTitleBold || !cardDetails.rawTitle) issues.push('missing bold title (h3)');
-        if (cardDetails.bulletCount < 4) issues.push(`only ${cardDetails.bulletCount} bullet points (min 4)`);
-        if (cardDetails.checkmarkCount < 4) issues.push(`only ${cardDetails.checkmarkCount} checkmark badges (min 4)`);
+        if (cardDetails.bulletCount !== BULLETS_PER_CARD) issues.push(`${cardDetails.bulletCount} bullet points (expected ${BULLETS_PER_CARD})`);
+        if (cardDetails.checkmarkCount !== BULLETS_PER_CARD) issues.push(`${cardDetails.checkmarkCount} checkmark badges (expected ${BULLETS_PER_CARD})`);
 
         if (issues.length === 0) {
           validStructuralCards++;
@@ -745,132 +754,51 @@ async function runTestSuite() {
       if (cards.length > 0 && failedCards.length === 0) {
         recordTest('tier2', {
           id: `T2.1_STRUCT_${p.file}`,
-          name: `Product Card Structure & 4 Checkmarks (${p.file})`,
+          name: `Product Card Structure & 3 Checkmarks (${p.file})`,
           milestone: p.milestone,
           page: p.file,
           status: 'PASS',
-          message: `All ${validStructuralCards} cards have aspect-square frame, bold title, and >= 4 checkmark badges.`
+          message: `All ${validStructuralCards} cards have aspect-square frame, bold title, and exactly 3 checkmark badges.`
         });
       } else {
         const isPending = p.milestone !== 'M0' && (cliOptions.allowPending || cliOptions.milestone === 'M0');
         const issuesSummary = failedCards.map(f => `Card #${f.cardIndex} ("${f.title}"): ${f.issues.join(', ')}`).join(' | ');
         recordTest('tier2', {
           id: `T2.1_STRUCT_${p.file}`,
-          name: `Product Card Structure & 4 Checkmarks (${p.file})`,
+          name: `Product Card Structure & 3 Checkmarks (${p.file})`,
           milestone: p.milestone,
           page: p.file,
           status: isPending ? 'PENDING' : 'FAIL',
           defect: cards.length === 0 ? `No product cards detected in #${p.solutionId}` : `${failedCards.length} cards failed structure: ${issuesSummary}`,
-          expected: `All cards have aspect-square photo, bold h3, and >= 4 checkmark bullet points`,
+          expected: `All cards have aspect-square photo, bold h3, and exactly 3 checkmark bullet points`,
           actual: `${validStructuralCards}/${cards.length} cards valid`
         });
       }
 
-      // Category-Specific Specification Assertions
-      const sectionText = section.full;
-
-      if (p.specs && p.specs.category === 'Amenities') {
-        const hasBpom = p.specs.bpomPatterns.some(rx => rx.test(sectionText));
-        const hasEco = p.specs.ecoPatterns.some(rx => rx.test(sectionText));
-        const hasCustomLogo = p.specs.customLogoPatterns.some(rx => rx.test(sectionText));
-
-        if (hasBpom && hasEco && hasCustomLogo) {
-          recordTest('tier2', {
-            id: 'T2.2_SPECS_AMENITIES',
-            name: 'Amenities Specifications (BPOM, Eco-friendly, Custom Logo)',
-            milestone: 'M1',
-            page: 'amenities.html',
-            status: 'PASS',
-            message: 'All commercial specifications (BPOM/izin edar, Eco-friendly/ramah lingkungan, Custom Logo/branding) verified.'
-          });
-        } else {
-          const missing = [];
-          if (!hasBpom) missing.push('BPOM / Standar formula aman');
-          if (!hasEco) missing.push('Eco-friendly / Ramah lingkungan');
-          if (!hasCustomLogo) missing.push('Custom Logo / Hotel branding');
-          const isPending = cliOptions.allowPending || cliOptions.milestone === 'M0';
-
-          recordTest('tier2', {
-            id: 'T2.2_SPECS_AMENITIES',
-            name: 'Amenities Specifications (BPOM, Eco-friendly, Custom Logo)',
-            milestone: 'M1',
-            page: 'amenities.html',
-            status: isPending ? 'PENDING' : 'FAIL',
-            defect: `Missing required amenities specifications in cards: ${missing.join(', ')}`,
-            expected: 'Cards must explicitly mention BPOM, eco-friendly, and custom logo capabilities',
-            actual: `Missing: ${missing.join(', ')}`
-          });
-        }
-      }
-
-      if (p.specs && p.specs.category === 'Gorden') {
-        const hasBlackout = p.specs.blackoutPatterns.some(rx => rx.test(sectionText));
-        const hasFlame = p.specs.flamePatterns.some(rx => rx.test(sectionText));
-        const hasAcoustic = p.specs.acousticPatterns.some(rx => rx.test(sectionText));
-        const hasMotorized = p.specs.motorizedPatterns.some(rx => rx.test(sectionText));
-
-        if (hasBlackout && hasFlame && hasAcoustic && hasMotorized) {
-          recordTest('tier2', {
-            id: 'T2.3_SPECS_GORDEN',
-            name: 'Gorden Specifications (Blackout, Flame-Retardant, Acoustic dB, Motorized Track)',
-            milestone: 'M2',
-            page: 'gorden.html',
-            status: 'PASS',
-            message: 'All commercial specifications (100% Blackout, Flame retardant, Acoustic/dB, Motorized track) verified.'
-          });
-        } else {
-          const missing = [];
-          if (!hasBlackout) missing.push('100% Blackout');
-          if (!hasFlame) missing.push('Flame-retardant / Tahan api');
-          if (!hasAcoustic) missing.push('Acoustic dB / Peredam suara');
-          if (!hasMotorized) missing.push('Motorized smart track');
-          const isPending = cliOptions.allowPending || cliOptions.milestone === 'M0';
-
-          recordTest('tier2', {
-            id: 'T2.3_SPECS_GORDEN',
-            name: 'Gorden Specifications (Blackout, Flame-Retardant, Acoustic dB, Motorized Track)',
-            milestone: 'M2',
-            page: 'gorden.html',
-            status: isPending ? 'PENDING' : 'FAIL',
-            defect: `Missing required gorden specifications in cards: ${missing.join(', ')}`,
-            expected: 'Cards must explicitly mention blackout, flame-retardant, acoustic dB, and motorized tracks',
-            actual: `Missing: ${missing.join(', ')}`
-          });
-        }
-      }
-
-      if (p.specs && p.specs.category === 'Towel') {
-        const hasGsm = p.specs.gsmPattern.test(sectionText);
-        const hasCombed = p.specs.combedPattern.some(rx => rx.test(sectionText));
-        const hasLaundry = p.specs.laundryPattern.some(rx => rx.test(sectionText));
-
-        if (hasGsm && hasCombed && hasLaundry) {
-          recordTest('tier2', {
-            id: 'T2.4_SPECS_TOWEL',
-            name: 'Towel Specifications (GSM 450-800, Combed Cotton, Industrial Laundry)',
-            milestone: 'M3',
-            page: 'towel.html',
-            status: 'PASS',
-            message: 'All commercial specifications (GSM 450-800 range, Combed cotton, Industrial laundry durability) verified.'
-          });
-        } else {
-          const missing = [];
-          if (!hasGsm) missing.push('Explicit GSM grammage in 450-800 GSM range');
-          if (!hasCombed) missing.push('Combed Cotton 100%');
-          if (!hasLaundry) missing.push('Industrial Laundry / Cuci industri durability');
-          const isPending = cliOptions.allowPending || cliOptions.milestone === 'M0';
-
-          recordTest('tier2', {
-            id: 'T2.4_SPECS_TOWEL',
-            name: 'Towel Specifications (GSM 450-800, Combed Cotton, Industrial Laundry)',
-            milestone: 'M3',
-            page: 'towel.html',
-            status: isPending ? 'PENDING' : 'FAIL',
-            defect: `Missing required towel specifications in cards: ${missing.join(', ')}`,
-            expected: 'Cards must explicitly state GSM (450-800 GSM), combed cotton, and industrial wash durability',
-            actual: `Missing: ${missing.join(', ')}`
-          });
-        }
+      // General-benefits rule: no technical specifications inside product cards
+      const visibleText = section.full.replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&');
+      const specHits = FORBIDDEN_SPEC_PATTERNS.filter(f => f.rx.test(visibleText)).map(f => f.label);
+      if (specHits.length === 0) {
+        recordTest('tier2', {
+          id: `T2.2_NOSPECS_${p.file}`,
+          name: `General Benefits Only, No Technical Specs (${p.file})`,
+          milestone: p.milestone,
+          page: p.file,
+          status: 'PASS',
+          message: 'Product section contains no GSM, BPOM, fire-standard, decibel, combed-cotton, thread-count or material-grade specifications.'
+        });
+      } else {
+        const isPending = p.milestone !== 'M0' && (cliOptions.allowPending || cliOptions.milestone === 'M0');
+        recordTest('tier2', {
+          id: `T2.2_NOSPECS_${p.file}`,
+          name: `General Benefits Only, No Technical Specs (${p.file})`,
+          milestone: p.milestone,
+          page: p.file,
+          status: isPending ? 'PENDING' : 'FAIL',
+          defect: `Technical specifications found in product cards: ${specHits.join(', ')}`,
+          expected: 'Cards list general benefits only; full specs are given by the admin on request',
+          actual: `Found: ${specHits.join(', ')}`
+        });
       }
     }
   }
