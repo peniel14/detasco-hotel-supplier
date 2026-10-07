@@ -1144,7 +1144,10 @@
 
     // ---- amenities: comb ----
     "Halus dan nyaman di rambut": "Smooth and gentle on hair",
-    "Tampilan natural dan elegan": "Natural, elegant look"
+    "Tampilan natural dan elegan": "Natural, elegant look",
+
+    // ---- homepage H1 ----
+    "SUPPLIER PERLENGKAPAN HOTEL & RUMAH SAKIT DI MEDAN": "HOTEL & HOSPITAL SUPPLIES SUPPLIER IN MEDAN"
   };
 
   var textNodes = [];
@@ -1218,10 +1221,12 @@
       var titleMap = {
         "Katalog Lengkap Perlengkapan Hotel Bintang 5 | DETASCO": "Complete 5-Star Hotel Supplies Catalog | DETASCO",
         "DETASCO | Supplier Perlengkapan Hotel & Rumah Sakit di Medan": "DETASCO | Hotel & Hospital Supplies Supplier in Medan",
-        "Linen & Bedding Hotel Bintang 5 | DETASCO": "5-Star Hotel Linen & Bedding | DETASCO",
-        "Handuk Hotel Premium | DETASCO": "5-Star Hotel Towels & Bathrobes | DETASCO",
-        "Amenities Hotel Premium | DETASCO": "5-Star Hotel Guest Amenities | DETASCO",
-        "Gorden Hotel Elegan | DETASCO": "Hotel Curtains & Window Treatments | DETASCO"
+        "Supplier Linen & Bedding Hotel Bintang 5 | DETASCO": "5-Star Hotel Linen & Bedding Supplier | DETASCO",
+        "Supplier Handuk Hotel Premium di Medan | DETASCO": "Premium Hotel Towel Supplier in Medan | DETASCO",
+        "Supplier Amenities Hotel Premium di Medan | DETASCO": "Premium Hotel Amenities Supplier in Medan | DETASCO",
+        "Supplier Gorden Hotel Elegan di Medan | DETASCO": "Elegant Hotel Curtain Supplier in Medan | DETASCO",
+        "Supplier Perlengkapan Rumah Sakit di Medan | DETASCO": "Hospital Supplies Supplier in Medan | DETASCO",
+        "Tentang Kami | PT. Detasco Elca Sarana": "About Us | PT. Detasco Elca Sarana"
       };
       if (!titleEl.dataset.origTitle) titleEl.dataset.origTitle = titleEl.textContent;
       titleEl.textContent = (lang === 'en' && titleMap[titleEl.dataset.origTitle]) ? titleMap[titleEl.dataset.origTitle] : titleEl.dataset.origTitle;
