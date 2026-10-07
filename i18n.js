@@ -1117,7 +1117,19 @@
     // ---- Best Price phrase ----
     "Kemitraan pengadaan jangka panjang dengan kepastian kualitas konsisten, Best Price dengan transparansi harga pabrik, dan dedikasi layanan purna jual.": "A long-term procurement partnership built on consistent quality, Best Price with transparent factory pricing, and dedicated after-sales service.",
     "Kirim daftar kebutuhan lewat WhatsApp atau formulir. Kami balas dengan penawaran harga grosir Best Price.": "Send your requirements via WhatsApp or the form. We'll reply with a Best Price wholesale quote.",
-    "Pilihan produk dan kustomisasi dengan Best Price, disesuaikan dengan hotel dan rumah sakit Anda.": "Product choices and customization at the Best Price, tailored to your hotel or hospital."
+    "Pilihan produk dan kustomisasi dengan Best Price, disesuaikan dengan hotel dan rumah sakit Anda.": "Product choices and customization at the Best Price, tailored to your hotel or hospital.",
+
+    // ---- amenities: cotton bud, disposable bag, vanity kit, shaving kit ----
+    "Higienis dalam kemasan praktis": "Hygienic in practical packaging",
+    "Pelengkap perawatan tamu": "A handy addition to guest care",
+    "Praktis dan higienis": "Practical and hygienic",
+    "Menjaga kamar mandi tetap bersih": "Keeps the bathroom clean",
+    "Set perawatan praktis untuk tamu": "A practical grooming set for guests",
+    "Kemasan rapi dan berkelas": "Neat, premium packaging",
+    "Bisa custom branding hotel": "Hotel branding can be customized",
+    "Praktis untuk tamu pria": "Convenient for male guests",
+    "Set lengkap dalam kemasan rapi": "A complete set in neat packaging",
+    "Kesan mewah di kamar mandi": "A luxurious touch in the bathroom"
   };
 
   var textNodes = [];
