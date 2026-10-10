@@ -1155,7 +1155,7 @@
     "Tuliskan item yang dibutuhkan (contoh: sprei, handuk mandi, sabun, gorden blackout) beserta catatan lain, misalnya logo bordir atau jadwal pengiriman...": "Describe the items you need (e.g. sheets, bath towels, soap, blackout curtains) and any other notes, such as logo embroidery or delivery schedule...",
 
     // ---- quote form: data consent ----
-    "Saya setuju data yang saya isi (nama, email, dan nomor WhatsApp) digunakan oleh PT. Detasco Elca Sarana untuk menghubungi saya terkait permintaan penawaran ini.": "I agree that the information I provide (name, email, and WhatsApp number) may be used by PT. Detasco Elca Sarana to contact me about this quote request."
+    "Saya setuju data yang saya isi (nama, email, dan nomor WhatsApp) hanya digunakan oleh PT. Detasco Elca Sarana untuk menghubungi saya terkait permintaan penawaran ini.": "I agree that the information I provide (name, email, and WhatsApp number) will only be used by PT. Detasco Elca Sarana to contact me about this quote request."
   };
 
   var textNodes = [];
