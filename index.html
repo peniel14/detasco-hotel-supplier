@@ -929,6 +929,11 @@
             <label class="block text-gray-300 font-medium mb-1">Item Spesifik & Catatan Khusus</label>
             <textarea id="notes" rows="3" placeholder="Tuliskan item yang dibutuhkan (contoh: sprei, handuk mandi, sabun, gorden blackout) beserta catatan lain, misalnya logo bordir atau jadwal pengiriman..." class="w-full px-3.5 py-2.5 rounded-lg bg-[#0B0E14] border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-detasco-gold transition"></textarea>
           </div>
+          <label class="flex items-start gap-2.5 cursor-pointer select-none text-gray-300 leading-relaxed">
+            <input type="checkbox" id="dataConsent" required class="mt-0.5 w-3.5 h-3.5 shrink-0 cursor-pointer accent-[#E5B13A]">
+            <span>Saya setuju data yang saya isi (nama, email, dan nomor WhatsApp) digunakan oleh PT. Detasco Elca Sarana untuk menghubungi saya terkait permintaan penawaran ini.</span>
+          </label>
+
 
           <button type="submit" class="w-full py-3.5 px-6 rounded-lg bg-detasco-gold text-black font-bold text-xs uppercase tracking-wider hover:bg-detasco-goldHover transition shadow-xl flex items-center justify-center gap-2">
             <i data-lucide="send" class="w-4 h-4"></i>
@@ -1113,11 +1118,23 @@
   <!-- ========================================================================= -->
   <script src="theme.js?v=20260929_2"></script>
   <script src="i18n.js?v=20260929_2"></script>
+  <script src="cookie-notice.js"></script>
 
   <!-- ========================================================================= -->
   <!-- JAVASCRIPT: DATA & INTERACTIVE LOGIC                                      -->
   <!-- ========================================================================= -->
   <script>
+    // Consent checkbox: localized "required" message
+    (function () {
+      var c = document.getElementById('dataConsent');
+      if (!c) return;
+      c.addEventListener('invalid', function () {
+        var en = window.DetascoI18n && DetascoI18n.getLang() === 'en';
+        c.setCustomValidity(en ? 'Please tick this box to agree before sending.' : 'Centang kotak persetujuan sebelum mengirim.');
+      });
+      c.addEventListener('change', function () { c.setCustomValidity(''); });
+    })();
+
     // Category checkboxes: clear the "pick at least one" message once something is ticked
     document.addEventListener('change', function (ev) {
       if (ev.target && ev.target.name === 'formCategory') {
@@ -1144,7 +1161,7 @@
       const rooms = document.getElementById('roomCount').value;
       const notes = document.getElementById('notes').value;
 
-      const waText = encodeURIComponent(`*PERMINTAAN PENAWARAN RESMI DETASCO*\n\nNama PIC: ${pic}\nNama Hotel/Properti: ${hotel}\nKategori Kebutuhan: ${cat}\nJumlah Kamar: ${rooms}\nCatatan: ${notes}\n\nMohon proposal harga dan pengiriman sampel mock-up kamar.`);
+      const waText = encodeURIComponent(`*PERMINTAAN PENAWARAN RESMI DETASCO*\n\nNama PIC: ${pic}\nNama Hotel/Properti: ${hotel}\nKategori Kebutuhan: ${cat}\nJumlah Kamar: ${rooms}\nCatatan: ${notes}\nPersetujuan penggunaan data: Ya\n\nMohon proposal harga dan pengiriman sampel mock-up kamar.`);
       
       window.open(`https://wa.me/6281234567890?text=${waText}`, '_blank');
       alert(`Terima kasih, Bpk/Ibu ${pic}. Formulir penawaran untuk ${hotel} telah terkirim ke tim sales kami. Tim kami akan segera menindaklanjuti via WhatsApp & Email.`);
