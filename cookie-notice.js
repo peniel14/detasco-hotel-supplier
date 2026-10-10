@@ -12,12 +12,12 @@
   var TEXT = {
     id: {
       label: 'Pemberitahuan cookie',
-      msg: 'Situs ini menyimpan pilihan bahasa dan tema Anda di perangkat Anda. Kami tidak menggunakan cookie pelacak atau iklan.',
+      msg: 'Situs ini hanya menyimpan pilihan bahasa dan tema Anda di perangkat Anda (penyimpanan lokal) agar tampilan sesuai preferensi. Kami tidak menggunakan cookie pelacak atau iklan.',
       btn: 'Mengerti'
     },
     en: {
       label: 'Cookie notice',
-      msg: 'This site stores your language and theme choice on your device. We do not use tracking or advertising cookies.',
+      msg: 'This site only stores your language and theme choice on your device (local storage) so the display matches your preference. We do not use tracking or advertising cookies.',
       btn: 'Got it'
     }
   };
