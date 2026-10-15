@@ -34,7 +34,7 @@ const PROJECT_ROOT = path.resolve(__dirname, '..');
 const SERVER_HOST = 'localhost';
 const SERVER_PORT = 3000;
 const SERVER_BASE_URL = `http://${SERVER_HOST}:${SERVER_PORT}`;
-const WA_PHONE_EXPECTED = '6281234567890';
+const WA_PHONE_EXPECTED = '628218038103';
 const WA_BASE_URL = `https://wa.me/${WA_PHONE_EXPECTED}`;
 
 // Page Catalog Specifications
@@ -817,7 +817,7 @@ async function runTestSuite() {
       const hrefList = extractAllHrefs(fileContent);
       const waLinks = hrefList.filter(item => item.href.includes('wa.me'));
 
-      // Check 1: All WhatsApp URLs must point to wa.me/6281234567890
+      // Check 1: All WhatsApp URLs must point to wa.me/628218038103
       let invalidWaNumbers = [];
       let invalidEncoding = [];
 
@@ -863,8 +863,8 @@ async function runTestSuite() {
       // Check 2: Subpages must have a prominent bottom CTA button ("Pesan Sekarang!")
       if (p.solutionId) {
         const hasPesanSekarang = /Pesan\s*Sekarang!?/i.test(fileContent);
-        const hasBottomCtaWa = /href=["']https:\/\/wa\.me\/6281234567890\?text=[^"']*memesan[^"']*["']/i.test(fileContent) ||
-                              /href=["']https:\/\/wa\.me\/6281234567890\?text=[^"']*Solution[^"']*["']/i.test(fileContent);
+        const hasBottomCtaWa = /href=["']https:\/\/wa\.me\/628218038103\?text=[^"']*memesan[^"']*["']/i.test(fileContent) ||
+                              /href=["']https:\/\/wa\.me\/628218038103\?text=[^"']*Solution[^"']*["']/i.test(fileContent);
 
         if (hasPesanSekarang && hasBottomCtaWa) {
           recordTest('tier3', {
@@ -884,7 +884,7 @@ async function runTestSuite() {
             page: p.file,
             status: isPending ? 'PENDING' : 'FAIL',
             defect: `Missing prominent bottom "Pesan Sekarang!" WhatsApp CTA button in ${p.file}`,
-            expected: `Prominent CTA button linking to https://wa.me/6281234567890 with category order inquiry`,
+            expected: `Prominent CTA button linking to https://wa.me/628218038103 with category order inquiry`,
             actual: hasPesanSekarang ? 'Button present but link missing' : 'Button missing'
           });
         }

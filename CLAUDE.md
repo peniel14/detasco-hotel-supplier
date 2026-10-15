@@ -34,11 +34,10 @@ git pull origin main                # ALWAYS before starting work
 3. **No made-up client names.** The only real client examples (given by the owner) are **Grand City Hall** (hotel) and **Columbia Asia** (hospital), on `about.html`.
 4. **Company facts**: PT. Detasco Elca Sarana has met the amenity needs of many hotels and hospitals since 2006, and prioritizes quality and premium products.
 5. **"Best Price"** appears in four main places only: homepage hero badge, homepage "why choose us" intro, order step 2, and the About commitment card. Do not sprinkle it elsewhere.
-6. **Real data**: address `Jalan HM. Joni No. 30A, Kelurahan Pasar Merah Barat, Kecamatan Medan Kota, Medan 20214`, email `detasco55@gmail.com`.
+6. **Real data**: address `Jalan HM. Joni No. 30A, Kelurahan Pasar Merah Barat, Kecamatan Medan Kota, Medan 20214`, email `detasco55@gmail.com`, business WhatsApp `+62 821-8038-103` (`628218038103` in every `wa.me` link and the homepage form; the E2E constant `WA_PHONE_EXPECTED` must match). There is no landline.
 
-### Known placeholders (replace together when real values exist)
+### Known placeholders (replace when real values exist)
 
-- Phone `(021) 5890-7788` and WhatsApp `6281234567890` (used in every `wa.me` link and the homepage form; the E2E constant `WA_PHONE_EXPECTED` must be updated at the same time).
 - Domain `https://www.detasco.co.id` in canonical, Open Graph, JSON-LD, `robots.txt` and `sitemap.xml`.
 - The homepage quote form only opens WhatsApp; it does not store or email anything.
 

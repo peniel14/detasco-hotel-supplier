@@ -15,7 +15,7 @@ const { URL } = require('url');
 
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 const SERVER_URL = 'http://localhost:3000';
-const TARGET_PHONE = '6281234567890';
+const TARGET_PHONE = '628218038103';
 const HTML_PAGES = ['index.html', 'linen.html', 'amenities.html', 'gorden.html', 'towel.html'];
 
 // Color output formatting

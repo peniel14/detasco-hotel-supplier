@@ -71,10 +71,10 @@ The test suite is **100% zero-dependency** (running on native Node.js built-in m
 
 ### Tier 3: Link & Quotation Integrity
 1. **WhatsApp B2B Lead Generation Integrity (`T3.1_WA_*`)**:
-   - Checks that all WhatsApp links target the official phone number `6281234567890`.
+   - Checks that all WhatsApp links target the official phone number `628218038103`.
    - Asserts that all pre-filled query strings (`?text=...`) are valid, non-empty, and properly URI-encoded.
 2. **Prominent Bottom CTA Button ("Pesan Sekarang!") (`T3.1_BOTTOM_CTA_*`)**:
-   - Checks that each subcategory solution section concludes with a prominent bottom order inquiry button ("Pesan Sekarang!") linked to `https://wa.me/6281234567890?text=...`.
+   - Checks that each subcategory solution section concludes with a prominent bottom order inquiry button ("Pesan Sekarang!") linked to `https://wa.me/628218038103?text=...`.
 3. **Zero Broken Internal Links & Valid Local Assets (`T3.2_*`)**:
    - Crawls all internal `href` attributes across all 5 HTML documents.
    - Verifies that all referenced `.html` files exist on disk.
