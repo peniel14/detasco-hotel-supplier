@@ -33,7 +33,7 @@
 
     // ---- Hero (index.html) ----
     "SOLUSI PENGADAAN HOSPITALITY BINTANG 5 DI SELURUH INDONESIA": "5-STAR HOSPITALITY PROCUREMENT SOLUTIONS ACROSS INDONESIA",
-    "Sertifikasi Standar Industri Hotel": "Certified to Hotel Industry Standards",
+    "Standar Industri Hotel": "Hotel Industry Standards",
     "Distribusi Cepat Seluruh Nusantara": "Fast Distribution Nationwide",
 
     // ---- Katalog Produk Unggulan (index.html) ----
