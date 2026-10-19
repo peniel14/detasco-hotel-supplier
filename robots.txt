@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.detasco.co.id/sitemap.xml
+Sitemap: https://detasco.com/sitemap.xml

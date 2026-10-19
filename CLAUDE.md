@@ -38,7 +38,7 @@ git pull origin main                # ALWAYS before starting work
 
 ### Known placeholders (replace when real values exist)
 
-- Domain `https://www.detasco.co.id` in canonical, Open Graph, JSON-LD, `robots.txt` and `sitemap.xml`.
+- Domain `https://detasco.com` in canonical, Open Graph, JSON-LD, `robots.txt` and `sitemap.xml`.
 - The homepage quote form only opens WhatsApp; it does not store or email anything.
 
 ---
